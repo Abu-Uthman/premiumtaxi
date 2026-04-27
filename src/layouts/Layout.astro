@@ -10,7 +10,7 @@ interface Props {
 
 const { 
   title, 
-  description = "Premium Maxi Taxi Victoria provides luxury, reliable, and spacious taxi services. We specialize in Maxi Taxis, airport transfers, and group tours across Melbourne and Victoria.",
+  description = "Premium Maxi Taxi Victoria supports Melbourne taxi and maxi cab bookings for airport transfers, families, groups, wheelchair requests, baby seats, parcels, events, schools, and regional trips.",
   robots = "index, follow, max-image-preview:large",
   includeBusinessSchema = true
 } = Astro.props;
@@ -28,7 +28,7 @@ const businessSchema = {
   "name": "Premium Maxi Taxi Victoria",
   "url": new URL('/', site).href,
   "image": imageUrl,
-  "description": "Premium Maxi Taxi Victoria provides 11 and 13-seater maxi taxi transport, Melbourne Airport transfers, wheelchair-accessible taxis, corporate transfers, group hire, and private Victoria day tours.",
+  "description": "Premium Maxi Taxi Victoria supports 11 and 13-seater maxi taxi requests, Melbourne Airport transfers, wheelchair-accessible taxi requests, baby-seat taxis, corporate transfers, group transport, parcel delivery, school runs, events, cruise transfers, and outer Melbourne trips.",
   "priceRange": "$$",
   "areaServed": [
     { "@type": "City", "name": "Melbourne" },
@@ -38,12 +38,6 @@ const businessSchema = {
     "@type": "AdministrativeArea",
     "name": "Victoria"
   },
-  "openingHoursSpecification": [{
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-    "opens": "00:00",
-    "closes": "23:59"
-  }],
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
     "name": "Premium Maxi Taxi Services",

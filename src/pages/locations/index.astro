@@ -5,7 +5,7 @@ import Footer from '../../components/Footer.astro';
 import locationsData from '../../data/locations.js';
 
 const title = "Maxi Taxi Service Areas Victoria | All Locations We Cover";
-const description = "Premium Maxi Taxi operates across all of Victoria. Find your suburb and book a luxury 11 or 13-seater cab for airport transfers, tours, and group transport.";
+const description = "Find Melbourne and Victorian taxi service areas for maxi cabs, airport transfers, family taxis, wheelchair requests, parcel delivery, events, schools, and outer-suburb trips.";
 
 // Breadcrumb schema
 const breadcrumbSchema = {
@@ -36,7 +36,7 @@ const breadcrumbSchema = {
         <div class="section-tag">Coverage</div>
         <h1 class="page-title">Victoria <em class="text-gold">Service Areas</em></h1>
         <p class="page-sub">
-          We provide premium 11 &amp; 13-seater Maxi Taxi transport across Melbourne and all of regional Victoria. Select your suburb below.
+          Find the right local page for maxi cabs, standard taxi requests, SUV and wagon taxis, airport transfers, baby-seat taxis, wheelchair-accessible requests, parcel delivery, events, schools, and outer Melbourne trips.
         </p>
       </div>
     </section>
@@ -69,16 +69,16 @@ const breadcrumbSchema = {
     <section class="section section-dark">
       <div class="container text-center">
         <div class="section-tag">Why Book With Us</div>
-        <h2 class="section-title" style="color: white;">Victoria's Most Trusted <em class="text-gold">Maxi Taxi</em> Provider</h2>
+        <h2 class="section-title" style="color: white;">Built Around <em class="text-gold">Real Local Searches</em></h2>
         <p class="section-sub" style="color: rgba(255,255,255,0.7); max-width: 640px;">
-          No matter where you are in Victoria — from inner Melbourne to regional hubs — Premium Maxi Taxi delivers luxury group transport with professional drivers.
+          Each suburb page connects location intent with the actual trip type: airport, family, wheelchair, parcel, student, corporate, event, cruise, group, or regional travel.
         </p>
         <div class="why-grid">
           {[
-            { icon: "✈️", title: "Flight Tracking", desc: "We monitor your flight and adjust pickup times automatically." },
-            { icon: "🛡️", title: "Fully Licensed", desc: "All drivers are certified, insured, and background-checked." },
-            { icon: "🧳", title: "Massive Luggage Capacity", desc: "Our vans handle 10–13 large suitcases with ease." },
-            { icon: "⏰", title: "24/7 Availability", desc: "Early morning, late night — we're always available." },
+            { icon: "✈️", title: "Airport Intent", desc: "Pages include route notes, luggage needs, flight details, and airport corridor context." },
+            { icon: "♿", title: "Access Notes", desc: "Wheelchair, carer, child-seat, pram, parcel and equipment requirements are treated as booking details." },
+            { icon: "🧳", title: "Vehicle Fit", desc: "The site supports standard taxi, SUV, wagon, maxi cab, and specialist request pathways." },
+            { icon: "📍", title: "Nearby Coverage", desc: "Suburb pages link nearby areas, popular trip types, corridors, and high-intent booking pages." },
           ].map(item => (
             <div class="why-card">
               <div class="why-icon">{item.icon}</div>

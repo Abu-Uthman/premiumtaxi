@@ -26,6 +26,95 @@ const relatedServices = servicesData.filter((item) => item.slug !== service.slug
 const relatedLocations = primaryLocation
   ? locationsData.filter((loc) => loc.region === primaryLocation.region && loc.slug !== primaryLocation.slug).slice(0, 6)
   : locationsData.slice(0, 6);
+const playbooks = {
+  "maxi-cab-melbourne": {
+    label: "Group and luggage taxi",
+    promise: "built for groups that need one vehicle, clear pickup timing, and enough space for passengers, bags, prams, sports gear, or shopping.",
+    vehicleFit: ["11 and 13-seat maxi taxi options", "Luggage-friendly layouts", "Suitable for families, events, schools, and airports"],
+    bookingFields: ["passenger count", "luggage or prams", "pickup access", "extra stops"],
+    popularTrips: ["home to Melbourne Airport", "family event transfer", "school or sports group pickup", "outer-suburb return trip"]
+  },
+  "wheelchair-accessible-taxi-melbourne": {
+    label: "Accessible taxi planning",
+    promise: "planned around boarding time, mobility equipment, carers, pickup access, and appointment deadlines instead of treating accessibility as an afterthought.",
+    vehicleFit: ["wheelchair-accessible vehicle request", "space for carers and mobility equipment", "appointment and hospital timing support"],
+    bookingFields: ["wheelchair type", "carer count", "pickup access", "appointment time"],
+    popularTrips: ["hospital appointment", "family outing", "airport transfer with mobility equipment", "community or NDIS-style transport"]
+  },
+  "baby-seat-taxi-melbourne": {
+    label: "Family taxi planning",
+    promise: "focused on families who need child-seat requests, pram space, luggage room, and a vehicle that is planned before pickup.",
+    vehicleFit: ["baby-seat and booster requests", "space for prams and suitcases", "family-sized maxi taxi options"],
+    bookingFields: ["child age", "seat or booster request", "pram count", "luggage count"],
+    popularTrips: ["family airport transfer", "school or childcare pickup", "medical appointment", "holiday luggage transfer"]
+  },
+  "parcel-delivery-taxi-melbourne": {
+    label: "Direct parcel taxi",
+    promise: "for urgent point-to-point items where a direct taxi delivery is more practical than waiting for a standard courier run.",
+    vehicleFit: ["small parcels and documents", "direct pickup-to-delivery movement", "clear sender and receiver details"],
+    bookingFields: ["item size", "pickup contact", "delivery contact", "handling notes"],
+    popularTrips: ["CBD document delivery", "forgotten luggage transfer", "business item movement", "industrial-area delivery"]
+  },
+  "corporate-transfers-melbourne": {
+    label: "Business transport",
+    promise: "set up for offices, hotels, conferences, client pickups, staff movements, and airport travel where timing and presentation matter.",
+    vehicleFit: ["SUV, wagon, silver service, or maxi taxi requests", "team and luggage planning", "meeting and flight timing notes"],
+    bookingFields: ["company or guest name", "meeting time", "flight details", "luggage count"],
+    popularTrips: ["hotel to office", "conference transfer", "airport client pickup", "staff group movement"]
+  },
+  "group-transfers-melbourne": {
+    label: "Multi-passenger transfer",
+    promise: "keeps groups together across events, wineries, sports, hotels, airports, and multi-stop itineraries.",
+    vehicleFit: ["larger passenger capacity", "space for event gear or luggage", "multi-stop pickup planning"],
+    bookingFields: ["guest count", "venue names", "return time", "stop sequence"],
+    popularTrips: ["wedding guest transfer", "winery day trip", "sports team movement", "night-out return trip"]
+  },
+  "wedding-event-transfers-melbourne": {
+    label: "Event movement",
+    promise: "designed around venue timing, formal clothing, guest groups, late returns, and clear meeting points.",
+    vehicleFit: ["guest group transfers", "late-night return bookings", "hotel, venue, and home pickups"],
+    bookingFields: ["venue address", "guest count", "return time", "pickup meeting point"],
+    popularTrips: ["ceremony to reception", "hotel to venue", "late-night guest return", "race day or concert transfer"]
+  },
+  "cruise-transfer-melbourne": {
+    label: "Cruise luggage transfer",
+    promise: "matches cruise passengers with luggage-friendly vehicles and fixed boarding-time planning for Station Pier and hotel connections.",
+    vehicleFit: ["large suitcase capacity", "hotel and airport connections", "Station Pier timing"],
+    bookingFields: ["ship or terminal", "boarding time", "suitcase count", "hotel or flight details"],
+    popularTrips: ["hotel to Station Pier", "airport to cruise terminal", "home to port", "port to hotel"]
+  },
+  "school-runs-student-transport-melbourne": {
+    label: "Student transport",
+    promise: "planned around school times, authorised contacts, student groups, bags, sports gear, and predictable pickup instructions.",
+    vehicleFit: ["student group capacity", "space for bags or sports gear", "recurring or one-off booking notes"],
+    bookingFields: ["school name", "authorised contact", "student count", "equipment notes"],
+    popularTrips: ["school pickup", "sports fixture", "excursion movement", "camp luggage transfer"]
+  },
+  "outer-melbourne-taxi": {
+    label: "Longer-distance taxi",
+    promise: "built for outer Melbourne and regional trips where route, luggage, passengers, and return timing need to be arranged before departure.",
+    vehicleFit: ["long-distance taxi and maxi cab options", "airport and regional route planning", "return-trip coordination"],
+    bookingFields: ["route", "pickup time", "return details", "passenger and luggage count"],
+    popularTrips: ["regional airport transfer", "outer-suburb event trip", "Melbourne to regional city", "day trip return"]
+  },
+  "suv-wagon-taxi-melbourne": {
+    label: "Extra luggage taxi",
+    promise: "for passengers who need more luggage space and comfort than a standard sedan without necessarily needing a full maxi cab.",
+    vehicleFit: ["SUV or wagon requests", "extra boot space", "small groups and business passengers"],
+    bookingFields: ["passenger count", "luggage size", "comfort preference", "flight or meeting time"],
+    popularTrips: ["airport with extra bags", "business transfer", "family shopping trip", "hotel pickup"]
+  },
+  "silver-service-taxi-melbourne": {
+    label: "Premium point-to-point taxi",
+    promise: "for passengers who want a cleaner, more polished point-to-point ride for business, appointments, hotels, and airport trips.",
+    vehicleFit: ["premium taxi or SUV request", "business and hotel pickups", "appointment and airport timing"],
+    bookingFields: ["pickup presentation notes", "meeting or flight time", "luggage count", "preferred vehicle type"],
+    popularTrips: ["CBD hotel pickup", "airport transfer", "business appointment", "premium event arrival"]
+  }
+};
+const playbook = playbooks[service.slug] || playbooks["maxi-cab-melbourne"];
+const locationName = primaryLocation?.name || "Melbourne";
+const nearbySuburbNames = primaryLocation?.nearbySuburbs || relatedLocations.map((loc) => loc.name).slice(0, 3);
 
 const canonical = new URL(Astro.url.pathname, Astro.site || 'https://premiummaxitaxi.com.au').href;
 const breadcrumbSchema = {
@@ -104,11 +193,11 @@ const faqSchema = {
     <section class="section">
       <div class="container landing-grid">
         <article>
-          <div class="section-tag">Local Booking Page</div>
-          <h2>{page.h1} for Real Passenger Needs</h2>
+          <div class="section-tag">{playbook.label}</div>
+          <h2>{page.h1} for the Trip People Actually Need</h2>
           <p>{page.localNotes}</p>
           <p>
-            This booking page is built for passengers who need the right taxi type before pickup: maxi cab space, standard taxi convenience, SUV or wagon luggage room, baby-seat requests, wheelchair access, parcel delivery, airport timing, event groups, or outer-suburb travel.
+            This page is not a generic suburb page. It is for {page.h1.toLowerCase()} bookings {playbook.promise} The booking should capture the practical details before dispatch, so the vehicle type, timing, route, and passenger requirements are clear.
           </p>
 
           <h3>Best For</h3>
@@ -117,6 +206,26 @@ const faqSchema = {
               <div class="use-card">
                 <span>✓</span>
                 <strong>{item}</strong>
+              </div>
+            ))}
+          </div>
+
+          <h3>Best Taxi Options for This Request</h3>
+          <div class="option-grid">
+            {playbook.vehicleFit.map((item) => (
+              <div class="option-card">
+                <strong>{item}</strong>
+                <p>Useful for {locationName} trips where timing, vehicle space, and pickup instructions need to be settled before the driver arrives.</p>
+              </div>
+            ))}
+          </div>
+
+          <h3>Popular Trips From {locationName}</h3>
+          <div class="trip-list">
+            {playbook.popularTrips.map((trip) => (
+              <div>
+                <span>{trip}</span>
+                <p>{page.h1} bookings can be planned around {trip}, nearby suburbs such as {nearbySuburbNames.slice(0, 2).join(" and ")}, and the final destination.</p>
               </div>
             ))}
           </div>
@@ -134,7 +243,7 @@ const faqSchema = {
           <Image src={interiorImg} alt="Clean maxi taxi interior with spacious passenger seating" width={520} height={340} class="panel-img" quality={65} />
           <div class="panel-body">
             <h2>Plan the Ride Properly</h2>
-            <p>Include pickup, destination, passengers, luggage, child seats, wheelchair needs, flight details, stops, and preferred time.</p>
+            <p>For this page, the most important booking details are: {playbook.bookingFields.join(", ")}. Add pickup, destination, preferred time, and any notes that affect loading or timing.</p>
             <a href="/book" class="btn btn-primary">Start Booking</a>
             <a href="tel:+61432405388" class="panel-call">Call +61 432 405 388</a>
           </div>
@@ -147,10 +256,10 @@ const faqSchema = {
         <div class="section-tag text-center">Why Pre-Book</div>
         <h2 class="section-title text-center">A Better Fit Than a Random Taxi</h2>
         <div class="trust-grid">
-          <div class="trust-card"><strong>Right Vehicle</strong><p>Match the booking to passengers, luggage, child seats, wheelchair access, or group size.</p></div>
-          <div class="trust-card"><strong>Clear Timing</strong><p>Early flights, school runs, appointments, events, and cruise boarding need planned pickup windows.</p></div>
-          <div class="trust-card"><strong>Local Coverage</strong><p>Inner Melbourne, outer suburbs, airports, cruise terminals, regional Victoria, and day-trip routes.</p></div>
-          <div class="trust-card"><strong>Simple CTAs</strong><p>Book online, call, or request a quote now; final phone and WhatsApp details can be swapped in later.</p></div>
+          <div class="trust-card"><strong>Vehicle Fit</strong><p>{page.h1} should be matched to passengers, luggage, child seats, wheelchair access, parcel size, or group size before pickup.</p></div>
+          <div class="trust-card"><strong>Timing Fit</strong><p>Early flights, schools, medical appointments, events, cruise boarding, and regional routes all need different timing buffers.</p></div>
+          <div class="trust-card"><strong>Local Fit</strong><p>{locationName} trips often connect nearby suburbs, airports, hospitals, hotels, venues, stations, and outer-Melbourne routes.</p></div>
+          <div class="trust-card"><strong>Booking Fit</strong><p>The form and phone CTA collect the details that decide whether a standard taxi, SUV, wagon, maxi cab, or specialist request is suitable.</p></div>
         </div>
       </div>
     </section>
@@ -297,6 +406,7 @@ article h3 {
   margin: 32px 0 16px;
 }
 .use-case-grid,
+.option-grid,
 .trust-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -306,12 +416,39 @@ article h3 {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 .use-card,
+.option-card,
 .trust-card {
   padding: 18px;
   border: 1px solid var(--bg-tertiary);
   border-radius: var(--border-radius-sm);
   background: #fff;
   box-shadow: var(--shadow-sm);
+}
+.option-card p {
+  margin: 8px 0 0;
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+.trip-list {
+  display: grid;
+  gap: 12px;
+}
+.trip-list div {
+  padding: 16px 18px;
+  border-left: 3px solid var(--accent-gold);
+  background: var(--bg-secondary);
+}
+.trip-list span {
+  display: block;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.trip-list p {
+  margin: 0;
+  color: var(--text-muted);
+  line-height: 1.6;
 }
 .use-card {
   display: flex;
@@ -408,6 +545,7 @@ article h3 {
   .landing-grid,
   .related-grid,
   .use-case-grid,
+  .option-grid,
   .trust-grid { grid-template-columns: 1fr; }
   .booking-panel { position: static; }
 }

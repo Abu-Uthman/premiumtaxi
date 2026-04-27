@@ -9,11 +9,11 @@ import heroFaq from '../assets/van-exterior-9.jpeg';
 const faqItems = [
   {
     q: "How many passengers can a Maxi Taxi hold?",
-    a: "Our fleet includes 11-seater luxury vans and 13-seater Maxi Cabs. Both options include substantial luggage space in addition to the full passenger capacity."
+    a: "The site supports 11 and 13-seater maxi taxi requests. Add passenger count and luggage details so the booking can be matched to the right vehicle option."
   },
   {
     q: "Do your vehicles have extra luggage space?",
-    a: "Yes. All our vehicles have dedicated underfloor cargo compartments separate from the passenger cabin, which is useful for airport runs and multi-day tours."
+    a: "Larger taxi and maxi cab options can suit luggage-heavy trips. Add suitcase, pram, equipment, or parcel details when booking."
   },
   {
     q: "How do I book a Premium Maxi Taxi?",
@@ -33,11 +33,11 @@ const faqItems = [
   },
   {
     q: "Do you track flights for arrivals?",
-    a: "Yes. Customers can provide a flight number at booking so pickup timing can be adjusted for early or delayed arrivals."
+    a: "Add your flight number and arrival details when booking so airport timing can be planned around the flight."
   },
   {
     q: "Do you provide wheelchair-accessible taxis?",
-    a: "Yes. Wheelchair-accessible Maxi Taxis include electric hoist boarding, certified restraint systems, and space for carers or family members."
+    a: "Wheelchair-accessible requests should include wheelchair type, carers, pickup access, destination, appointment time, and luggage or equipment notes."
   },
   {
     q: "Can I create a custom tour itinerary?",
@@ -115,17 +115,17 @@ const faqSchema = {
             
             <details class="faq-item">
               <summary>How many passengers can a Maxi Taxi hold?</summary>
-              <p>Our fleet includes <strong>11-seater luxury vans</strong> and <strong>13-seater Maxi Cabs</strong>. Both options include substantial luggage space in addition to the full passenger capacity, making them ideal for families and groups with luggage.</p>
+              <p>The site supports <strong>11-seater</strong> and <strong>13-seater</strong> maxi taxi requests. Add passenger count and luggage details so the booking can be matched to the right vehicle option.</p>
             </details>
 
             <details class="faq-item">
               <summary>Do your vehicles have extra luggage space?</summary>
-              <p>Yes. All our vehicles have dedicated underfloor cargo compartments separate from the passenger cabin. Our 13-seaters especially accommodate large volumes of luggage, suitcases, and equipment — perfect for airport runs or multi-day tours.</p>
+              <p>Larger taxi and maxi cab options can suit luggage-heavy trips. Add suitcase, pram, equipment, or parcel details when booking so vehicle space can be considered.</p>
             </details>
 
             <details class="faq-item">
               <summary>Can I book a Maxi Taxi for just a small group?</summary>
-              <p>Absolutely. While our vehicles can hold up to 13 passengers, you can book them for any group size — from 2 people upwards. Many customers prefer the extra space and comfort even for smaller groups.</p>
+              <p>Yes. Smaller groups can still request a larger vehicle when luggage, prams, equipment, child seats, accessibility, or comfort requirements make a standard sedan unsuitable.</p>
             </details>
           </div>
 
@@ -139,7 +139,7 @@ const faqSchema = {
 
             <details class="faq-item">
               <summary>How far in advance should I book?</summary>
-              <p>For airport transfers, we recommend booking at least <strong>24–48 hours</strong> in advance. For tours and special occasions, <strong>3–7 days</strong> ahead is ideal to guarantee availability. However, we always try to accommodate last-minute requests — just call us.</p>
+              <p>For airport transfers, we recommend booking at least <strong>24-48 hours</strong> in advance. For tours and special occasions, <strong>3-7 days</strong> ahead gives more time to plan vehicle type, route, stops, and return details. For urgent requests, call directly.</p>
             </details>
 
             <details class="faq-item">
@@ -153,12 +153,12 @@ const faqSchema = {
 
             <details class="faq-item">
               <summary>How do you calculate your prices?</summary>
-              <p>We offer <strong>fixed, transparent pricing</strong> based on the distance, vehicle type, and service. We never apply surge pricing or hidden fees. You'll always know the exact price before you confirm your booking.</p>
+              <p>Pricing depends on distance, vehicle type, timing, route, stops, luggage, and service requirements. Request a quote before confirming if the trip is complex.</p>
             </details>
 
             <details class="faq-item">
               <summary>What payment methods do you accept?</summary>
-              <p>We accept all major cards (Visa, Mastercard, Amex), PayPal, Apple Pay, Google Pay, cash, and Cabcharge. Corporate invoicing with NET-30 terms is available for business accounts.</p>
+              <p>Payment details should be confirmed when booking. If you need a corporate or account-style arrangement, include that request in the booking notes.</p>
             </details>
           </div>
 
@@ -167,17 +167,17 @@ const faqSchema = {
 
             <details class="faq-item">
               <summary>Do you track flights for arrivals?</summary>
-              <p>Yes — simply provide your flight number at booking and we monitor it in real-time. If your flight is delayed, we adjust your driver's arrival time accordingly. You will <strong>never be charged for airline delays</strong>.</p>
+              <p>Add your flight number and arrival details when booking so airport timing can be planned around the flight. Include terminal, luggage, passengers, child seats, and pickup instructions.</p>
             </details>
 
             <details class="faq-item">
               <summary>Which airports do you service?</summary>
-              <p>We service both <strong>Melbourne Tullamarine (MEL)</strong> and <strong>Avalon Airport (AVV)</strong>, along with any private airstrips in Victoria on request. We cover all terminals and departure points.</p>
+              <p>The site supports booking requests for <strong>Melbourne Tullamarine (MEL)</strong> and <strong>Avalon Airport (AVV)</strong>. Include terminal, flight number, luggage, and passenger count.</p>
             </details>
 
             <details class="faq-item">
               <summary>Do you offer a meet-and-greet service?</summary>
-              <p>Yes. Our drivers can meet you inside the terminal with a name sign for an additional fee. This is especially popular for corporate clients arriving from interstate or international flights.</p>
+              <p>If you need meet-and-greet or specific pickup instructions, add that request during booking so it can be confirmed before the trip.</p>
             </details>
           </div>
 
@@ -186,12 +186,12 @@ const faqSchema = {
 
             <details class="faq-item">
               <summary>Do you provide wheelchair-accessible taxis?</summary>
-              <p>Yes. Our wheelchair-accessible Maxi Taxis feature <strong>electric hoist boarding</strong>, certified tie-down restraint systems, and plenty of space for carers or family members. Simply select "Wheelchair Accessible" or "Mobility Scooter" when booking.</p>
+              <p>Wheelchair-accessible requests should include wheelchair type, mobility equipment, carers, pickup access, destination, appointment time, and luggage details.</p>
             </details>
 
             <details class="faq-item">
               <summary>Are your drivers trained for passengers with disabilities?</summary>
-              <p>All drivers providing accessible transport hold specific government-approved certifications for assisting passengers with mobility challenges. They undergo regular refresher training in passenger handling and first-aid.</p>
+              <p>Include any assistance requirements in the booking notes so accessibility needs can be understood before the trip is confirmed.</p>
             </details>
           </div>
 
@@ -200,12 +200,12 @@ const faqSchema = {
 
             <details class="faq-item">
               <summary>Can I create a custom tour itinerary?</summary>
-              <p>Absolutely. Many customers prefer a <strong>fully custom day trip</strong> tailored to their group's interests — stopping at specific lookouts, wineries, or towns along the way. Just describe your ideal day in the booking form notes and we'll make it happen.</p>
+              <p>Yes. Add preferred stops, pickup time, return time, passenger count, luggage, and route priorities in the booking notes for a custom day trip quote.</p>
             </details>
 
             <details class="faq-item">
               <summary>Are food and breaks included on tours?</summary>
-              <p>Our drivers are your dedicated chauffeur for the day and guide you to top-rated stops. Meals and entry fees at destinations are at your own expense, but your driver will happily suggest the best spots along the route.</p>
+              <p>Meals, tastings, attraction tickets, and entry fees are usually separate from transport. Add timing and stop preferences so the quote reflects the itinerary.</p>
             </details>
           </div>
 
@@ -214,12 +214,12 @@ const faqSchema = {
 
             <details class="faq-item">
               <summary>What areas in Victoria do you serve?</summary>
-              <p>We cover <strong>all of Victoria</strong> — Melbourne CBD, inner suburbs, airport corridors, the Yarra Valley, Mornington Peninsula, Geelong, Great Ocean Road, Phillip Island, Ballarat, Bendigo, and beyond. If it's in Victoria, we'll get you there.</p>
+              <p>Booking requests can cover Melbourne CBD, suburbs, airport corridors, the Yarra Valley, Mornington Peninsula, Geelong, Great Ocean Road, Phillip Island, Ballarat, Bendigo, and selected Victorian regional routes.</p>
             </details>
 
             <details class="faq-item">
               <summary>Do you operate on public holidays?</summary>
-              <p>Yes — we operate 24/7, 365 days a year, including all Victorian and national public holidays. Public holiday surcharges may apply; these will always be communicated at the time of booking.</p>
+              <p>Early morning, late night, weekend, and public holiday requests should be pre-booked where possible. Any surcharge or special timing requirement should be confirmed before the booking is accepted.</p>
             </details>
           </div>
 

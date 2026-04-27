@@ -17,6 +17,7 @@ const keywordUniverse = buildKeywordUniverse();
 const keywordUniverseSummary = summarizeKeywordUniverse(keywordUniverse);
 
 const existingPrioritySlugs = new Set(priorityPages.map((page) => page.slug));
+const existingServiceSlugs = new Set(services.map((service) => service.slug));
 const serviceBySlug = new Map(services.map((service) => [service.slug, service]));
 const locationBySlug = new Map(locations.map((location) => [location.slug, location]));
 
@@ -40,6 +41,27 @@ function inferLocation(keyword) {
   return locations.find((location) => keyword.includes(location.name.toLowerCase())) || null;
 }
 
+function inferLandingSlug(keyword, serviceSlug, location) {
+  if (!location) return slugify(keyword);
+
+  if (/\bmaxi taxi\b/.test(keyword)) return slugify(`maxi taxi ${location.name}`);
+  if (/\bmaxi cab\b/.test(keyword)) return slugify(`maxi cab ${location.name}`);
+  if (/\bairport taxi\b|\bairport transfer\b|\btullamarine\b|\bavalon\b/.test(keyword)) return slugify(`airport taxi ${location.name}`);
+  if (/\bbaby seat\b|\bchild seat\b|\btaxi with baby seat\b/.test(keyword)) return slugify(`baby seat taxi ${location.name}`);
+  if (/\bwheelchair\b|\baccessible taxi\b/.test(keyword)) return slugify(`wheelchair taxi ${location.name}`);
+  if (/\bparcel\b|\bcourier\b|\bdelivery taxi\b/.test(keyword)) return slugify(`parcel delivery ${location.name}`);
+  if (/\bcorporate\b|\bbusiness\b|\bexecutive\b/.test(keyword)) return slugify(`corporate transfers ${location.name}`);
+  if (/\bschool\b|\bstudent\b/.test(keyword)) return slugify(`school runs ${location.name}`);
+  if (/\bcruise\b|\bstation pier\b/.test(keyword)) return slugify(`cruise transfer ${location.name}`);
+  if (/\bsuv\b|\bwagon\b/.test(keyword)) return slugify(`suv wagon taxi ${location.name}`);
+  if (/\bsilver service\b/.test(keyword)) return slugify(`silver service taxi ${location.name}`);
+  if (/\bcab\b/.test(keyword)) return slugify(`cab ${location.name}`);
+  if (/\btaxi\b/.test(keyword)) return slugify(`taxi ${location.name}`);
+
+  const service = serviceBySlug.get(serviceSlug);
+  return slugify(`${service?.name || 'taxi'} ${location.name}`);
+}
+
 const rankedKeywords = (keywordsReport.keywords || [])
   .filter((item) => (item.searchVolume || 0) > 0 || (item.cpc || 0) > 0)
   .sort((a, b) => (b.searchVolume || 0) - (a.searchVolume || 0) || (b.cpc || 0) - (a.cpc || 0));
@@ -47,9 +69,9 @@ const rankedKeywords = (keywordsReport.keywords || [])
 const pageCandidates = rankedKeywords.map((item) => {
   const serviceSlug = inferIntent(item.keyword);
   const location = inferLocation(item.keyword);
-  const service = serviceBySlug.get(serviceSlug);
-  const slug = location ? slugify(`${service?.name || 'taxi'} ${location.name}`) : slugify(item.keyword);
+  const slug = inferLandingSlug(item.keyword, serviceSlug, location);
   const exists = existingPrioritySlugs.has(slug);
+  const serviceExists = existingServiceSlugs.has(slug);
   return {
     keyword: item.keyword,
     searchVolume: item.searchVolume,
@@ -58,7 +80,7 @@ const pageCandidates = rankedKeywords.map((item) => {
     recommendedSlug: slug,
     recommendedServiceSlug: serviceSlug,
     recommendedLocationSlug: location?.slug || null,
-    status: exists ? 'improve-existing-priority-page' : 'candidate-new-priority-page'
+    status: exists ? 'improve-existing-priority-page' : serviceExists ? 'improve-existing-service-page' : 'candidate-new-priority-page'
   };
 });
 
@@ -80,7 +102,7 @@ writeJson('contentGaps.json', {
   generatedAt: nowIso(),
   topKeywordOpportunities: pageCandidates.slice(0, 80),
   missingPriorityPageCandidates: pageCandidates.filter((item) => item.status === 'candidate-new-priority-page').slice(0, 60),
-  improveExistingPriorityPages: pageCandidates.filter((item) => item.status === 'improve-existing-priority-page').slice(0, 60),
+  improveExistingPriorityPages: pageCandidates.filter((item) => item.status.startsWith('improve-existing')).slice(0, 60),
   aeoQuestions
 });
 

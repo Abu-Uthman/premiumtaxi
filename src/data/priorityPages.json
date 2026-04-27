@@ -732,5 +732,257 @@
       { "q": "Can I book a taxi from Bendigo to Melbourne Airport?", "a": "Yes. Bendigo long-distance taxi and maxi cab airport transfers can be arranged in advance." },
       { "q": "Can a maxi cab handle Bendigo group travel?", "a": "Yes. Maxi cabs are useful when passengers want to travel together with luggage or equipment." }
     ]
+  },
+  {
+    "slug": "taxi-melbourne",
+    "title": "Taxi Melbourne | Pre-Book Standard, Maxi & Airport Taxi",
+    "description": "Pre-book a Melbourne taxi for local rides, airport transfers, maxi taxi groups, baby-seat requests, wheelchair access, parcel delivery, and events.",
+    "h1": "Taxi Melbourne",
+    "primaryServiceSlug": "taxi-melbourne",
+    "locationSlugs": ["melbourne-cbd"],
+    "useCases": ["Point-to-point taxi rides", "Airport transfers", "Maxi taxi and group trips", "Baby-seat and wheelchair requests"],
+    "localNotes": "Melbourne taxi bookings can involve CBD hotels, hospitals, offices, apartments, events, airports, luggage, children, accessibility needs, or outer-suburb destinations.",
+    "faq": [
+      { "q": "Can I pre-book a taxi in Melbourne?", "a": "Yes. Melbourne taxi bookings can be pre-booked with pickup time, destination, passengers, luggage, and any vehicle notes." },
+      { "q": "Can I request a maxi taxi instead of a standard taxi?", "a": "Yes. Include passenger count and luggage details so a maxi taxi, SUV, wagon, or standard taxi can be planned." }
+    ]
+  },
+  {
+    "slug": "cab-melbourne",
+    "title": "Cab Melbourne | Book Taxi, Maxi Cab & Airport Transfers",
+    "description": "Book a Melbourne cab for airport transfers, CBD trips, maxi cab group travel, family taxi bookings, business rides, events, and luggage-friendly transport.",
+    "h1": "Cab Melbourne",
+    "primaryServiceSlug": "taxi-melbourne",
+    "locationSlugs": ["melbourne-cbd"],
+    "useCases": ["CBD cab bookings", "Airport cab transfers", "Group and maxi cab travel", "Business and hotel pickups"],
+    "localNotes": "Cab Melbourne searches often need a practical booking path for standard taxis, maxi cabs, airport luggage, hotel pickups, events, and suburbs beyond the CBD.",
+    "faq": [
+      { "q": "Can I book a cab in Melbourne for later?", "a": "Yes. Pre-booking is recommended for airports, events, early pickups, groups, and trips needing a specific vehicle type." },
+      { "q": "Can a Melbourne cab booking include luggage or extra passengers?", "a": "Yes. Add luggage and passenger details so the request can be matched to a standard taxi, SUV, wagon, or maxi cab." }
+    ]
+  },
+  {
+    "slug": "taxi-melbourne-cbd",
+    "title": "Taxi Melbourne CBD | Hotel, Airport & Business Taxi",
+    "description": "Book a Melbourne CBD taxi for hotels, offices, Southern Cross Station, airport transfers, events, business rides, luggage, and maxi taxi requests.",
+    "h1": "Taxi Melbourne CBD",
+    "primaryServiceSlug": "taxi-melbourne",
+    "locationSlugs": ["melbourne-cbd"],
+    "useCases": ["CBD hotel transfers", "Office and business trips", "Southern Cross Station pickups", "Airport taxi bookings"],
+    "localNotes": "Melbourne CBD taxi pickups need clear meeting points because hotels, towers, stations, laneways, and event traffic can affect where the vehicle can stop.",
+    "faq": [
+      { "q": "Can I book a taxi from Melbourne CBD to the airport?", "a": "Yes. CBD airport taxi bookings should include pickup access, flight time, passengers, and luggage." },
+      { "q": "Can CBD bookings include a maxi taxi?", "a": "Yes. Maxi taxis are useful for CBD hotel groups, families, cruise luggage, events, and airport transfers." }
+    ]
+  },
+  {
+    "slug": "taxi-melbourne-airport",
+    "title": "Taxi Melbourne Airport | Tullamarine Taxi & Maxi Cab",
+    "description": "Book a taxi to or from Melbourne Airport with standard taxi, maxi taxi, baby-seat, wheelchair, SUV, wagon, and luggage-friendly options.",
+    "h1": "Taxi Melbourne Airport",
+    "primaryServiceSlug": "airport-taxi-melbourne",
+    "locationSlugs": ["tullamarine"],
+    "useCases": ["Tullamarine airport transfers", "Airport pickups", "Family airport taxi", "Maxi taxi with luggage"],
+    "localNotes": "Melbourne Airport taxi bookings should include terminal, flight time, luggage, passenger count, child-seat needs, accessibility notes, and pickup instructions.",
+    "faq": [
+      { "q": "Can I pre-book a taxi to Melbourne Airport?", "a": "Yes. Pre-booking helps plan pickup time, route, vehicle size, and luggage space before the airport trip." },
+      { "q": "Can I book a taxi from Melbourne Airport with extra luggage?", "a": "Yes. A maxi taxi, SUV, or wagon may be suitable when passengers have multiple suitcases, prams, or equipment." }
+    ]
+  },
+  {
+    "slug": "taxi-to-melbourne-airport",
+    "title": "Taxi to Melbourne Airport | Pre-Book Airport Taxi",
+    "description": "Pre-book a taxi to Melbourne Airport from CBD, suburbs, homes, hotels, hospitals, schools, events, and outer Melbourne with luggage-friendly options.",
+    "h1": "Taxi to Melbourne Airport",
+    "primaryServiceSlug": "airport-taxi-melbourne",
+    "locationSlugs": ["tullamarine"],
+    "useCases": ["Home to airport", "Hotel to airport", "Early morning flights", "Airport taxi with luggage"],
+    "localNotes": "Taxi to Melbourne Airport bookings are time-sensitive, so pickup address, flight time, terminal, route, passengers, and luggage should be confirmed before travel.",
+    "faq": [
+      { "q": "How early should I book a taxi to Melbourne Airport?", "a": "Pre-book as early as possible for morning flights, group trips, outer-suburb pickups, child-seat requests, and wheelchair-accessible needs." },
+      { "q": "Can I request a larger taxi to Melbourne Airport?", "a": "Yes. Mention passengers, suitcases, prams, sports gear, or mobility equipment so a suitable vehicle can be planned." }
+    ]
+  },
+  {
+    "slug": "taxi-near-me",
+    "title": "Taxi Near Me Melbourne | Pre-Book Local & Airport Taxi",
+    "description": "Looking for a taxi near you in Melbourne? Pre-book local taxi, maxi taxi, airport transfer, family taxi, wheelchair taxi, and luggage-friendly transport.",
+    "h1": "Taxi Near Me Melbourne",
+    "primaryServiceSlug": "taxi-melbourne",
+    "locationSlugs": ["melbourne-cbd"],
+    "useCases": ["Local taxi pickup", "Nearby airport transfer", "Taxi with luggage", "Maxi taxi for groups"],
+    "localNotes": "Taxi near me searches still need clear pickup details, because the right option may be a standard taxi, maxi taxi, airport taxi, SUV, wagon, baby-seat taxi, or wheelchair request.",
+    "faq": [
+      { "q": "Can I use this page to book a taxi near me?", "a": "Yes. Add your exact pickup address, destination, passenger count, timing, and any vehicle needs in the booking request." },
+      { "q": "Can nearby taxi bookings include special requests?", "a": "Yes. Child seats, wheelchair access, luggage, parcels, group size, and airport details should be included when booking." }
+    ]
+  },
+  {
+    "slug": "maxi-taxi-melbourne",
+    "title": "Maxi Taxi Melbourne | 7, 11 & 13 Seater Group Taxi",
+    "description": "Book a maxi taxi in Melbourne for group travel, airport transfers, luggage, families, events, school trips, cruise transfers, and outer-suburb travel.",
+    "h1": "Maxi Taxi Melbourne",
+    "primaryServiceSlug": "maxi-cab-melbourne",
+    "locationSlugs": ["melbourne-cbd"],
+    "useCases": ["7 passenger taxi", "11 and 13 seater requests", "Airport transfers with luggage", "Event and family group travel"],
+    "localNotes": "Maxi taxi Melbourne bookings usually need more space than a standard taxi for passengers, suitcases, prams, wheelchairs, sports gear, shopping, or event groups.",
+    "faq": [
+      { "q": "Can I book a maxi taxi in Melbourne?", "a": "Yes. Maxi taxi bookings can be arranged for groups, airport transfers, luggage-heavy trips, events, schools, and outer-suburb travel." },
+      { "q": "What details are needed for a maxi taxi?", "a": "Provide passenger count, luggage, pickup access, destination, timing, and any child-seat or accessibility requirements." }
+    ]
+  },
+  {
+    "slug": "airport-taxi-melbourne",
+    "title": "Airport Taxi Melbourne | Melbourne Airport Taxi & Maxi Cab",
+    "description": "Book airport taxi transfers in Melbourne for Tullamarine, Avalon, CBD hotels, homes, business trips, families, luggage, and maxi taxi groups.",
+    "h1": "Airport Taxi Melbourne",
+    "primaryServiceSlug": "airport-taxi-melbourne",
+    "locationSlugs": ["tullamarine"],
+    "useCases": ["Melbourne Airport transfers", "Avalon Airport trips", "Hotel airport pickups", "Maxi taxi airport transfers"],
+    "localNotes": "Airport taxi Melbourne bookings are strongest when flight details, terminal, luggage, passengers, child-seat requests, and pickup access are confirmed upfront.",
+    "faq": [
+      { "q": "Can I book an airport taxi in Melbourne?", "a": "Yes. Airport taxis can be pre-booked for Melbourne Airport, Avalon Airport, CBD hotels, homes, and outer-suburb pickups." },
+      { "q": "Can airport taxi bookings include a maxi cab?", "a": "Yes. Maxi cabs are useful for airport transfers with families, groups, prams, and multiple suitcases." }
+    ]
+  },
+  {
+    "slug": "maxi-taxi-melbourne-airport",
+    "title": "Maxi Taxi Melbourne Airport | Group Airport Taxi",
+    "description": "Book a maxi taxi for Melbourne Airport transfers with space for groups, families, luggage, prams, sports gear, child-seat requests, and early flights.",
+    "h1": "Maxi Taxi Melbourne Airport",
+    "primaryServiceSlug": "maxi-cab-melbourne",
+    "locationSlugs": ["tullamarine"],
+    "useCases": ["Group airport transfers", "Family airport taxi", "Luggage-heavy airport trips", "Early and late flights"],
+    "localNotes": "Maxi taxi Melbourne Airport bookings should include terminal, flight time, passenger count, suitcases, prams, pickup access, and return-trip needs.",
+    "faq": [
+      { "q": "Can I book a maxi taxi to Melbourne Airport?", "a": "Yes. Maxi taxis can be booked for airport trips where passengers want to travel together with luggage." },
+      { "q": "Is a maxi taxi better than two standard taxis for airport trips?", "a": "Often yes. A maxi taxi can keep families or groups together and may be easier when luggage, prams, or equipment are involved." }
+    ]
+  },
+  {
+    "slug": "maxi-taxi-to-melbourne-airport",
+    "title": "Maxi Taxi to Melbourne Airport | Group & Luggage Taxi",
+    "description": "Pre-book a maxi taxi to Melbourne Airport for groups, families, cruise passengers, business teams, children, luggage, prams, and early flights.",
+    "h1": "Maxi Taxi to Melbourne Airport",
+    "primaryServiceSlug": "maxi-cab-melbourne",
+    "locationSlugs": ["tullamarine"],
+    "useCases": ["Home to airport", "Group airport pickup", "Family luggage transfer", "Hotel to Melbourne Airport"],
+    "localNotes": "A maxi taxi to Melbourne Airport is useful when a standard taxi may not fit the passengers, luggage, child seats, mobility equipment, or timing requirements.",
+    "faq": [
+      { "q": "Can I pre-book a maxi taxi to Melbourne Airport?", "a": "Yes. Pre-booking is recommended for early flights, groups, families, and luggage-heavy airport transfers." },
+      { "q": "What should I include when booking?", "a": "Include flight time, terminal, pickup address, passengers, luggage, child seats, and any access notes." }
+    ]
+  },
+  {
+    "slug": "maxi-cab-melbourne-airport",
+    "title": "Maxi Cab Melbourne Airport | Family & Group Airport Transfer",
+    "description": "Book a Melbourne Airport maxi cab for family trips, groups, luggage, prams, hotel pickups, cruise connections, business teams, and outer-suburb transfers.",
+    "h1": "Maxi Cab Melbourne Airport",
+    "primaryServiceSlug": "maxi-cab-melbourne",
+    "locationSlugs": ["tullamarine"],
+    "useCases": ["Airport maxi cab", "Family airport transfers", "Group luggage trips", "Hotel and cruise connections"],
+    "localNotes": "Melbourne Airport maxi cab bookings often need a larger vehicle because passengers travel with suitcases, prams, sports equipment, or group luggage.",
+    "faq": [
+      { "q": "Can a maxi cab pick up from Melbourne Airport?", "a": "Yes. Melbourne Airport maxi cab bookings can be arranged with flight, terminal, passenger, and luggage details." },
+      { "q": "Can maxi cab airport bookings include children?", "a": "Yes. Add baby-seat or booster requirements when booking so the vehicle setup can be planned." }
+    ]
+  },
+  {
+    "slug": "taxi-frankston",
+    "title": "Taxi Frankston | Airport, Hospital & Peninsula Taxi",
+    "description": "Book a taxi in Frankston for hospital trips, airport transfers, Peninsula travel, events, family taxi bookings, maxi taxi groups, and luggage.",
+    "h1": "Taxi Frankston",
+    "primaryServiceSlug": "taxi-melbourne",
+    "locationSlugs": ["frankston"],
+    "useCases": ["Frankston Hospital trips", "Airport transfers", "Peninsula taxi travel", "Family and maxi taxi bookings"],
+    "localNotes": "Frankston taxi bookings often connect homes, Frankston Hospital, Bayside Centre, Peninsula destinations, airports, events, and longer outer-suburb routes.",
+    "faq": [
+      { "q": "Can I pre-book a taxi in Frankston?", "a": "Yes. Frankston taxi bookings can be pre-booked for local rides, appointments, airport transfers, family trips, and events." },
+      { "q": "Can Frankston bookings include a maxi taxi?", "a": "Yes. Maxi taxi requests are useful for groups, luggage, prams, airport transfers, and Peninsula travel." }
+    ]
+  },
+  {
+    "slug": "taxi-dandenong",
+    "title": "Taxi Dandenong | Airport, Hospital & Maxi Taxi Booking",
+    "description": "Book a Dandenong taxi for airport transfers, hospital trips, Dandenong Market, parcel delivery, wheelchair requests, family travel, and maxi taxi groups.",
+    "h1": "Taxi Dandenong",
+    "primaryServiceSlug": "taxi-melbourne",
+    "locationSlugs": ["dandenong"],
+    "useCases": ["Dandenong local taxi", "Airport transfers", "Hospital and appointment trips", "Parcel, wheelchair, and maxi taxi requests"],
+    "localNotes": "Dandenong taxi bookings are often practical trips involving hospitals, markets, industrial areas, schools, parcels, accessibility needs, and south-east airport routes.",
+    "faq": [
+      { "q": "Can I book a taxi in Dandenong?", "a": "Yes. Dandenong taxi bookings can be arranged for local trips, airport transfers, appointments, parcels, and group transport." },
+      { "q": "Can Dandenong taxi requests include accessibility needs?", "a": "Yes. Add wheelchair, mobility, carer, passenger, and pickup access details when booking." }
+    ]
+  },
+  {
+    "slug": "taxi-bendigo",
+    "title": "Taxi Bendigo | Regional Taxi to Melbourne & Airports",
+    "description": "Book Bendigo taxi and maxi cab travel for Melbourne Airport, Avalon, business trips, regional transfers, events, groups, luggage, and long-distance rides.",
+    "h1": "Taxi Bendigo",
+    "primaryServiceSlug": "outer-melbourne-taxi",
+    "locationSlugs": ["bendigo"],
+    "useCases": ["Bendigo to Melbourne", "Airport transfers", "Regional business travel", "Long-distance maxi cab"],
+    "localNotes": "Bendigo taxi bookings need advance planning for long-distance routes, flight times, luggage, passengers, driver availability, and return-trip requirements.",
+    "faq": [
+      { "q": "Can I book a taxi from Bendigo to Melbourne Airport?", "a": "Yes. Bendigo airport transfers can be arranged with pickup time, passengers, luggage, and flight details." },
+      { "q": "Can Bendigo regional trips use a maxi cab?", "a": "Yes. Maxi cabs can suit groups, luggage-heavy travel, business teams, and longer regional trips." }
+    ]
+  },
+  {
+    "slug": "taxi-cranbourne",
+    "title": "Taxi Cranbourne | Airport, Family & Outer South-East Taxi",
+    "description": "Book a Cranbourne taxi for airport transfers, family trips, school runs, events, outer south-east travel, maxi taxi requests, and luggage-friendly rides.",
+    "h1": "Taxi Cranbourne",
+    "primaryServiceSlug": "taxi-melbourne",
+    "locationSlugs": ["cranbourne"],
+    "useCases": ["Cranbourne local taxi", "Airport transfers", "Family and school travel", "Outer south-east taxi trips"],
+    "localNotes": "Cranbourne taxi bookings often involve longer routes to Melbourne Airport, the city, Berwick, Frankston, Pakenham, schools, events, and family destinations.",
+    "faq": [
+      { "q": "Can I pre-book a taxi in Cranbourne?", "a": "Yes. Cranbourne taxi bookings can be arranged for local rides, airport transfers, family trips, and outer-suburb travel." },
+      { "q": "Can I request a larger taxi from Cranbourne?", "a": "Yes. Mention passengers, luggage, prams, school bags, or equipment so a suitable vehicle can be planned." }
+    ]
+  },
+  {
+    "slug": "taxi-geelong",
+    "title": "Taxi Geelong | Melbourne, Avalon & Airport Transfers",
+    "description": "Book Geelong taxi and maxi cab travel for Avalon Airport, Melbourne Airport, regional transfers, events, groups, luggage, and long-distance trips.",
+    "h1": "Taxi Geelong",
+    "primaryServiceSlug": "outer-melbourne-taxi",
+    "locationSlugs": ["geelong"],
+    "useCases": ["Geelong to Melbourne", "Avalon Airport taxi", "Regional group travel", "Long-distance airport transfers"],
+    "localNotes": "Geelong taxi bookings often connect Avalon Airport, Melbourne Airport, waterfront hotels, events, Werribee, Point Cook, and regional Victorian routes.",
+    "faq": [
+      { "q": "Can I book a taxi from Geelong to Melbourne Airport?", "a": "Yes. Geelong airport taxi bookings can be planned with pickup time, route, luggage, passengers, and flight details." },
+      { "q": "Can Geelong bookings include a maxi cab?", "a": "Yes. Maxi cabs are useful for groups, suitcases, events, sports gear, and long-distance travel." }
+    ]
+  },
+  {
+    "slug": "taxi-werribee",
+    "title": "Taxi Werribee | Airport, Avalon & Maxi Taxi Booking",
+    "description": "Book a taxi in Werribee for Melbourne Airport, Avalon Airport, family travel, Werribee Mansion, zoo trips, maxi taxi groups, and luggage.",
+    "h1": "Taxi Werribee",
+    "primaryServiceSlug": "taxi-melbourne",
+    "locationSlugs": ["werribee"],
+    "useCases": ["Werribee local taxi", "Melbourne Airport transfers", "Avalon Airport transfers", "Family and maxi taxi travel"],
+    "localNotes": "Werribee taxi bookings often involve airport corridors, Avalon, family attractions, luggage, prams, school trips, and western-suburb group travel.",
+    "faq": [
+      { "q": "Can I book a taxi in Werribee?", "a": "Yes. Werribee taxi bookings can be arranged for local trips, airport transfers, family outings, and group travel." },
+      { "q": "Can Werribee taxis go to Avalon Airport?", "a": "Yes. Avalon and Melbourne Airport transfers can be planned from Werribee with luggage and timing details." }
+    ]
+  },
+  {
+    "slug": "wheelchair-taxi-melbourne",
+    "title": "Wheelchair Taxi Melbourne | Accessible Taxi Booking",
+    "description": "Pre-book wheelchair taxi transport in Melbourne for appointments, hospitals, airport transfers, family travel, NDIS-style trips, events, and community transport.",
+    "h1": "Wheelchair Taxi Melbourne",
+    "primaryServiceSlug": "wheelchair-accessible-taxi-melbourne",
+    "locationSlugs": ["melbourne-cbd"],
+    "useCases": ["Medical appointments", "Hospital transfers", "Accessible airport taxi", "Family and community travel"],
+    "localNotes": "Wheelchair taxi Melbourne bookings should include wheelchair type, mobility equipment, carers, pickup access, appointment time, luggage, and destination details.",
+    "faq": [
+      { "q": "Can I pre-book a wheelchair taxi in Melbourne?", "a": "Yes. Accessible taxi requests can be pre-booked with mobility details, carers, pickup access, and appointment or flight timing." },
+      { "q": "Can wheelchair taxi bookings include family or luggage?", "a": "Yes. Add passenger count, carers, mobility equipment, luggage, and any loading requirements when booking." }
+    ]
   }
 ]

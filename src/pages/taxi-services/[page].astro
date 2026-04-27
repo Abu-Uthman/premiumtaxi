@@ -29,6 +29,20 @@ const relatedLocations = primaryLocation
   ? locationsData.filter((loc) => loc.region === primaryLocation.region && loc.slug !== primaryLocation.slug).slice(0, 6)
   : locationsData.slice(0, 6);
 const playbooks = {
+  "taxi-melbourne": {
+    label: "Flexible Melbourne taxi booking",
+    promise: "matched to the actual trip, whether the passenger needs a standard taxi, maxi taxi, SUV or wagon, baby-seat request, wheelchair-accessible transport, parcel movement, or airport transfer.",
+    vehicleFit: ["standard taxi for point-to-point trips", "maxi taxi for groups and luggage", "SUV, wagon, baby-seat, wheelchair, or parcel taxi by request"],
+    bookingFields: ["pickup time", "destination", "passenger count", "vehicle or access request"],
+    popularTrips: ["CBD to airport transfer", "suburb to appointment", "family taxi with luggage", "late-night return trip"]
+  },
+  "airport-taxi-melbourne": {
+    label: "Airport taxi planning",
+    promise: "planned around flight time, terminal, luggage, passenger count, child-seat or accessibility requirements, and the best pickup route instead of treating airport travel as a basic local trip.",
+    vehicleFit: ["standard airport taxi", "maxi taxi for luggage-heavy airport trips", "SUV, wagon, baby-seat, or wheelchair request"],
+    bookingFields: ["flight time", "terminal", "luggage count", "passenger and child-seat details"],
+    popularTrips: ["home to Melbourne Airport", "Melbourne Airport to hotel", "Avalon Airport transfer", "airport trip with extra luggage"]
+  },
   "maxi-cab-melbourne": {
     label: "Group and luggage taxi",
     promise: "built for groups that need one vehicle, clear pickup timing, and enough space for passengers, bags, prams, sports gear, or shopping.",
@@ -118,6 +132,8 @@ const playbook = playbooks[service.slug] || playbooks["maxi-cab-melbourne"];
 const locationName = primaryLocation?.name || "Melbourne";
 const nearbySuburbNames = primaryLocation?.nearbySuburbs || relatedLocations.map((loc) => loc.name).slice(0, 3);
 const priorityHeroImages = {
+  "taxi-melbourne": hotelAirportImg,
+  "airport-taxi-melbourne": hotelAirportImg,
   "baby-seat-taxi-melbourne": familyBabyImg,
   "corporate-transfers-melbourne": hotelAirportImg,
   "cruise-transfer-melbourne": hotelAirportImg,

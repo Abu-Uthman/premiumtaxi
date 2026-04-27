@@ -4,16 +4,16 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { Image } from 'astro:assets';
 
-import heroFleet  from '../assets/van-exterior-4.jpeg';
-import van11a     from '../assets/van-exterior-1.jpeg';
-import van11b     from '../assets/van-exterior-2.jpeg';
-import van13a     from '../assets/van-exterior-3.jpeg';
-import van13b     from '../assets/van-exterior-5.jpeg';
-import int1       from '../assets/van-interior-1.jpeg';
-import int2       from '../assets/van-interior-2.jpeg';
-import int3       from '../assets/van-interior-3.jpeg';
-import fleet2     from '../assets/van-fleet-2.jpeg';
-import fleet3     from '../assets/van-fleet-3.jpeg';
+import heroFleet  from '../assets/van-exterior-4.webp';
+import van11a     from '../assets/van-exterior-1.webp';
+import van11b     from '../assets/van-exterior-2.webp';
+import van13a     from '../assets/van-exterior-3.webp';
+import van13b     from '../assets/van-exterior-5.webp';
+import int1       from '../assets/van-interior-1.webp';
+import int2       from '../assets/van-interior-2.webp';
+import int3       from '../assets/van-interior-3.webp';
+import fleet2     from '../assets/van-fleet-2.webp';
+import fleet3     from '../assets/van-fleet-3.webp';
 ---
 
 <Layout 
@@ -26,7 +26,7 @@ import fleet3     from '../assets/van-fleet-3.jpeg';
     <!-- Page Hero -->
     <section class="page-hero">
       <div class="page-hero-bg">
-        <Image src={heroFleet} alt="Premium Maxi Taxi fleet exterior Melbourne 13-seater" width={1920} height={700} class="page-hero-img" quality={65} />
+        <Image src={heroFleet} alt="Premium Maxi Taxi fleet exterior Melbourne 13-seater" width={1440} height={525} class="page-hero-img" quality={55} />
         <div class="page-hero-overlay"></div>
       </div>
       <div class="container page-hero-content">
@@ -46,7 +46,7 @@ import fleet3     from '../assets/van-fleet-3.jpeg';
 
         <div class="vehicle-layout">
           <div class="vehicle-images">
-            <Image src={van11a} alt="11-seater Maxi Taxi exterior Melbourne" width={700} height={460} class="v-main-img" quality={70} />
+            <Image src={van11a} alt="11-seater Maxi Taxi exterior Melbourne" width={700} height={460} class="v-main-img" quality={62} />
             <div class="v-thumbs">
               <Image src={van11b} alt="11-seater Maxi Cab side view premium" width={340} height={220} class="v-thumb" quality={60} />
               <Image src={int1}   alt="11-seater interior seating and luggage planning" width={340} height={220} class="v-thumb" quality={60} />
@@ -93,7 +93,7 @@ import fleet3     from '../assets/van-fleet-3.jpeg';
             <a href="/book?vehicle=13seater" class="btn btn-primary" style="margin-top:1.5rem;" id="book-13">Book 13-Seater</a>
           </div>
           <div class="vehicle-images">
-            <Image src={van13a} alt="13-seater Maxi Taxi exterior large group Victoria" width={700} height={460} class="v-main-img" quality={70} />
+            <Image src={van13a} alt="13-seater Maxi Taxi exterior large group Victoria" width={700} height={460} class="v-main-img" quality={62} />
             <div class="v-thumbs">
               <Image src={van13b} alt="13-seater Maxi Cab exterior rear view" width={340} height={220} class="v-thumb" quality={60} />
               <Image src={int2}   alt="13-seater interior group seating" width={340} height={220} class="v-thumb" quality={60} />

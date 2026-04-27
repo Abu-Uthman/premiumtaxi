@@ -4,12 +4,12 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { Image } from 'astro:assets';
 
-import heroBook  from '../assets/van-exterior-8.jpeg';
+import heroBook  from '../assets/van-exterior-8.webp';
 ---
 
 <Layout 
   title="Book a Maxi Taxi | Melbourne Airport Transfers & Victoria Tours"
-  description="Book your Premium Maxi Taxi online — airport transfers, winery tours, wheelchair-accessible taxis, and corporate transport across Melbourne and Victoria. Available 24/7."
+  description="Book your Premium Maxi Taxi online for airport transfers, winery tours, wheelchair-accessible taxi requests, corporate transport, events, parcels, and regional trips across Melbourne and Victoria."
 >
   <Header />
 
@@ -17,11 +17,11 @@ import heroBook  from '../assets/van-exterior-8.jpeg';
     <!-- Page Hero -->
     <section class="page-hero">
       <div class="page-hero-bg">
-        <Image src={heroBook} alt="Book a Premium Maxi Taxi Melbourne online 24/7 group transport" width={1920} height={600} class="page-hero-img" quality={60} />
+        <Image src={heroBook} alt="Book a Premium Maxi Taxi Melbourne online group transport" width={1440} height={450} class="page-hero-img" quality={55} />
         <div class="page-hero-overlay"></div>
       </div>
       <div class="container page-hero-content">
-        <span class="badge">✦ Available 24/7</span>
+        <span class="badge">Pre-book your ride</span>
         <h1>Book Your <em class="text-gold">Premium Ride</em></h1>
         <p>Fill in your details and our team will confirm your booking promptly. For urgent or immediate bookings, call us directly.</p>
       </div>
@@ -35,7 +35,7 @@ import heroBook  from '../assets/van-exterior-8.jpeg';
         <aside class="booking-sidebar">
           <div class="sidebar-card glass">
             <h3>Contact Directly</h3>
-            <p class="text-muted" style="font-size: 0.9rem; margin-bottom: 1.5rem;">For immediate or 24/7 urgent bookings, call us now:</p>
+            <p class="text-muted" style="font-size: 0.9rem; margin-bottom: 1.5rem;">For immediate or urgent booking requests, call us now:</p>
             <a href="tel:+61432405388" class="btn btn-primary" style="width:100%; text-align:center; display:block;" id="book-call-btn">📞 +61 432 405 388</a>
             <div class="divider-or"><span>or email</span></div>
             <a href="mailto:booking@premiummaxitaxi.com.au" class="sidebar-email">booking@premiummaxitaxi.com.au</a>

@@ -1,5 +1,7 @@
 ---
 import '../styles/global.css';
+import { getImage } from 'astro:assets';
+import ogImageSource from '../assets/hero.webp';
 
 interface Props {
 	title: string;
@@ -17,7 +19,14 @@ const {
 
 const site = Astro.site || new URL('https://premiummaxitaxi.com.au');
 const canonicalUrl = new URL(Astro.url.pathname, site).href;
-const imageUrl = new URL('/hero.jpeg', site).href;
+const optimizedOgImage = await getImage({
+  src: ogImageSource,
+  width: 1200,
+  height: 630,
+  format: 'webp',
+  quality: 55
+});
+const imageUrl = new URL(optimizedOgImage.src, site).href;
 const titleText = title.includes('Premium Maxi Taxi')
   ? title
   : `${title} | Premium Maxi Taxi Victoria`;

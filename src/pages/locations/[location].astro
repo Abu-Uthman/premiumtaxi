@@ -2,8 +2,8 @@
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
-import { Image } from 'astro:assets';
-import heroImg from '../../assets/hero.jpeg';
+import { Image, getImage } from 'astro:assets';
+import heroImg from '../../assets/hero.webp';
 import locationsData from '../../data/locations.js';
 import servicesData from '../../data/services.json';
 import priorityPagesData from '../../data/priorityPages.json';
@@ -22,13 +22,20 @@ const serviceMatches = servicesData.filter((service) =>
 const bestServices = serviceMatches.length ? serviceMatches : servicesData.slice(0, 6);
 const priorityLinks = priorityPagesData.filter((page) => page.locationSlugs.includes(loc.slug)).slice(0, 8);
 const poiText = Array.isArray(loc.poi) ? loc.poi.join(", ") : loc.poi;
+const optimizedLocationSchemaImage = await getImage({
+  src: heroImg,
+  width: 1200,
+  height: 630,
+  format: 'webp',
+  quality: 55
+});
 
 // Schema generation for SEO
 const schema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": `Premium Maxi Taxi ${loc.name}`,
-  "image": new URL('/hero.jpeg', Astro.site || 'https://premiummaxitaxi.com.au').href,
+  "image": new URL(optimizedLocationSchemaImage.src, Astro.site || 'https://premiummaxitaxi.com.au').href,
   "description": loc.shortDescription,
   "address": {
     "@type": "PostalAddress",
@@ -76,7 +83,7 @@ const faqSchema = {
   <main>
     <section class="hero-short">
       <div class="hero-bg">
-        <Image src={heroImg} alt={`Premium Maxi Taxi ${loc.name}`} width={1920} height={600} class="hero-img" loading="eager" quality={70} />
+        <Image src={heroImg} alt={`Premium Maxi Taxi ${loc.name}`} width={1440} height={450} class="hero-img" loading="eager" quality={55} />
          <div class="hero-overlay"></div>
       </div>
       <div class="container hero-content text-center" style="max-width: 800px; margin: 0 auto;">
@@ -109,7 +116,7 @@ const faqSchema = {
           <ul class="feature-list" style="margin-top: 1.5rem; margin-bottom: 2rem;">
              <li><span class="check">✓</span> Maxi cab, standard taxi, SUV and wagon options</li>
              <li><span class="check">✓</span> Airport, cruise, event, medical and school trips</li>
-             <li><span class="check">✓</span> 24/7 pre-booked service in {loc.name}</li>
+             <li><span class="check">✓</span> Pre-booked service planning in {loc.name}</li>
           </ul>
           <a href="/book" class="btn btn-dark">Book Your Transfer</a>
         </div>

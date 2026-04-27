@@ -4,14 +4,14 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { Image } from 'astro:assets';
 
-import fleetMain    from '../assets/van-exterior-3.jpeg';
-import fleet11      from '../assets/van-exterior-1.jpeg';
-import fleet13      from '../assets/van-exterior-2.jpeg';
-import interior1    from '../assets/van-interior-1.jpeg';
-import interior2    from '../assets/van-interior-2.jpeg';
-import corpImg      from '../assets/van-corp-1.jpeg';
-import groupImg     from '../assets/van-group-1.jpeg';
-import airportImg   from '../assets/van-airport-1.jpeg';
+import fleetMain    from '../assets/van-exterior-3.webp';
+import fleet11      from '../assets/van-exterior-1.webp';
+import fleet13      from '../assets/van-exterior-2.webp';
+import interior1    from '../assets/van-interior-1.webp';
+import interior2    from '../assets/van-interior-2.webp';
+import corpImg      from '../assets/van-corp-1.webp';
+import groupImg     from '../assets/van-group-1.webp';
+import airportImg   from '../assets/van-airport-1.webp';
 import servicesData from '../data/services.json';
 
 const serviceSchema = {
@@ -74,7 +74,7 @@ const serviceSchema = {
     <!-- Page Hero -->
     <section class="page-hero">
       <div class="page-hero-bg">
-        <Image src={fleetMain} alt="Premium Maxi Taxi exterior fleet Melbourne Victoria" width={1920} height={700} class="page-hero-img" quality={65} />
+        <Image src={fleetMain} alt="Premium Maxi Taxi exterior fleet Melbourne Victoria" width={1440} height={525} class="page-hero-img" quality={55} />
         <div class="page-hero-overlay"></div>
       </div>
       <div class="container page-hero-content">
@@ -112,7 +112,7 @@ const serviceSchema = {
         <!-- Service 1: Airport -->
         <article class="tour-full-card" id="airport-transfers">
           <div class="tfc-image">
-            <Image src={airportImg} alt="Melbourne airport maxi taxi group transfer Tullamarine Avalon" width={700} height={460} class="tfc-img" quality={70} />
+            <Image src={airportImg} alt="Melbourne airport maxi taxi group transfer Tullamarine Avalon" width={700} height={460} class="tfc-img" quality={62} />
           </div>
           <div class="tfc-content">
             <span class="section-tag">Most Popular</span>
@@ -145,7 +145,7 @@ const serviceSchema = {
             <a href="/book?service=corporate" class="btn btn-primary" id="book-corp">Book Corporate</a>
           </div>
           <div class="tfc-image">
-            <Image src={corpImg} alt="Corporate Maxi Taxi group Melbourne executive transport" width={700} height={460} class="tfc-img" quality={70} />
+            <Image src={corpImg} alt="Corporate Maxi Taxi group Melbourne executive transport" width={700} height={460} class="tfc-img" quality={62} />
           </div>
         </article>
 
@@ -154,7 +154,7 @@ const serviceSchema = {
         <!-- Service 3: Wheelchair -->
         <article class="tour-full-card" id="wheelchair-accessible">
           <div class="tfc-image">
-            <Image src={groupImg} alt="Wheelchair accessible Maxi Taxi Melbourne safe dignified transport" width={700} height={460} class="tfc-img" quality={70} />
+            <Image src={groupImg} alt="Wheelchair accessible Maxi Taxi Melbourne safe dignified transport" width={700} height={460} class="tfc-img" quality={62} />
           </div>
           <div class="tfc-content">
             <span class="section-tag">Accessibility First</span>
@@ -187,7 +187,7 @@ const serviceSchema = {
             <a href="/book?service=group" class="btn btn-primary" id="book-group">Book Group Hire</a>
           </div>
           <div class="tfc-image">
-            <Image src={interior1} alt="Maxi Taxi spacious interior group comfort seating" width={700} height={460} class="tfc-img" quality={70} />
+            <Image src={interior1} alt="Maxi Taxi spacious interior group comfort seating" width={700} height={460} class="tfc-img" quality={62} />
           </div>
         </article>
 

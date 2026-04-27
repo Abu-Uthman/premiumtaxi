@@ -3,7 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import { Image } from 'astro:assets';
-import heroImg from '../../assets/van-exterior-3.jpeg';
+import heroImg from '../../assets/van-exterior-3.webp';
 import servicesData from '../../data/services.json';
 import locationsData from '../../data/locations.js';
 import priorityPagesData from '../../data/priorityPages.json';
@@ -69,7 +69,7 @@ const faqSchema = {
   <main>
     <section class="service-hero">
       <div class="service-hero-bg">
-        <Image src={heroImg} alt={`${service.name} in Melbourne and Victoria`} width={1920} height={700} class="hero-img" loading="eager" quality={65} />
+        <Image src={heroImg} alt={`${service.name} in Melbourne and Victoria`} width={1440} height={525} class="hero-img" loading="eager" quality={55} />
         <div class="hero-overlay"></div>
       </div>
       <div class="container hero-content">

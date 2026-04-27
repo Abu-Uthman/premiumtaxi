@@ -3,8 +3,8 @@ import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import { Image } from 'astro:assets';
-import heroImg from '../../assets/van-exterior-1.jpeg';
-import interiorImg from '../../assets/van-interior-1.jpeg';
+import heroImg from '../../assets/van-exterior-1.webp';
+import interiorImg from '../../assets/van-interior-1.webp';
 import servicesData from '../../data/services.json';
 import locationsData from '../../data/locations.js';
 import priorityPagesData from '../../data/priorityPages.json';
@@ -168,7 +168,7 @@ const faqSchema = {
   <main>
     <section class="priority-hero">
       <div class="priority-hero-bg">
-        <Image src={heroImg} alt={`${page.h1} taxi service Melbourne Victoria`} width={1920} height={760} class="hero-img" loading="eager" quality={68} />
+        <Image src={heroImg} alt={`${page.h1} taxi service Melbourne Victoria`} width={1440} height={570} class="hero-img" loading="eager" quality={55} />
         <div class="hero-overlay"></div>
       </div>
       <div class="container hero-content">
@@ -240,7 +240,7 @@ const faqSchema = {
         </article>
 
         <aside class="booking-panel">
-          <Image src={interiorImg} alt="Clean maxi taxi interior with spacious passenger seating" width={520} height={340} class="panel-img" quality={65} />
+          <Image src={interiorImg} alt="Clean maxi taxi interior with spacious passenger seating" width={520} height={340} class="panel-img" quality={58} />
           <div class="panel-body">
             <h2>Plan the Ride Properly</h2>
             <p>For this page, the most important booking details are: {playbook.bookingFields.join(", ")}. Add pickup, destination, preferred time, and any notes that affect loading or timing.</p>

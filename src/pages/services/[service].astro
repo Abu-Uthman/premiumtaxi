@@ -1,0 +1,419 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { Image } from 'astro:assets';
+import heroImg from '../../assets/van-exterior-3.jpeg';
+import servicesData from '../../data/services.json';
+import locationsData from '../../data/locations.js';
+import priorityPagesData from '../../data/priorityPages.json';
+
+export async function getStaticPaths() {
+  return servicesData.map((service) => ({
+    params: { service: service.slug },
+    props: { service },
+  }));
+}
+
+const { service } = Astro.props;
+const topLocations = locationsData.filter((loc) =>
+  loc.popularTripTypes.some((trip) => service.name.toLowerCase().includes(trip.split(" ")[0]) || service.description.toLowerCase().includes(trip))
+).slice(0, 8);
+const fallbackLocations = topLocations.length ? topLocations : locationsData.slice(0, 8);
+const otherServices = servicesData.filter((item) => item.slug !== service.slug).slice(0, 6);
+const priorityLinks = priorityPagesData.filter((item) => item.primaryServiceSlug === service.slug).slice(0, 8);
+const serviceBenefits = [
+  "Pre-booked pickup times",
+  "Melbourne and outer-suburb coverage",
+  "Passenger, luggage, child-seat and accessibility notes",
+  "Clear booking details before dispatch"
+];
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": service.name,
+  "description": service.description,
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Premium Maxi Taxi Victoria",
+    "url": "https://premiummaxitaxi.com.au/"
+  },
+  "areaServed": [
+    { "@type": "City", "name": "Melbourne" },
+    { "@type": "AdministrativeArea", "name": "Victoria" }
+  ],
+  "serviceType": service.name,
+  "url": new URL(Astro.url.pathname, Astro.site || 'https://premiummaxitaxi.com.au').href
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": service.faq.map((item) => ({
+    "@type": "Question",
+    "name": item.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": item.a
+    }
+  }))
+};
+---
+
+<Layout title={service.title} description={service.description}>
+  <Header />
+  <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <main>
+    <section class="service-hero">
+      <div class="service-hero-bg">
+        <Image src={heroImg} alt={`${service.name} in Melbourne and Victoria`} width={1920} height={700} class="hero-img" loading="eager" quality={65} />
+        <div class="hero-overlay"></div>
+      </div>
+      <div class="container hero-content">
+        <nav class="breadcrumb" aria-label="breadcrumb">
+          <a href="/">Home</a>
+          <span>/</span>
+          <a href="/services">Services</a>
+          <span>/</span>
+          <span>{service.name}</span>
+        </nav>
+        <span class="badge">Melbourne & Victoria</span>
+        <h1>{service.name}</h1>
+        <p>{service.description}</p>
+        <div class="hero-actions">
+          <a href="/book" class="btn btn-primary">Book This Service</a>
+          <a href="/contact" class="btn btn-ghost">Get a Quote</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container service-layout">
+        <article class="service-main">
+          <div class="section-tag">Service Details</div>
+          <h2>Taxi Service Built for Real Melbourne Trips</h2>
+          <p>{service.intro}</p>
+          <p>
+            Premium Maxi Taxi Victoria covers standard taxi requests, maxi cabs, SUV and wagon taxis, silver service rides, wheelchair-accessible transport, baby-seat trips, parcel delivery, schools, events, airports, cruise terminals, outer Melbourne suburbs, and regional Victorian destinations.
+          </p>
+
+          <h3>Best For</h3>
+          <ul class="feature-list">
+            {service.bestFor.map((item) => (
+              <li><span class="check">✓</span>{item}</li>
+            ))}
+          </ul>
+
+          <h3>Why Pre-Book This Taxi Service</h3>
+          <div class="benefit-grid">
+            {serviceBenefits.map((item) => (
+              <div class="benefit-card">
+                <span>✓</span>
+                <strong>{item}</strong>
+              </div>
+            ))}
+          </div>
+
+          <h3>Popular Melbourne Areas</h3>
+          <div class="location-links">
+            {fallbackLocations.map((loc) => (
+              <a href={`/locations/${loc.slug}`}>{loc.name}</a>
+            ))}
+            <a href="/locations">View all service areas</a>
+          </div>
+
+          {priorityLinks.length > 0 && (
+            <>
+              <h3>High-Demand Booking Pages</h3>
+              <div class="location-links">
+                {priorityLinks.map((item) => (
+                  <a href={`/taxi-services/${item.slug}`}>{item.h1}</a>
+                ))}
+              </div>
+            </>
+          )}
+        </article>
+
+        <aside class="service-side">
+          <div class="side-card">
+            <h2>Book by Service</h2>
+            <p>Choose the service, vehicle type, pickup location, destination, passengers, luggage, and any accessibility or child-seat requirements.</p>
+            <a href="/book" class="btn btn-primary">Start Booking</a>
+            <a href="tel:+61432405388" class="side-call">Call +61 432 405 388</a>
+          </div>
+          <div class="side-card">
+            <h2>Related Services</h2>
+            <div class="related-links">
+              {otherServices.map((item) => (
+                <a href={`/services/${item.slug}`}>{item.name}</a>
+              ))}
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section section-light">
+      <div class="container faq-wrap">
+        <div class="section-tag">Questions</div>
+        <h2>Common Questions About {service.name}</h2>
+        {service.faq.map((item) => (
+          <details class="faq-item">
+            <summary>{item.q}</summary>
+            <p>{item.a}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+.service-hero {
+  position: relative;
+  min-height: 560px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.service-hero-bg {
+  position: absolute;
+  inset: 0;
+}
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(100deg, rgba(0,0,0,0.82), rgba(0,0,0,0.45), rgba(0,0,0,0.18));
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+  color: white;
+  max-width: 800px;
+  padding-top: 80px;
+}
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+  font-size: 0.875rem;
+  color: rgba(255,255,255,0.7);
+}
+.breadcrumb a { color: rgba(255,255,255,0.78); }
+.breadcrumb a:hover { color: var(--accent-gold); }
+.badge {
+  display: inline-block;
+  color: var(--accent-gold);
+  border: 1px solid rgba(212,175,55,0.65);
+  background: rgba(212,175,55,0.16);
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-size: 0.8rem;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 18px;
+}
+.hero-content h1 {
+  color: white;
+  font-size: clamp(2.4rem, 5vw, 4.2rem);
+  line-height: 1.08;
+  margin-bottom: 18px;
+}
+.hero-content p {
+  color: rgba(255,255,255,0.84);
+  font-size: 1.1rem;
+  max-width: 680px;
+}
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 32px;
+}
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  font-family: var(--font-heading);
+  font-weight: 500;
+  border-radius: var(--border-radius-sm);
+  color: white;
+  border: 1.5px solid rgba(255,255,255,0.48);
+  background: rgba(255,255,255,0.08);
+}
+.btn-ghost:hover { background: rgba(255,255,255,0.16); }
+.section { padding: 90px 0; }
+.section-light { background: var(--bg-secondary); }
+.service-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 340px;
+  gap: 56px;
+  align-items: start;
+}
+.service-main h2 {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  margin-bottom: 18px;
+}
+.service-main h3 {
+  margin: 34px 0 16px;
+  font-size: 1.3rem;
+}
+.service-main p {
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 18px;
+}
+.section-tag {
+  display: inline-block;
+  color: var(--accent-gold);
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.feature-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+.feature-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 14px 16px;
+  border: 1px solid var(--bg-tertiary);
+  border-radius: var(--border-radius-sm);
+  background: var(--bg-secondary);
+  font-weight: 500;
+}
+.check { color: var(--accent-gold); font-weight: 700; }
+.benefit-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 26px;
+}
+.benefit-card {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 16px;
+  background: #fff;
+  border: 1px solid var(--bg-tertiary);
+  border-radius: var(--border-radius-sm);
+  box-shadow: var(--shadow-sm);
+}
+.benefit-card span {
+  color: var(--accent-gold);
+  font-weight: 800;
+}
+.benefit-card strong {
+  font-size: 0.95rem;
+}
+.location-links,
+.related-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.location-links a,
+.related-links a {
+  display: inline-flex;
+  border: 1px solid var(--bg-tertiary);
+  border-radius: 999px;
+  padding: 8px 13px;
+  font-size: 0.9rem;
+  color: var(--text-main);
+  background: var(--bg-primary);
+}
+.location-links a:hover,
+.related-links a:hover {
+  border-color: var(--accent-gold);
+  color: var(--accent-gold);
+}
+.service-side {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  position: sticky;
+  top: 100px;
+}
+.side-card {
+  padding: 26px;
+  border: 1px solid var(--bg-tertiary);
+  border-radius: var(--border-radius);
+  background: var(--bg-secondary);
+}
+.side-card h2 {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
+.side-card p {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  line-height: 1.65;
+  margin-bottom: 18px;
+}
+.side-call {
+  display: inline-flex;
+  margin-top: 14px;
+  color: var(--accent-gold);
+  font-family: var(--font-heading);
+  font-weight: 600;
+}
+.related-links {
+  flex-direction: column;
+  align-items: stretch;
+}
+.related-links a {
+  border-radius: var(--border-radius-sm);
+}
+.faq-wrap {
+  max-width: 860px;
+}
+.faq-wrap h2 {
+  font-size: clamp(1.75rem, 3vw, 2.4rem);
+  margin-bottom: 26px;
+}
+.faq-item {
+  border: 1px solid var(--bg-tertiary);
+  border-radius: var(--border-radius-sm);
+  background: var(--bg-primary);
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+.faq-item summary {
+  padding: 18px 22px;
+  cursor: pointer;
+  font-family: var(--font-heading);
+  font-weight: 600;
+}
+.faq-item p {
+  padding: 0 22px 20px;
+  color: var(--text-muted);
+}
+@media (max-width: 900px) {
+  .service-layout { grid-template-columns: 1fr; }
+  .service-side { position: static; }
+  .feature-list { grid-template-columns: 1fr; }
+  .benefit-grid { grid-template-columns: 1fr; }
+}
+</style>

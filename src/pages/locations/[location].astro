@@ -1,0 +1,466 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { Image } from 'astro:assets';
+import heroImg from '../../assets/hero.jpeg';
+import locationsData from '../../data/locations.js';
+import servicesData from '../../data/services.json';
+import priorityPagesData from '../../data/priorityPages.json';
+
+export async function getStaticPaths() {
+  return locationsData.map((loc) => ({
+    params: { location: loc.slug },
+    props: { loc },
+  }));
+}
+
+const { loc } = Astro.props;
+const serviceMatches = servicesData.filter((service) =>
+  loc.popularTripTypes.some((trip) => service.name.toLowerCase().includes(trip.split(" ")[0]) || service.description.toLowerCase().includes(trip))
+).slice(0, 6);
+const bestServices = serviceMatches.length ? serviceMatches : servicesData.slice(0, 6);
+const priorityLinks = priorityPagesData.filter((page) => page.locationSlugs.includes(loc.slug)).slice(0, 8);
+const poiText = Array.isArray(loc.poi) ? loc.poi.join(", ") : loc.poi;
+
+// Schema generation for SEO
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": `Premium Maxi Taxi ${loc.name}`,
+  "image": new URL('/hero.jpeg', Astro.site || 'https://premiummaxitaxi.com.au').href,
+  "description": loc.shortDescription,
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": loc.name,
+    "addressRegion": "VIC",
+    "postalCode": loc.postcode,
+    "addressCountry": "AU"
+  },
+  "url": new URL(Astro.url.pathname, Astro.site || 'https://premiummaxitaxi.com.au').href,
+  "serviceArea": {
+    "@type": "GeoCircle",
+    "geoMidpoint": {
+        "@type": "GeoCoordinates",
+        "addressLocality": loc.name,
+        "addressRegion": "VIC"
+    },
+    "geoRadius": "50000"
+  }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": loc.faq.map((f: any) => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": f.a
+    }
+  }))
+};
+---
+
+<Layout 
+  title={`Maxi Taxi ${loc.name} | Premium Airport Transfers & Group Transport`}
+  description={loc.shortDescription}
+>
+  <Header />
+
+  <!-- Inject Schema Data for Google Rich Snippets -->
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <main>
+    <section class="hero-short">
+      <div class="hero-bg">
+        <Image src={heroImg} alt={`Premium Maxi Taxi ${loc.name}`} width={1920} height={600} class="hero-img" loading="eager" quality={70} />
+         <div class="hero-overlay"></div>
+      </div>
+      <div class="container hero-content text-center" style="max-width: 800px; margin: 0 auto;">
+         <span class="badge delay-100">✦ Serving {loc.name} & Surrounds</span>
+          <h1 class="hero-title delay-200">
+            Maxi Taxi <em class="text-gold">{loc.name}</em>
+          </h1>
+          <p class="hero-sub delay-300 mx-auto">
+            {loc.shortDescription}
+          </p>
+          <div class="cta-actions delay-400" style="margin-top:2rem;">
+            <a href="/book" class="btn btn-primary">Book Now</a>
+            <a href="tel:+61432405388" class="btn btn-ghost">📞 Call Us</a>
+          </div>
+      </div>
+    </section>
+
+    <!-- CONTENT -->
+    <section class="section section-light">
+      <div class="container split-section">
+        <div class="split-content reveal">
+          <div class="section-tag">Local Insights</div>
+          <h2 class="section-title">Reliable Group Transport in <em class="text-gold">{loc.name}</em></h2>
+          <p>
+            Whether you're heading to the airport, booking a local taxi, arranging wheelchair transport, moving a family group, or visiting local destinations like <strong>{poiText}</strong>, Premium Maxi Taxi can match the trip to the right taxi type.
+          </p>
+          <p>
+            <strong>Airport transfers from {loc.name}:</strong> {loc.airportRouteNote} Add flight details, luggage, passenger count, child-seat requests, accessibility needs, and pickup notes so the booking is prepared before dispatch.
+          </p>
+          <ul class="feature-list" style="margin-top: 1.5rem; margin-bottom: 2rem;">
+             <li><span class="check">✓</span> Maxi cab, standard taxi, SUV and wagon options</li>
+             <li><span class="check">✓</span> Airport, cruise, event, medical and school trips</li>
+             <li><span class="check">✓</span> 24/7 pre-booked service in {loc.name}</li>
+          </ul>
+          <a href="/book" class="btn btn-dark">Book Your Transfer</a>
+        </div>
+        
+        <div class="faq-list reveal delay-200">
+          <h3 style="margin-bottom: 24px; font-family: var(--font-heading); font-size: 1.5rem;">Frequently Asked Questions</h3>
+          {loc.faq.map((f: any) => (
+            <details class="faq-item">
+              <summary>{f.q}</summary>
+              <p>{f.a}</p>
+            </details>
+          ))}
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container local-grid">
+        <div>
+          <div class="section-tag">Popular Trips</div>
+          <h2 class="section-title">Taxi Bookings People Need in <em class="text-gold">{loc.name}</em></h2>
+          <div class="trip-grid">
+            {loc.popularTripTypes.map((trip) => (
+              <div class="trip-card">
+                <span>●</span>
+                <strong>{trip}</strong>
+                <p>{loc.serviceHighlights.find((highlight) => highlight.toLowerCase().includes(trip.split(" ")[0])) || "Pre-booked taxi transport can be planned around timing, passengers, luggage, and destination."}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+        <aside class="local-panel">
+          <h3>Nearby Suburbs</h3>
+          <div class="pill-links">
+            {loc.nearbySuburbs.map((suburb) => (
+              <span>{suburb}</span>
+            ))}
+          </div>
+          <h3>Transport Corridors</h3>
+          <div class="pill-links">
+            {loc.transportCorridors.map((corridor) => (
+              <span>{corridor}</span>
+            ))}
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section section-light">
+      <div class="container">
+        <div class="section-tag text-center">Best Taxi Options</div>
+        <h2 class="section-title text-center">Choose the Right Service from {loc.name}</h2>
+        <div class="service-card-grid">
+          {bestServices.map((service) => (
+            <a href={`/services/${service.slug}`} class="service-card">
+              <h3>{service.name}</h3>
+              <p>{service.description}</p>
+              <span>View service →</span>
+            </a>
+          ))}
+        </div>
+        {priorityLinks.length > 0 && (
+          <div class="priority-wrap">
+            <h3>High-Intent Pages for {loc.name}</h3>
+            <div class="pill-link-row">
+              {priorityLinks.map((page) => (
+                <a href={`/taxi-services/${page.slug}`}>{page.h1}</a>
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
+    </section>
+
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+/* Scoped styles adapted from index.astro for this dynamic route */
+
+/* ── Hero ───────────────────────── */
+.hero-short {
+  position: relative;
+  height: 60vh;
+  min-height: 400px;
+  max-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(105deg, rgba(0,0,0,0.84) 0%, rgba(0,0,0,0.45) 60%, rgba(0,0,0,0.2) 100%);
+}
+.hero-content {
+  position: relative;
+  z-index: 10;
+  color: white;
+  padding-top: 60px;
+}
+.badge {
+  display: inline-block;
+  background: rgba(212,175,55,0.2);
+  border: 1px solid var(--accent-gold);
+  color: var(--accent-gold);
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 6px 14px;
+  border-radius: 100px;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+.hero-title {
+  color: white;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  letter-spacing: -1px;
+  line-height: 1.1;
+  margin-bottom: 1.25rem;
+  font-style: normal;
+}
+.hero-sub {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-weight: 300;
+  opacity: 0.88;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
+}
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: 1rem;
+  border-radius: var(--border-radius-sm);
+  background: rgba(255,255,255,0.1);
+  border: 1.5px solid rgba(255,255,255,0.5);
+  color: white;
+  transition: var(--transition);
+}
+.btn-ghost:hover {
+  background: rgba(255,255,255,0.2);
+  border-color: white;
+}
+
+/* ── Section Helpers ───────────────── */
+.section {
+    padding: 100px 0;
+}
+.section-light {
+    background: var(--bg-secondary);
+}
+.section-tag {
+  display: inline-block;
+  color: var(--accent-gold);
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.section-title {
+  font-size: clamp(1.75rem, 3vw, 2.6rem);
+  margin-bottom: 1.5rem;
+}
+
+.feature-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.feature-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 500;
+}
+.check {
+  color: var(--accent-gold);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+.local-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 340px;
+  gap: 44px;
+  align-items: start;
+}
+.trip-grid,
+.service-card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+.service-card-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 34px;
+}
+.trip-card,
+.service-card,
+.local-panel {
+  border: 1px solid var(--bg-tertiary);
+  border-radius: var(--border-radius-sm);
+  background: var(--bg-primary);
+  padding: 22px;
+  box-shadow: var(--shadow-sm);
+}
+.trip-card span {
+  color: var(--accent-gold);
+}
+.trip-card strong,
+.service-card h3,
+.local-panel h3 {
+  display: block;
+  font-family: var(--font-heading);
+  margin-bottom: 8px;
+}
+.trip-card p,
+.service-card p {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  line-height: 1.65;
+}
+.service-card {
+  display: block;
+  color: inherit;
+  transition: var(--transition);
+}
+.service-card:hover {
+  border-color: var(--accent-gold);
+  transform: translateY(-4px);
+}
+.service-card span {
+  display: inline-flex;
+  margin-top: 12px;
+  color: var(--accent-gold);
+  font-family: var(--font-heading);
+  font-weight: 600;
+}
+.pill-links,
+.pill-link-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+.pill-links span,
+.pill-link-row a {
+  display: inline-flex;
+  padding: 8px 12px;
+  border: 1px solid var(--bg-tertiary);
+  border-radius: 999px;
+  color: var(--text-main);
+  background: #fff;
+  font-size: 0.88rem;
+}
+.pill-link-row a:hover {
+  color: var(--accent-gold);
+  border-color: var(--accent-gold);
+}
+.priority-wrap {
+  margin-top: 42px;
+}
+.priority-wrap h3 {
+  margin-bottom: 18px;
+}
+
+/* ── Split Sections ───────────────── */
+.split-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+/* ── FAQ Details ──────────────────── */
+.faq-list { display: flex; flex-direction: column; gap: 12px; }
+.faq-item {
+  padding: 0;
+  border-radius: var(--border-radius-sm);
+  border: 1px solid var(--bg-tertiary);
+  background: var(--bg-primary);
+  overflow: hidden;
+  transition: var(--transition);
+}
+.faq-item:hover { border-color: var(--accent-gold); }
+.faq-item summary {
+  padding: 18px 24px;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--text-main);
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: '+';
+  color: var(--accent-gold);
+  font-size: 1.4rem;
+  line-height: 1;
+  transition: transform 0.3s ease;
+}
+.faq-item[open] summary::after { content: '−'; }
+.faq-item p {
+  padding: 0 24px 18px;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* ── Responsive ───────────────────── */
+@media (max-width: 768px) {
+  .split-section { grid-template-columns: 1fr; gap: 40px; }
+  .local-grid,
+  .trip-grid,
+  .service-card-grid { grid-template-columns: 1fr; }
+}
+
+/* Animations */
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+
+</style>

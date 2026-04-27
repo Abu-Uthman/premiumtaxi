@@ -1,0 +1,55 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Page Not Found | Premium Maxi Taxi Victoria" robots="noindex, follow" includeBusinessSchema={false}>
+  <Header />
+
+  <main class="error-page">
+    <div class="container text-center">
+      <h1 class="error-code text-gold">404</h1>
+      <h2 class="error-title">Destination Not Found</h2>
+      <p class="error-message text-muted">
+        It looks like the link you followed is broken or the page has been moved. 
+        Don't worry, we can still get you where you need to go.
+      </p>
+      
+      <div class="error-actions text-center" style="margin-top: 2.5rem;">
+        <a href="/" class="btn btn-primary" style="margin-right: 1rem;">Back to Home</a>
+        <a href="/book" class="btn btn-outline-sm">Book a Taxi</a>
+      </div>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  .error-page {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 0 60px;
+  }
+  .error-code {
+    font-size: clamp(6rem, 15vw, 12rem);
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 1rem;
+    color: var(--accent-gold);
+    text-shadow: 0 10px 30px rgba(212, 175, 55, 0.15);
+  }
+  .error-title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 1.5rem;
+  }
+  .error-message {
+    max-width: 500px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+</style>

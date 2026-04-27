@@ -1,0 +1,224 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { Image } from 'astro:assets';
+
+import heroBook  from '../assets/van-exterior-8.jpeg';
+---
+
+<Layout 
+  title="Book a Maxi Taxi | Melbourne Airport Transfers & Victoria Tours"
+  description="Book your Premium Maxi Taxi online — airport transfers, winery tours, wheelchair-accessible taxis, and corporate transport across Melbourne and Victoria. Available 24/7."
+>
+  <Header />
+
+  <main>
+    <!-- Page Hero -->
+    <section class="page-hero">
+      <div class="page-hero-bg">
+        <Image src={heroBook} alt="Book a Premium Maxi Taxi Melbourne online 24/7 group transport" width={1920} height={600} class="page-hero-img" quality={60} />
+        <div class="page-hero-overlay"></div>
+      </div>
+      <div class="container page-hero-content">
+        <span class="badge">✦ Available 24/7</span>
+        <h1>Book Your <em class="text-gold">Premium Ride</em></h1>
+        <p>Fill in your details and our team will confirm your booking promptly. For urgent or immediate bookings, call us directly.</p>
+      </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section class="section">
+      <div class="container booking-layout">
+
+        <!-- Sidebar Info -->
+        <aside class="booking-sidebar">
+          <div class="sidebar-card glass">
+            <h3>Contact Directly</h3>
+            <p class="text-muted" style="font-size: 0.9rem; margin-bottom: 1.5rem;">For immediate or 24/7 urgent bookings, call us now:</p>
+            <a href="tel:+61432405388" class="btn btn-primary" style="width:100%; text-align:center; display:block;" id="book-call-btn">📞 +61 432 405 388</a>
+            <div class="divider-or"><span>or email</span></div>
+            <a href="mailto:booking@premiummaxitaxi.com.au" class="sidebar-email">booking@premiummaxitaxi.com.au</a>
+          </div>
+
+          <div class="sidebar-card">
+            <h4 style="margin-bottom: 16px;">Why Book With Us?</h4>
+            <ul class="feature-list">
+              <li><span class="check">✓</span> Fixed, transparent pricing</li>
+              <li><span class="check">✓</span> No surge pricing — ever</li>
+              <li><span class="check">✓</span> Flight-tracking for airports</li>
+              <li><span class="check">✓</span> 11 &amp; 13-seater options</li>
+              <li><span class="check">✓</span> Wheelchair accessible vehicles</li>
+              <li><span class="check">✓</span> All of Victoria covered</li>
+            </ul>
+          </div>
+        </aside>
+
+        <!-- Booking Form -->
+        <div class="booking-form-container">
+          <h2 class="form-title">Booking Request</h2>
+          <p class="text-muted" style="margin-bottom: 2rem; font-size: 0.95rem;">Fields marked with <span style="color:var(--accent-gold);">*</span> are required. We aim to confirm within 1 hour.</p>
+
+          <form class="booking-form" action="/api/send-email" method="POST" id="booking-form" data-resend-form>
+            <input type="hidden" name="form_type" value="booking">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Full Name <span class="req">*</span></label>
+                <input type="text" id="name" name="name" required class="form-control" placeholder="e.g. John Smith" />
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number <span class="req">*</span></label>
+                <input type="tel" id="phone" name="phone" required class="form-control" placeholder="e.g. 0400 000 000" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address <span class="req">*</span></label>
+              <input type="email" id="email" name="email" required class="form-control" placeholder="your@email.com" />
+            </div>
+
+            <div class="form-group">
+              <label for="service">Service Type <span class="req">*</span></label>
+              <select id="service" name="service" required class="form-control">
+                <option value="">Select a service...</option>
+                <optgroup label="Airport Transfers">
+                  <option value="airport-mel">Tullamarine Airport Transfer</option>
+                  <option value="airport-ava">Avalon Airport Transfer</option>
+                </optgroup>
+                <optgroup label="Victoria Day Tours">
+                  <option value="tour-gor">Great Ocean Road Tour</option>
+                  <option value="tour-yv">Yarra Valley Wine Tour</option>
+                  <option value="tour-pi">Phillip Island Tour</option>
+                  <option value="tour-custom">Custom Victoria Tour</option>
+                </optgroup>
+                <optgroup label="Group &amp; Corporate">
+                  <option value="corporate">Corporate Group Transfer</option>
+                  <option value="wedding">Wedding Transport</option>
+                  <option value="school-group">School / Sport Group</option>
+                  <option value="point-to-point">Point-to-Point Transfer</option>
+                </optgroup>
+                <optgroup label="Accessibility">
+                  <option value="wheelchair">Wheelchair Accessible Taxi</option>
+                </optgroup>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="date">Date <span class="req">*</span></label>
+                <input type="date" id="date" name="date" required class="form-control" />
+              </div>
+              <div class="form-group">
+                <label for="time">Pickup Time <span class="req">*</span></label>
+                <input type="time" id="time" name="time" required class="form-control" />
+              </div>
+              <div class="form-group">
+                <label for="passengers">Passengers <span class="req">*</span></label>
+                <input type="number" id="passengers" name="passengers" min="1" max="13" required class="form-control" placeholder="1–13" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="pickup">Pickup Address <span class="req">*</span></label>
+              <input type="text" id="pickup" name="pickup" required class="form-control" placeholder="Full address including suburb" />
+            </div>
+
+            <div class="form-group">
+              <label for="dropoff">Drop-off Address / Destination <span class="req">*</span></label>
+              <input type="text" id="dropoff" name="dropoff" required class="form-control" placeholder="Destination or if a tour, leave as 'Return to pickup'" />
+            </div>
+
+            <div class="form-group">
+              <label for="flight">Flight Number (if Airport Transfer)</label>
+              <input type="text" id="flight" name="flight" class="form-control" placeholder="e.g. VA1234 — we track it for you" />
+            </div>
+
+            <div class="form-group">
+              <label for="wheelchair">Wheelchair / Accessibility Needs</label>
+              <select id="wheelchair" name="wheelchair" class="form-control">
+                <option value="none">None required</option>
+                <option value="manual">Manual wheelchair</option>
+                <option value="electric">Electric/power chair</option>
+                <option value="scooter">Mobility scooter</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Additional Notes or Special Requirements</label>
+              <textarea id="message" name="message" rows="4" class="form-control" placeholder="Luggage details, child seats, specific stops, etc."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-submit" id="submit-booking">
+              Submit Booking Request →
+            </button>
+            <p class="form-status" data-form-status aria-live="polite"></p>
+            <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 12px; text-align: center;">We'll confirm within 1 hour during business hours. For urgent bookings, please call.</p>
+          </form>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+.page-hero { position: relative; height: 55vh; min-height: 380px; display: flex; align-items: center; overflow: hidden; }
+.page-hero-bg { position: absolute; inset: 0; z-index: 0; }
+.page-hero-img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.page-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to right, rgba(0,0,0,0.80) 0%, rgba(0,0,0,0.3) 80%); }
+.page-hero-content { position: relative; z-index: 10; color: white; padding-top: 80px; max-width: 700px; }
+.page-hero-content .badge { display: inline-block; background: rgba(212,175,55,0.2); border: 1px solid var(--accent-gold); color: var(--accent-gold); font-family: var(--font-heading); font-size: 0.8rem; font-weight: 600; letter-spacing: 1px; padding: 6px 14px; border-radius: 100px; margin-bottom: 1rem; text-transform: uppercase; }
+.page-hero-content h1 { color: white; font-size: clamp(2rem, 4.5vw, 3.2rem); line-height: 1.15; margin-bottom: 1rem; }
+.page-hero-content p { color: rgba(255,255,255,0.8); font-size: 1.05rem; }
+
+/* Layout */
+.booking-layout { display: grid; grid-template-columns: 320px 1fr; gap: 48px; align-items: start; }
+
+/* Sidebar */
+.booking-sidebar { display: flex; flex-direction: column; gap: 24px; position: sticky; top: 100px; }
+.sidebar-card { padding: 28px; border-radius: var(--border-radius); background: var(--bg-secondary); border: 1px solid var(--bg-tertiary); }
+.sidebar-card h3 { font-size: 1.2rem; margin-bottom: 8px; }
+.sidebar-card h4 { font-size: 1rem; }
+.divider-or { display: flex; align-items: center; gap: 12px; margin: 16px 0; color: var(--text-muted); font-size: 0.875rem; }
+.divider-or::before, .divider-or::after { content: ''; flex: 1; height: 1px; background: var(--bg-tertiary); }
+.sidebar-email { display: block; font-size: 0.875rem; color: var(--accent-gold); word-break: break-all; font-weight: 500; }
+.sidebar-email:hover { text-decoration: underline; }
+.feature-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.feature-list li { display: flex; align-items: center; gap: 10px; font-weight: 500; font-size: 0.9rem; }
+.check { color: var(--accent-gold); font-weight: 700; }
+
+/* Form */
+.booking-form-container { background: var(--bg-primary); border: 1px solid var(--bg-tertiary); border-radius: var(--border-radius); padding: 48px; }
+.form-title { font-size: 1.75rem; margin-bottom: 0.5rem; }
+.form-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.form-group { margin-bottom: 22px; }
+label { display: block; margin-bottom: 8px; font-size: 0.875rem; font-weight: 600; color: var(--text-main); }
+.req { color: var(--accent-gold); }
+.form-control { width: 100%; padding: 12px 16px; border: 1.5px solid var(--bg-tertiary); border-radius: var(--border-radius-sm); font-family: var(--font-body); font-size: 0.95rem; color: var(--text-main); background-color: var(--bg-secondary); transition: var(--transition); }
+.form-control:focus { outline: none; border-color: var(--accent-gold); background-color: var(--bg-primary); box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1); }
+textarea.form-control { resize: vertical; min-height: 120px; }
+.btn-submit { width: 100%; padding: 16px; font-size: 1.05rem; margin-top: 8px; }
+.btn-submit:disabled { opacity: 0.68; cursor: wait; }
+.form-status {
+  min-height: 22px;
+  margin-top: 14px;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.form-status[data-tone="success"] { color: #1b7f43; }
+.form-status[data-tone="error"] { color: #b42318; }
+.form-status[data-tone="neutral"] { color: var(--text-muted); }
+
+@media (max-width: 1024px) {
+  .booking-layout { grid-template-columns: 1fr; }
+  .booking-sidebar { position: static; }
+  .form-row { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+  .booking-form-container { padding: 28px 20px; }
+  .form-row { grid-template-columns: 1fr; }
+}
+</style>

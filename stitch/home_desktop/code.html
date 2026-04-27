@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Maxi Taxi Melbourne | Premium Urban Transport</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-container": "#b4b5b7",
+                        "on-secondary-fixed-variant": "#454749",
+                        "on-secondary": "#2f3133",
+                        "on-primary-fixed": "#221b00",
+                        "secondary": "#c6c6c9",
+                        "surface-container": "#1e2022",
+                        "on-tertiary-fixed-variant": "#45474a",
+                        "outline-variant": "#4d4732",
+                        "surface-bright": "#38393c",
+                        "surface-variant": "#333537",
+                        "inverse-on-surface": "#2f3133",
+                        "on-primary-container": "#705e00",
+                        "surface-container-low": "#1a1c1e",
+                        "surface-container-lowest": "#0c0e10",
+                        "surface-dim": "#121416",
+                        "on-primary": "#3a3000",
+                        "on-background": "#e2e2e5",
+                        "secondary-fixed-dim": "#c6c6c9",
+                        "secondary-container": "#454749",
+                        "tertiary": "#f6f5f9",
+                        "primary-fixed-dim": "#e9c400",
+                        "error-container": "#93000a",
+                        "surface": "#121416",
+                        "on-tertiary-container": "#5d5f62",
+                        "on-surface": "#e2e2e5",
+                        "error": "#ffb4ab",
+                        "primary": "#fff6df",
+                        "outline": "#999077",
+                        "on-error-container": "#ffdad6",
+                        "on-primary-fixed-variant": "#544600",
+                        "on-secondary-fixed": "#1a1c1e",
+                        "background": "#121416",
+                        "primary-container": "#ffd700",
+                        "on-tertiary": "#2f3034",
+                        "on-error": "#690005",
+                        "primary-fixed": "#ffe16d",
+                        "on-surface-variant": "#d0c6ab",
+                        "inverse-primary": "#705d00",
+                        "surface-tint": "#e9c400",
+                        "tertiary-fixed-dim": "#c6c6ca",
+                        "on-tertiary-fixed": "#1a1c1f",
+                        "tertiary-fixed": "#e2e2e6",
+                        "tertiary-container": "#d9d9dd",
+                        "surface-container-highest": "#333537",
+                        "surface-container-high": "#282a2c",
+                        "secondary-fixed": "#e2e2e5",
+                        "inverse-surface": "#e2e2e5"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Manrope', sans-serif;
+            background-color: #121416;
+            color: #e2e2e5;
+        }
+        h1, h2, h3, .nav-item {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .kinetic-midnight-gradient {
+            background: linear-gradient(180deg, rgba(18, 20, 22, 0) 0%, rgba(18, 20, 22, 1) 100%);
+        }
+        .cta-gradient {
+            background: linear-gradient(135deg, #ffd700 0%, #e9c400 100%);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-container selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#121416]/60 backdrop-blur-xl shadow-[0_0_32px_rgba(226,226,229,0.06)]">
+<div class="flex justify-between items-center px-8 h-20 w-full max-w-none">
+<div class="text-2xl font-bold tracking-tighter text-[#ffd700]">Maxi Taxi Melbourne</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-['Space_Grotesk'] uppercase tracking-wider text-sm font-bold text-[#ffd700] border-b-2 border-[#ffd700] pb-1" href="#">Home</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-wider text-sm font-bold text-[#e2e2e5] hover:text-[#ffd700] transition-colors" href="#">Services</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-wider text-sm font-bold text-[#e2e2e5] hover:text-[#ffd700] transition-colors" href="#">Fleet</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-wider text-sm font-bold text-[#e2e2e5] hover:text-[#ffd700] transition-colors" href="#">Pricing</a>
+</div>
+<button class="bg-primary-container text-on-primary-fixed px-6 py-2.5 font-['Space_Grotesk'] font-bold uppercase text-xs tracking-widest rounded-md hover:scale-105 active:scale-95 transition-all duration-300">
+                Book Now
+            </button>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Melbourne Cityscape at night" class="w-full h-full object-cover opacity-60" data-alt="Cinematic wide shot of Melbourne CBD skyline at night with neon lights reflecting on the Yarra River, featuring architectural silhouettes and a deep moody blue atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAx8ZfmhGG1SnPKahRbgVaYeieHYAMtaym_jiZt_T8cNZGeegUeZj6K80o2YHGPcyFiexRiZPRmDrggv5_2xpDh68r04qSxoLezC8TbIqjaJElWPsQpcnZ_z8oedmCiIIhMFRL63VJtuHdSXEsaWCg_JBzgGMloNE69ZBTeUPfwxk50ams0oHw9Mt91--dZg7KId1i4PTK-yYgHE2qpq101msEYjvWHZtppAVrFIpGSRvg_U81zuk5n5rK_C_na5bNJnS9SYeNrjI4"/>
+<div class="absolute inset-0 kinetic-midnight-gradient"></div>
+</div>
+<div class="relative z-10 w-full max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="space-y-8">
+<div class="inline-flex items-center gap-3 px-4 py-2 bg-surface-container-high/40 backdrop-blur-md rounded-full border border-outline-variant/15">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+<span class="text-xs font-bold uppercase tracking-[0.2em] text-on-surface-variant">Premium Urban Fleet</span>
+</div>
+<h1 class="text-6xl md:text-8xl font-bold tracking-tighter leading-[0.9] text-on-surface">
+                    Kinetic <br/> <span class="text-primary-container">Midnight.</span>
+</h1>
+<p class="text-lg md:text-xl text-on-surface-variant max-w-md font-light leading-relaxed">
+                    Experience Melbourne's elite transport service. Seamless elegance for the urban navigator, delivered with nocturnal precision.
+                </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<button class="cta-gradient text-on-primary-fixed px-10 py-4 font-headline font-bold uppercase text-sm tracking-widest rounded-md shadow-2xl hover:brightness-110 transition-all">
+                        Book Your Premium Ride
+                    </button>
+<button class="bg-surface-container-high text-on-surface px-10 py-4 font-headline font-bold uppercase text-sm tracking-widest rounded-md hover:bg-surface-bright transition-all">
+                        Explore Fleet
+                    </button>
+</div>
+</div>
+<div class="relative hidden lg:block">
+<img alt="Premium Van" class="w-full h-auto rounded-xl shadow-2xl transform translate-x-12" data-alt="Luxury black Mercedes V-Class van parked on a dark cobblestone street in Melbourne, sharp highlights on the metallic paint, dramatic street lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuACyTdOvGDE6TTL-K300eaTlKJdUDFo6Q3HaHSmowhMo-PqWRG9veRCRh0rhrs8nl7LClaRBZPCwgGvw2zZBSLtLLpynj68L1sN5oz_sz_l8KB5dCOxb6oLg-s9R9vIv92iem4wKzA97uyEricWqB6Zfdplczgwr1eqx6igrVeiRTsKx2IdaWOYQRihmW9FKZyRa0MV0nNB0h1bna3ba5QLD9Y050RQbTZjk-3rzGW8GcsRLlWW2SukkUuXTwfIHvqAIAjzY8UksIs"/>
+</div>
+</div>
+</section>
+<!-- Quick Booking Bento Section -->
+<section class="py-24 bg-surface px-8">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Booking Form Card -->
+<div class="md:col-span-8 bg-surface-container-low p-10 rounded-xl relative overflow-hidden">
+<div class="relative z-10">
+<h2 class="text-3xl font-bold mb-8 font-headline tracking-tight uppercase">Quick Booking</h2>
+<form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Pickup Location</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-primary-container">location_on</span>
+<input class="w-full bg-surface-container-lowest border-none rounded-md py-4 pl-12 pr-4 focus:ring-2 focus:ring-primary-container/20 text-on-surface placeholder:text-on-surface-variant/40" placeholder="Enter suburb or hotel" type="text"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Destination</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-primary-container">near_me</span>
+<input class="w-full bg-surface-container-lowest border-none rounded-md py-4 pl-12 pr-4 focus:ring-2 focus:ring-primary-container/20 text-on-surface placeholder:text-on-surface-variant/40" placeholder="Where to?" type="text"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Date &amp; Time</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-primary-container">schedule</span>
+<input class="w-full bg-surface-container-lowest border-none rounded-md py-4 pl-12 pr-4 focus:ring-2 focus:ring-primary-container/20 text-on-surface" type="datetime-local"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Passengers</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-primary-container">groups</span>
+<select class="w-full bg-surface-container-lowest border-none rounded-md py-4 pl-12 pr-4 focus:ring-2 focus:ring-primary-container/20 text-on-surface appearance-none">
+<option>1-4 Passengers</option>
+<option>5-7 Passengers</option>
+<option>8-11 Passengers</option>
+</select>
+</div>
+</div>
+<div class="md:col-span-2 pt-4">
+<button class="w-full py-5 cta-gradient text-on-primary-fixed font-headline font-bold uppercase tracking-[0.2em] rounded-md shadow-xl hover:scale-[1.01] transition-transform">
+                                    Calculate Fare &amp; Book
+                                </button>
+</div>
+</form>
+</div>
+</div>
+<!-- Info Card -->
+<div class="md:col-span-4 bg-surface-container-high p-10 rounded-xl flex flex-col justify-between border border-outline-variant/5">
+<div>
+<div class="text-primary-container mb-6">
+<span class="material-symbols-outlined text-5xl" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+</div>
+<h3 class="text-2xl font-bold mb-4 font-headline uppercase tracking-tight">Fixed Price Guarantee</h3>
+<p class="text-on-surface-variant font-light leading-relaxed">No surge pricing, no hidden meters. The price you see during booking is the final price you pay, guaranteed.</p>
+</div>
+<div class="pt-10 border-t border-outline-variant/10">
+<div class="flex items-center gap-4">
+<div class="flex -space-x-3">
+<div class="w-10 h-10 rounded-full border-2 border-surface bg-surface-container-highest flex items-center justify-center text-[10px] font-bold">MT</div>
+<div class="w-10 h-10 rounded-full border-2 border-surface bg-surface-container-highest flex items-center justify-center text-[10px] font-bold">MT</div>
+<div class="w-10 h-10 rounded-full border-2 border-surface bg-surface-container-highest flex items-center justify-center text-[10px] font-bold">+5k</div>
+</div>
+<span class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Trusted by Melburnians</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Choose Us: Tonal Carving -->
+<section class="py-24 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-8">
+<div class="mb-16">
+<h2 class="text-4xl md:text-5xl font-bold font-headline tracking-tighter uppercase leading-none">Why Choose <br/><span class="text-primary-container">The Maxi Elite.</span></h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<div class="group">
+<div class="w-16 h-1 bg-primary-container mb-8 group-hover:w-full transition-all duration-500"></div>
+<h3 class="text-xl font-bold mb-4 font-headline uppercase tracking-wider">Punctuality First</h3>
+<p class="text-on-surface-variant leading-relaxed">We monitor real-time traffic and flight schedules to ensure our drivers are waiting for you, not the other way around.</p>
+</div>
+<div class="group">
+<div class="w-16 h-1 bg-primary-container mb-8 group-hover:w-full transition-all duration-500"></div>
+<h3 class="text-xl font-bold mb-4 font-headline uppercase tracking-wider">Melbourne Experts</h3>
+<p class="text-on-surface-variant leading-relaxed">Our chauffeurs possess an intimate knowledge of Melbourne's unique grid and hidden laneways for the fastest routes.</p>
+</div>
+<div class="group">
+<div class="w-16 h-1 bg-primary-container mb-8 group-hover:w-full transition-all duration-500"></div>
+<h3 class="text-xl font-bold mb-4 font-headline uppercase tracking-wider">Unrivaled Comfort</h3>
+<p class="text-on-surface-variant leading-relaxed">Every vehicle in our fleet is maintained to the highest standards, featuring leather interiors and climate control.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Our Fleet: Asymmetric Layout -->
+<section class="py-24 bg-surface">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<h2 class="text-4xl md:text-6xl font-bold font-headline tracking-tighter uppercase">The Urban <br/>Fleet.</h2>
+<p class="text-on-surface-variant max-w-sm font-light text-right">A curated selection of high-capacity luxury vehicles tailored for groups, families, and corporate transfers.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<!-- Vehicle Card 1 -->
+<div class="bg-surface-container-high rounded-xl p-8 flex flex-col md:flex-row gap-8 items-center border border-outline-variant/5 hover:bg-surface-bright transition-colors group">
+<div class="flex-1 space-y-6">
+<div>
+<span class="text-primary-container text-xs font-bold uppercase tracking-[0.2em] mb-2 block">The Workhorse</span>
+<h3 class="text-3xl font-bold font-headline tracking-tight">MERCEDES SPRINTER</h3>
+</div>
+<ul class="space-y-2 text-sm text-on-surface-variant">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary-container text-sm">groups</span> 11 Passengers</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary-container text-sm">luggage</span> 12 Large Bags</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary-container text-sm">wifi</span> Onboard Connectivity</li>
+</ul>
+<button class="text-primary-container font-headline font-bold uppercase text-xs tracking-widest flex items-center gap-2 group-hover:translate-x-2 transition-transform">
+                            Details <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<div class="flex-1 -mr-16 transform group-hover:scale-105 transition-transform duration-500">
+<img alt="Mercedes Sprinter" class="w-full drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)]" data-alt="Side profile of a premium black Mercedes-Benz Sprinter van with tinted windows and polished chrome wheels, isolated against a dark urban background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcNINgISQt2SsO5Y4AdXfnTjzs-S5ZJpMyXh8Vj_nQ607wYbwprKdzVsptavSPs7O5ym43ZueTIi0jNV8dH_xtyR07-h1WWtJB8bX0AhxlP-xA0pB-vUhX2S0DCC1uC-IGd28N21CnN_iLigw_dilzuYl29QFoogzgJwjHl4boKCkgzqoV6j4m0snP1I5er18ryjT6KXOYLy9_CBTqUjLQt2JSF-Vxc5egU_lcBWqmXQr8pzq2tF-OCJyy1MkKp3ltfqfCvS38334"/>
+</div>
+</div>
+<!-- Vehicle Card 2 -->
+<div class="bg-surface-container-high rounded-xl p-8 flex flex-col md:flex-row gap-8 items-center border border-outline-variant/5 hover:bg-surface-bright transition-colors group">
+<div class="flex-1 space-y-6">
+<div>
+<span class="text-primary-container text-xs font-bold uppercase tracking-[0.2em] mb-2 block">Luxury Executive</span>
+<h3 class="text-3xl font-bold font-headline tracking-tight">LUXURY V-CLASS</h3>
+</div>
+<ul class="space-y-2 text-sm text-on-surface-variant">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary-container text-sm">groups</span> 7 Passengers</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary-container text-sm">luggage</span> 6 Large Bags</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary-container text-sm">chair</span> Captain Seating</li>
+</ul>
+<button class="text-primary-container font-headline font-bold uppercase text-xs tracking-widest flex items-center gap-2 group-hover:translate-x-2 transition-transform">
+                            Details <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<div class="flex-1 -mr-16 transform group-hover:scale-105 transition-transform duration-500">
+<img alt="Mercedes V-Class" class="w-full drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)]" data-alt="Modern high-end black Mercedes V-Class people mover, focusing on the sleek headlights and iconic front grille at twilight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmz9mB6Wnf2cs3plBEnkZmr0PZydU9-uFNXLjabv4LfO2t9GPbXZr4-hHhhlbkODvr0t_bGh8afxHgVvS6vMNIF5nk29t50cLyK6alGZWu5MqnAOVZOKoWpgAShvb2V4OmXY67Xy3M1_YOhb3Eg2WFBJdzidYeXR9IrPrhjxgZidMDwCSmY_7bPmfxbBYPNBjpCwvmMp06GGvdKUvQy_FjAAdpJlPl8HsDSflFbtkzhtE-SF2Hrupwvee2ZDQFCGB7RlRE0U2XQGY"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-[#1a1c1e] w-full py-12 px-8 border-t border-[#4d4732]/15">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 w-full max-w-7xl mx-auto">
+<div class="md:col-span-1">
+<div class="text-lg font-bold text-[#ffd700] mb-4">Maxi Taxi Melbourne</div>
+<p class="font-['Manrope'] text-xs tracking-normal text-[#e2e2e5]/60 leading-relaxed mb-6">
+                    Providing Melbourne's most reliable and luxurious high-capacity transport solutions since 2012. Professionalism at every turn.
+                </p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-[#ffd700] opacity-80 hover:opacity-100 cursor-pointer">share</span>
+<span class="material-symbols-outlined text-[#ffd700] opacity-80 hover:opacity-100 cursor-pointer">mail</span>
+</div>
+</div>
+<div>
+<h4 class="font-['Space_Grotesk'] text-sm font-bold uppercase tracking-widest text-[#ffd700] mb-6">Quick Links</h4>
+<ul class="space-y-3">
+<li><a class="font-['Manrope'] text-xs text-[#e2e2e5]/60 hover:text-[#ffd700] transition-colors duration-200" href="#">About Our Service</a></li>
+<li><a class="font-['Manrope'] text-xs text-[#e2e2e5]/60 hover:text-[#ffd700] transition-colors duration-200" href="#">Airport Transfers</a></li>
+<li><a class="font-['Manrope'] text-xs text-[#e2e2e5]/60 hover:text-[#ffd700] transition-colors duration-200" href="#">Corporate Travel</a></li>
+<li><a class="font-['Manrope'] text-xs text-[#e2e2e5]/60 hover:text-[#ffd700] transition-colors duration-200" href="#">Special Events</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-['Space_Grotesk'] text-sm font-bold uppercase tracking-widest text-[#ffd700] mb-6">Support</h4>
+<ul class="space-y-3">
+<li><a class="font-['Manrope'] text-xs text-[#e2e2e5]/60 hover:text-[#ffd700] transition-colors duration-200" href="#">Contact Us</a></li>
+<li><a class="font-['Manrope'] text-xs text-[#e2e2e5]/60 hover:text-[#ffd700] transition-colors duration-200" href="#">Privacy Policy</a></li>
+<li><a class="font-['Manrope'] text-xs text-[#e2e2e5]/60 hover:text-[#ffd700] transition-colors duration-200" href="#">Terms of Service</a></li>
+<li><a class="font-['Manrope'] text-xs text-[#e2e2e5]/60 hover:text-[#ffd700] transition-colors duration-200" href="#">Drivers Portal</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-['Space_Grotesk'] text-sm font-bold uppercase tracking-widest text-[#ffd700] mb-6">Location</h4>
+<p class="font-['Manrope'] text-xs text-[#e2e2e5]/60 leading-relaxed">
+                    Headquarters:<br/>
+                    Level 12, 120 Collins Street<br/>
+                    Melbourne VIC 3000
+                </p>
+<div class="mt-4 flex items-center gap-2 text-[#ffd700]">
+<span class="material-symbols-outlined text-sm">phone</span>
+<span class="font-['Space_Grotesk'] text-sm font-bold">1300 MAXI MELB</span>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto mt-12 pt-8 border-t border-[#4d4732]/10 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-['Manrope'] text-xs tracking-normal text-[#e2e2e5]/40 uppercase tracking-[0.2em]">© 2024 Maxi Taxi Melbourne. Premium Urban Transport.</p>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-lg opacity-40">payments</span>
+<span class="material-symbols-outlined text-lg opacity-40">contactless</span>
+<span class="material-symbols-outlined text-lg opacity-40">credit_card</span>
+</div>
+</div>
+</footer>
+</body></html>

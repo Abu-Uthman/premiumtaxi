@@ -1,0 +1,218 @@
+[
+  {
+    "slug": "maxi-cab-melbourne",
+    "name": "Maxi Cab Melbourne",
+    "title": "Maxi Cab Melbourne | 7, 11 & 13 Seater Taxi Booking",
+    "description": "Book a maxi cab in Melbourne for group travel, luggage, events, appointments, airport runs, and outer-suburb trips. 7, 11 and 13-seater options available.",
+    "intro": "A maxi cab is the right choice when a standard taxi is too small. It keeps passengers, luggage, mobility equipment, shopping, sports gear, and event groups together in one vehicle.",
+    "bestFor": ["Family and group travel", "Large luggage", "Events and nights out", "Outer Melbourne pickups", "Airport and cruise transfers"],
+    "faq": [
+      {
+        "q": "How many passengers can a maxi cab take in Melbourne?",
+        "a": "Depending on the vehicle selected, maxi cab bookings can suit small groups through to larger 11 and 13-seater requirements."
+      },
+      {
+        "q": "Can I pre-book a maxi cab for later?",
+        "a": "Yes. Pre-booking is recommended for early mornings, events, airport runs, wheelchair-accessible trips, and outer-suburb pickups."
+      }
+    ]
+  },
+  {
+    "slug": "group-transfers-melbourne",
+    "name": "Group Transfers Melbourne",
+    "title": "Group Transfers Melbourne | Maxi Taxi for Events, Families & Teams",
+    "description": "Melbourne group transport for families, sports teams, corporate groups, weddings, nights out, school events, and outer-suburb travel.",
+    "intro": "Group transfers are built around keeping everyone together. Instead of splitting between multiple cars, one planned taxi or maxi cab can handle the pickup, route, stops, and luggage.",
+    "bestFor": ["Sports teams", "Family outings", "Corporate teams", "Concerts and events", "Multi-stop trips"],
+    "faq": [
+      {
+        "q": "Can group transfers include more than one pickup?",
+        "a": "Yes. Multi-stop group transfers can be arranged when the pickup plan is provided during booking."
+      },
+      {
+        "q": "Do group transfers only cover Melbourne CBD?",
+        "a": "No. Group taxi bookings can cover inner Melbourne, outer suburbs, airport corridors, and regional Victorian destinations by arrangement."
+      }
+    ]
+  },
+  {
+    "slug": "wheelchair-accessible-taxi-melbourne",
+    "name": "Wheelchair Accessible Taxi Melbourne",
+    "title": "Wheelchair Accessible Taxi Melbourne | Maxi Taxi Transport",
+    "description": "Wheelchair-accessible taxi bookings across Melbourne and Victoria for appointments, airport transfers, family travel, events, and daily transport.",
+    "intro": "Accessible transport needs to be planned properly. Wheelchair-accessible taxi bookings should account for boarding time, restraint requirements, carers, luggage, appointment timing, and accessible pickup points.",
+    "bestFor": ["Wheelchair users", "Medical appointments", "Airport transfers", "NDIS and community travel", "Family outings"],
+    "faq": [
+      {
+        "q": "Should I mention wheelchair requirements when booking?",
+        "a": "Yes. Wheelchair, mobility scooter, carer, and equipment details should be included so the correct vehicle can be allocated."
+      },
+      {
+        "q": "Can wheelchair-accessible taxis travel outside Melbourne?",
+        "a": "Yes. Longer wheelchair-accessible trips around Victoria can be arranged when booked in advance."
+      }
+    ]
+  },
+  {
+    "slug": "baby-seat-taxi-melbourne",
+    "name": "Baby Seat Taxi Melbourne",
+    "title": "Baby Seat Taxi Melbourne | Family Taxi & Maxi Cab Booking",
+    "description": "Book a Melbourne taxi with baby seat options for family travel, airport transfers, appointments, school runs, and day trips.",
+    "intro": "Family taxi bookings need the right vehicle and the right child-seat request upfront. This service targets parents and carers who need more certainty than a random taxi or rideshare vehicle.",
+    "bestFor": ["Families with children", "Airport transfers", "School and childcare pickups", "Holiday travel", "Outer-suburb family trips"],
+    "faq": [
+      {
+        "q": "Do I need to request baby seats before pickup?",
+        "a": "Yes. Baby seat and booster requirements should be requested during booking so the correct setup can be confirmed."
+      },
+      {
+        "q": "Can baby seat taxi bookings include luggage?",
+        "a": "Yes. A maxi cab or larger vehicle is often the better option when travelling with children, prams, and suitcases."
+      }
+    ]
+  },
+  {
+    "slug": "corporate-transfers-melbourne",
+    "name": "Corporate Transfers Melbourne",
+    "title": "Corporate Transfers Melbourne | Business Taxi & Group Transport",
+    "description": "Corporate taxi and group transfer bookings for meetings, conferences, airport pickups, client transport, staff travel, and business events.",
+    "intro": "Corporate transport has to be punctual, clean, and easy to coordinate. A planned taxi or maxi cab booking helps teams arrive together and keeps travel simple for clients and staff.",
+    "bestFor": ["Meetings", "Conferences", "Client pickups", "Airport transfers", "Staff movements"],
+    "faq": [
+      {
+        "q": "Can corporate transfers be booked for teams?",
+        "a": "Yes. Maxi taxi bookings are suitable for groups attending meetings, events, conferences, and airport transfers."
+      },
+      {
+        "q": "Can you handle early morning business pickups?",
+        "a": "Yes. Early pickups should be pre-booked so timing, vehicle type, and contact details are confirmed."
+      }
+    ]
+  },
+  {
+    "slug": "wedding-event-transfers-melbourne",
+    "name": "Wedding & Event Transfers Melbourne",
+    "title": "Wedding & Event Transfers Melbourne | Maxi Taxi Group Transport",
+    "description": "Wedding, party, concert, sports, race day, and event transport across Melbourne and Victoria with taxi and maxi cab options.",
+    "intro": "Events create transport pressure: late finishes, multiple guests, formal clothes, luggage, venues, and traffic. Pre-booked event taxis and maxi cabs reduce the chance of guests being split up or stranded.",
+    "bestFor": ["Weddings", "Race days", "Concerts", "Sporting events", "Parties and functions"],
+    "faq": [
+      {
+        "q": "Can event transfers include late-night return trips?",
+        "a": "Yes. Return transfers should be booked in advance, especially for late-night venues and outer-suburb drop-offs."
+      },
+      {
+        "q": "Are maxi taxis suitable for wedding guests?",
+        "a": "Yes. Maxi taxis are useful for moving guest groups between hotels, ceremony locations, reception venues, and homes."
+      }
+    ]
+  },
+  {
+    "slug": "cruise-transfer-melbourne",
+    "name": "Cruise Transfers Melbourne",
+    "title": "Cruise Transfers Melbourne | Taxi to Station Pier & Ports",
+    "description": "Taxi and maxi cab cruise transfers for Station Pier, Melbourne hotels, airports, homes, and group luggage movements.",
+    "intro": "Cruise passengers often travel with more luggage than a standard taxi can comfortably handle. A planned maxi cab transfer can connect homes, hotels, airports, and cruise terminals in one trip.",
+    "bestFor": ["Station Pier transfers", "Cruise luggage", "Hotel pickups", "Airport to cruise connections", "Family groups"],
+    "faq": [
+      {
+        "q": "Can a maxi cab handle cruise luggage?",
+        "a": "Yes. Larger taxi vehicles are commonly used for cruise transfers because they provide more passenger and luggage space."
+      },
+      {
+        "q": "Can you pick up from a hotel before the cruise terminal?",
+        "a": "Yes. Hotel, home, airport, and cruise terminal pickups can be planned during booking."
+      }
+    ]
+  },
+  {
+    "slug": "parcel-delivery-taxi-melbourne",
+    "name": "Parcel Delivery Taxi Melbourne",
+    "title": "Parcel Delivery Taxi Melbourne | Urgent Courier Taxi Service",
+    "description": "Melbourne parcel delivery by taxi for urgent packages, documents, luggage, equipment, and same-day point-to-point deliveries.",
+    "intro": "Taxi parcel delivery is useful when something needs to move directly from pickup to destination without waiting for a standard courier run.",
+    "bestFor": ["Urgent documents", "Small parcels", "Forgotten luggage", "Business deliveries", "Point-to-point courier jobs"],
+    "faq": [
+      {
+        "q": "Can taxis deliver parcels without passengers?",
+        "a": "Yes. Parcel-only taxi delivery can be arranged when pickup and delivery details are clear."
+      },
+      {
+        "q": "What information is needed for parcel delivery?",
+        "a": "Pickup contact, delivery contact, item size, destination, urgency, and handling notes should be provided when booking."
+      }
+    ]
+  },
+  {
+    "slug": "school-runs-student-transport-melbourne",
+    "name": "School Runs & Student Transport Melbourne",
+    "title": "School Runs & Student Transport Melbourne | Taxi & Maxi Cab",
+    "description": "Pre-booked Melbourne taxi and maxi cab transport for school runs, excursions, camps, sports teams, and student group movements.",
+    "intro": "Student transport needs reliable timing, clear pickup instructions, and suitable vehicle space. Larger taxi vehicles are useful for school events, sports groups, and planned student movements.",
+    "bestFor": ["School runs", "Excursions", "Sports teams", "Camps", "Student group transfers"],
+    "faq": [
+      {
+        "q": "Can student transport be booked in advance?",
+        "a": "Yes. Advance booking is recommended for recurring school runs, events, camps, and group transfers."
+      },
+      {
+        "q": "Can one vehicle carry students with equipment?",
+        "a": "Yes. A maxi cab can be a good fit when students are travelling with bags, sports gear, or instruments."
+      }
+    ]
+  },
+  {
+    "slug": "outer-melbourne-taxi",
+    "name": "Outer Melbourne Taxi",
+    "title": "Outer Melbourne Taxi | Maxi Cab for Suburbs & Regional VIC",
+    "description": "Taxi and maxi cab bookings for outer Melbourne suburbs, airport corridors, Mornington Peninsula, Geelong, Yarra Valley, Dandenong Ranges, and regional Victoria.",
+    "intro": "Outer Melbourne taxi trips need a service that is comfortable with longer routes, luggage, group pickups, and non-CBD destinations. This page targets suburban and regional intent beyond airport-only searches.",
+    "bestFor": ["Outer-suburb pickups", "Regional Victorian trips", "Airport corridors", "Day trips", "Long-distance group travel"],
+    "faq": [
+      {
+        "q": "Do you only operate in Melbourne CBD?",
+        "a": "No. Taxi and maxi cab bookings can be arranged across inner Melbourne, outer suburbs, airport corridors, and many Victorian destinations."
+      },
+      {
+        "q": "Can I book a taxi from outer Melbourne to the airport?",
+        "a": "Yes. Outer-suburb airport transfers are one of the main reasons customers book a maxi cab or larger taxi in advance."
+      }
+    ]
+  },
+  {
+    "slug": "suv-wagon-taxi-melbourne",
+    "name": "SUV & Wagon Taxi Melbourne",
+    "title": "SUV & Wagon Taxi Melbourne | Extra Luggage Taxi Booking",
+    "description": "Melbourne SUV and wagon taxi bookings for passengers who need extra luggage room, comfort, airport transfers, family trips, and business travel.",
+    "intro": "SUV and wagon taxis bridge the gap between a standard sedan and a maxi cab. They are useful when passengers need extra boot space without needing a full 11 or 13-seater vehicle.",
+    "bestFor": ["Extra luggage", "Families", "Business travel", "Airport transfers", "Small groups"],
+    "faq": [
+      {
+        "q": "When should I book an SUV or wagon instead of a maxi cab?",
+        "a": "An SUV or wagon can suit smaller groups with extra luggage. A maxi cab is better for larger passenger counts or bulky equipment."
+      },
+      {
+        "q": "Can SUV and wagon taxis be pre-booked?",
+        "a": "Yes. Pre-booking helps confirm the right vehicle type for luggage, passengers, and timing."
+      }
+    ]
+  },
+  {
+    "slug": "silver-service-taxi-melbourne",
+    "name": "Silver Service Taxi Melbourne",
+    "title": "Silver Service Taxi Melbourne | Premium Taxi Booking",
+    "description": "Silver service and premium taxi bookings in Melbourne for business travel, airport transfers, appointments, events, and comfortable point-to-point rides.",
+    "intro": "Silver service taxi bookings are for customers who want a cleaner, more professional ride experience than a basic taxi while still using a practical taxi-style booking flow.",
+    "bestFor": ["Business travel", "Airport transfers", "Appointments", "Events", "Premium point-to-point rides"],
+    "faq": [
+      {
+        "q": "Is silver service different from a maxi cab?",
+        "a": "Yes. Silver service usually focuses on a premium sedan or similar vehicle, while maxi cabs focus on larger passenger and luggage capacity."
+      },
+      {
+        "q": "Can silver service be booked for airport transfers?",
+        "a": "Yes. Premium taxi bookings are suitable for airport, business, event, and appointment travel."
+      }
+    ]
+  }
+]

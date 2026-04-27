@@ -1,0 +1,186 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { Image } from 'astro:assets';
+
+import heroFleet  from '../assets/van-exterior-4.jpeg';
+import van11a     from '../assets/van-exterior-1.jpeg';
+import van11b     from '../assets/van-exterior-2.jpeg';
+import van13a     from '../assets/van-exterior-3.jpeg';
+import van13b     from '../assets/van-exterior-5.jpeg';
+import int1       from '../assets/van-interior-1.jpeg';
+import int2       from '../assets/van-interior-2.jpeg';
+import int3       from '../assets/van-interior-3.jpeg';
+import fleet2     from '../assets/van-fleet-2.jpeg';
+import fleet3     from '../assets/van-fleet-3.jpeg';
+---
+
+<Layout 
+  title="Our Fleet | 11 & 13-Seater Maxi Taxis Melbourne — Wheelchair Accessible"
+  description="Explore our modern fleet of 11 and 13-seater Maxi Taxis including wheelchair-accessible vehicles. Fully licensed, clean, and comfortable across Melbourne and Victoria."
+>
+  <Header />
+
+  <main>
+    <!-- Page Hero -->
+    <section class="page-hero">
+      <div class="page-hero-bg">
+        <Image src={heroFleet} alt="Premium Maxi Taxi fleet exterior Melbourne 13-seater" width={1920} height={700} class="page-hero-img" quality={65} />
+        <div class="page-hero-overlay"></div>
+      </div>
+      <div class="container page-hero-content">
+        <span class="badge">✦ Immaculate Every Ride</span>
+        <h1>Our Premium <em class="text-gold">Maxi Taxi Fleet</em></h1>
+        <p>Modern, spotlessly clean, and fully certified — every vehicle is ready to transport your group in the comfort they deserve.</p>
+        <a href="/book" class="btn btn-primary" id="fleet-hero-book">Book a Vehicle</a>
+      </div>
+    </section>
+
+    <!-- Vehicle 1: 11-seater -->
+    <section class="section" id="eleven-seater">
+      <div class="container">
+        <div class="section-tag">Vehicle Type 01</div>
+        <h2 class="section-title">11-Seater Luxury Van</h2>
+        <p class="section-sub">The perfect balance of comfort and capacity for medium-sized groups, family adventures, and corporate team-outs.</p>
+
+        <div class="vehicle-layout">
+          <div class="vehicle-images">
+            <Image src={van11a} alt="11-seater Maxi Taxi exterior Melbourne luxury van" width={700} height={460} class="v-main-img" quality={70} />
+            <div class="v-thumbs">
+              <Image src={van11b} alt="11-seater Maxi Cab side view premium" width={340} height={220} class="v-thumb" quality={60} />
+              <Image src={int1}   alt="11-seater interior luxury seating comfort" width={340} height={220} class="v-thumb" quality={60} />
+            </div>
+          </div>
+          <div class="vehicle-specs-panel">
+            <h3>Specifications</h3>
+            <div class="spec-grid">
+              <div class="spec-item"><span class="spec-label">Capacity</span><span class="spec-val">Up to 11 passengers</span></div>
+              <div class="spec-item"><span class="spec-label">Luggage</span><span class="spec-val">Large underfloor storage</span></div>
+              <div class="spec-item"><span class="spec-label">Climate</span><span class="spec-val">Dual-zone air conditioning</span></div>
+              <div class="spec-item"><span class="spec-label">Seating</span><span class="spec-val">Individual plush captain chairs</span></div>
+              <div class="spec-item"><span class="spec-label">Charging</span><span class="spec-val">USB ports at every seat</span></div>
+              <div class="spec-item"><span class="spec-label">Insurance</span><span class="spec-val">Fully licensed &amp; insured</span></div>
+            </div>
+            <p class="text-muted" style="font-size: 0.9rem; margin-top: 1rem;">Ideal for: Yarra Valley wine tours, airport transfers, family outings, small corporate events.</p>
+            <a href="/book?vehicle=11seater" class="btn btn-primary" style="margin-top:1.5rem;" id="book-11">Book 11-Seater</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider" />
+
+    <!-- Vehicle 2: 13-seater -->
+    <section class="section" id="thirteen-seater">
+      <div class="container">
+        <div class="section-tag">Vehicle Type 02</div>
+        <h2 class="section-title">13-Seater Maxi Cab</h2>
+        <p class="section-sub">Our flagship vehicle — built for large groups, extended tours, and any occasion requiring maximum passenger comfort and space.</p>
+
+        <div class="vehicle-layout reverse">
+          <div class="vehicle-specs-panel">
+            <h3>Specifications</h3>
+            <div class="spec-grid">
+              <div class="spec-item"><span class="spec-label">Capacity</span><span class="spec-val">Up to 13 passengers</span></div>
+              <div class="spec-item"><span class="spec-label">Wheelchairs</span><span class="spec-val">Hoist-equipped variants available</span></div>
+              <div class="spec-item"><span class="spec-label">Luggage</span><span class="spec-val">Extra-large cargo compartment</span></div>
+              <div class="spec-item"><span class="spec-label">PA System</span><span class="spec-val">Built-in for guided tours</span></div>
+              <div class="spec-item"><span class="spec-label">Certification</span><span class="spec-val">VHA/VHB approved</span></div>
+              <div class="spec-item"><span class="spec-label">24/7</span><span class="spec-val">Always available</span></div>
+            </div>
+            <p class="text-muted" style="font-size: 0.9rem; margin-top: 1rem;">Ideal for: Weddings, Great Ocean Road tours, school groups, large corporate transfers.</p>
+            <a href="/book?vehicle=13seater" class="btn btn-primary" style="margin-top:1.5rem;" id="book-13">Book 13-Seater</a>
+          </div>
+          <div class="vehicle-images">
+            <Image src={van13a} alt="13-seater Maxi Taxi exterior large group Victoria" width={700} height={460} class="v-main-img" quality={70} />
+            <div class="v-thumbs">
+              <Image src={van13b} alt="13-seater Maxi Cab exterior rear view" width={340} height={220} class="v-thumb" quality={60} />
+              <Image src={int2}   alt="13-seater interior spacious luxury" width={340} height={220} class="v-thumb" quality={60} />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interior Gallery -->
+    <section class="section section-light" id="interior-gallery">
+      <div class="container text-center">
+        <div class="section-tag">Inside Look</div>
+        <h2 class="section-title">Premium Interiors — <em class="text-gold">Every Journey</em></h2>
+        <p class="section-sub">Our vehicles undergo thorough valet cleaning before every booking. What you see is what you get — and it's exceptional.</p>
+        <div class="photo-grid">
+          <Image src={int1} alt="Maxi Taxi interior front seats comfort legroom" width={600} height={380} class="grid-photo" quality={65} />
+          <Image src={int2} alt="Maxi Taxi interior rear cabin temperature control" width={600} height={380} class="grid-photo" quality={65} />
+          <Image src={int3} alt="Maxi Cab interior door side storage" width={600} height={380} class="grid-photo" quality={65} />
+          <Image src={fleet2} alt="Maxi Taxi fleet exterior Melbourne all vehicles" width={600} height={380} class="grid-photo" quality={65} />
+          <Image src={fleet3} alt="Premium Maxi Taxi side profile Melbourne" width={600} height={380} class="grid-photo" quality={65} />
+          <Image src={van13b} alt="Maxi Cab rear exterior licensed premium" width={600} height={380} class="grid-photo" quality={65} />
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-banner">
+      <div class="container text-center">
+        <h2 class="cta-title">Ready to Travel in <em class="text-gold">Premium Style?</em></h2>
+        <p class="cta-sub">Book online now or call us to discuss your custom fleet requirement.</p>
+        <div class="cta-actions">
+          <a href="/book" class="btn btn-primary" id="fleet-cta-book">Book Now</a>
+          <a href="tel:+61432405388" class="btn btn-outline-dark" id="fleet-cta-call">📞 Call Us</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+.page-hero { position: relative; height: 70vh; min-height: 480px; display: flex; align-items: center; overflow: hidden; }
+.page-hero-bg { position: absolute; inset: 0; z-index: 0; }
+.page-hero-img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.page-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to right, rgba(0,0,0,0.78) 0%, rgba(0,0,0,0.25) 80%); }
+.page-hero-content { position: relative; z-index: 10; color: white; padding-top: 80px; max-width: 700px; }
+.page-hero-content .badge { display: inline-block; background: rgba(212,175,55,0.2); border: 1px solid var(--accent-gold); color: var(--accent-gold); font-family: var(--font-heading); font-size: 0.8rem; font-weight: 600; letter-spacing: 1px; padding: 6px 14px; border-radius: 100px; margin-bottom: 1rem; text-transform: uppercase; }
+.page-hero-content h1 { color: white; font-size: clamp(2rem, 4.5vw, 3.5rem); line-height: 1.15; margin-bottom: 1rem; }
+.page-hero-content p { color: rgba(255,255,255,0.8); font-size: 1.1rem; margin-bottom: 2rem; }
+
+.section-tag { display: inline-block; color: var(--accent-gold); font-family: var(--font-heading); font-size: 0.8rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 12px; }
+.section-title { font-size: clamp(1.75rem, 3.5vw, 2.6rem); margin-bottom: 1rem; }
+.section-sub { font-size: 1.05rem; color: var(--text-muted); max-width: 620px; margin: 0 auto 3rem; text-align: center; }
+.section-divider { border: none; border-top: 1px solid var(--bg-tertiary); margin: 20px 0 60px; }
+
+.vehicle-layout { display: grid; grid-template-columns: 1.3fr 1fr; gap: 60px; align-items: start; }
+.vehicle-layout.reverse { grid-template-columns: 1fr 1.3fr; }
+.v-main-img { width: 100%; height: 340px; object-fit: cover; border-radius: var(--border-radius); box-shadow: var(--shadow-md); display: block; margin-bottom: 16px; }
+.v-thumbs { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.v-thumb { width: 100%; height: 160px; object-fit: cover; border-radius: var(--border-radius-sm); display: block; }
+.vehicle-specs-panel { padding: 40px; background: var(--bg-secondary); border-radius: var(--border-radius); border: 1px solid var(--bg-tertiary); }
+.vehicle-specs-panel h3 { font-size: 1.4rem; margin-bottom: 24px; }
+.spec-grid { display: grid; grid-template-columns: 1fr; gap: 14px; }
+.spec-item { display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; padding-bottom: 14px; border-bottom: 1px solid var(--bg-tertiary); }
+.spec-item:last-child { border-bottom: none; }
+.spec-label { font-weight: 600; font-size: 0.875rem; color: var(--text-muted); white-space: nowrap; }
+.spec-val { font-size: 0.875rem; font-weight: 500; text-align: right; }
+
+.photo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 40px; }
+.grid-photo { width: 100%; height: 240px; object-fit: cover; border-radius: var(--border-radius); display: block; transition: transform 0.5s ease; }
+.grid-photo:hover { transform: scale(1.03); }
+
+.cta-banner { background: var(--accent-dark); padding: 80px 0; }
+.cta-title { color: white; font-size: clamp(1.75rem, 3.5vw, 2.5rem); margin-bottom: 1rem; }
+.cta-sub { color: rgba(255,255,255,0.7); font-size: 1.1rem; margin-bottom: 2.5rem; }
+.cta-actions { display: flex; justify-content: center; flex-wrap: wrap; gap: 16px; }
+.btn-outline-dark { display: inline-flex; align-items: center; gap: 8px; padding: 14px 28px; font-family: var(--font-heading); font-weight: 500; font-size: 1rem; border-radius: var(--border-radius-sm); border: 1.5px solid rgba(255,255,255,0.3); color: white; transition: var(--transition); }
+.btn-outline-dark:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.6); }
+
+@media (max-width: 900px) {
+  .vehicle-layout, .vehicle-layout.reverse { grid-template-columns: 1fr; }
+  .photo-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+  .photo-grid { grid-template-columns: 1fr; }
+  .v-thumbs { grid-template-columns: 1fr; }
+}
+</style>

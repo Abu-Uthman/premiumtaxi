@@ -1,0 +1,767 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { Image } from 'astro:assets';
+
+import heroImg      from '../assets/hero.jpeg';
+import fleet1       from '../assets/van-exterior-1.jpeg';
+import fleet2       from '../assets/van-exterior-2.jpeg';
+import fleet3       from '../assets/van-exterior-3.jpeg';
+import interior1    from '../assets/van-interior-1.jpeg';
+import interior2    from '../assets/van-interior-2.jpeg';
+import scenicImg    from '../assets/van-scenic-1.jpeg';
+import airportImg   from '../assets/van-airport-1.jpeg';
+import wineryImg    from '../assets/van-winery-1.jpeg';
+---
+
+<Layout title="Premium Maxi Taxi Melbourne | Luxury Group Transport & Victoria Tours">
+  <Header />
+
+  <main>
+
+    <!-- ═══ HERO ═══ -->
+    <section class="hero" id="home">
+      <div class="hero-bg">
+        <Image src={heroImg} alt="Premium Maxi Taxi Melbourne exterior — luxury group transport Victoria" width={1920} height={1080} class="hero-img" loading="eager" quality={70} />
+        <div class="hero-overlay"></div>
+      </div>
+      <div class="container hero-content">
+        <span class="badge animate-fade-in">✦ Melbourne & Victoria Wide</span>
+        <h1 class="hero-title animate-fade-in" style="animation-delay:0.1s">
+          Victoria's Premier<br/><em class="text-gold">Maxi Taxi</em> Service
+        </h1>
+        <p class="hero-sub animate-fade-in" style="animation-delay:0.2s">
+          Spacious 11 & 13-seater Maxi Cabs for airport transfers, corporate travel, and luxury day tours across Melbourne and regional Victoria — available 24/7.
+        </p>
+        <div class="hero-cta animate-fade-in" style="animation-delay:0.3s">
+          <a href="/book" class="btn btn-primary" id="hero-book-btn">Book Your Ride</a>
+          <a href="/tours" class="btn btn-ghost" id="hero-tours-btn">Explore Tours</a>
+        </div>
+        <div class="trust-bar animate-fade-in" style="animation-delay:0.4s">
+          <span>⭐ 4.9 Rated Service</span>
+          <span class="divider">|</span>
+          <span>✓ Licensed &amp; Insured</span>
+          <span class="divider">|</span>
+          <span>✓ 24/7 Available</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ SERVICES STRIP ═══ -->
+    <section class="strip section-light">
+      <div class="container strip-grid">
+        <div class="strip-card reveal">
+          <div class="strip-icon">✈️</div>
+          <div>
+            <h3>Airport Transfers</h3>
+            <p class="text-muted">Tullamarine &amp; Avalon — flight-tracked &amp; punctual.</p>
+          </div>
+        </div>
+        <div class="strip-card reveal delay-100">
+          <div class="strip-icon">🚐</div>
+          <div>
+            <h3>Maxi Taxis</h3>
+            <p class="text-muted">11 &amp; 13-seaters with massive luggage capacity.</p>
+          </div>
+        </div>
+        <div class="strip-card reveal delay-200">
+          <div class="strip-icon">🍷</div>
+          <div>
+            <h3>Winery &amp; Day Tours</h3>
+            <p class="text-muted">Yarra Valley, Great Ocean Road &amp; more.</p>
+          </div>
+        </div>
+        <div class="strip-card reveal delay-300">
+          <div class="strip-icon">♿</div>
+          <div>
+            <h3>Wheelchair Accessible</h3>
+            <p class="text-muted">Hoist-equipped, safety-certified vehicles.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ FLEET GALLERY ═══ -->
+    <section class="section" id="fleet-preview">
+      <div class="container">
+        <div class="section-tag reveal">Our Fleet</div>
+        <h2 class="section-title reveal delay-100">Immaculate Vehicles, <em class="text-gold">Every Time</em></h2>
+        <p class="section-sub reveal delay-200">Every vehicle in our fleet is professionally cleaned before every journey, GPS-tracked, and inspected to Australian transport authority standards.</p>
+
+        <div class="fleet-gallery reveal">
+          <div class="gallery-main">
+            <Image src={fleet1} alt="Premium Maxi Taxi 11-seater van exterior Melbourne" width={800} height={540} class="gallery-img" quality={70} />
+          </div>
+          <div class="gallery-side">
+            <Image src={fleet2} alt="Premium Maxi Cab exterior side view Victoria" width={400} height={263} class="gallery-img" quality={65} />
+            <Image src={fleet3} alt="Maxi Taxi exterior rear view Melbourne" width={400} height={263} class="gallery-img" quality={65} />
+          </div>
+        </div>
+
+        <div class="fleet-specs reveal">
+          <div class="spec-card">
+            <span class="spec-num">11</span>
+            <span class="spec-lbl">Passenger Luxury Van</span>
+          </div>
+          <div class="spec-card">
+            <span class="spec-num">13</span>
+            <span class="spec-lbl">Passenger Maxi Cab</span>
+          </div>
+          <div class="spec-card">
+            <span class="spec-num">24/7</span>
+            <span class="spec-lbl">Service Availability</span>
+          </div>
+          <div class="spec-card">
+            <span class="spec-num">100%</span>
+            <span class="spec-lbl">Licensed &amp; Insured</span>
+          </div>
+        </div>
+
+        <div class="text-center" style="margin-top:40px;">
+          <a href="/fleet" class="btn btn-dark" id="view-fleet-btn">View Full Fleet Details</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ INTERIOR HIGHLIGHT ═══ -->
+    <section class="section section-light" id="comfort">
+      <div class="container split-section">
+        <div class="split-images reveal">
+          <div class="img-stack">
+            <Image src={interior1} alt="Premium Maxi Taxi luxury interior seating Melbourne" width={540} height={380} class="stack-img stack-main" quality={70} />
+            <Image src={interior2} alt="Maxi Taxi interior comfort seats group transport" width={300} height={210} class="stack-img stack-accent reveal delay-300" quality={65} />
+          </div>
+        </div>
+        <div class="split-content reveal delay-100">
+          <div class="section-tag">Comfort &amp; Space</div>
+          <h2 class="section-title">Premium Interiors,<br/><em class="text-gold">Zero Compromise</em></h2>
+          <p>When you book with <strong>Premium Maxi Taxi</strong>, your group rides in a spacious cabin with generous legroom, climate-controlled comfort, and enough overhead room to travel without feeling cramped.</p>
+          <ul class="feature-list">
+            <li><span class="check">✓</span> Plush, individually-adjustable seating</li>
+            <li><span class="check">✓</span> Dual-zone climate control</li>
+            <li><span class="check">✓</span> Significant underfloor luggage storage</li>
+            <li><span class="check">✓</span> USB charging ports on every seat</li>
+            <li><span class="check">✓</span> Complimentary bottled water</li>
+          </ul>
+          <a href="/book" class="btn btn-primary" style="margin-top:2rem;" id="comfort-book-btn">Book Now</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ TOURS SECTION ═══ -->
+    <section class="section" id="tours-preview">
+      <div class="container">
+        <div class="section-tag reveal">Victoria Day Tours</div>
+        <h2 class="section-title reveal delay-100">Explore Victoria in <em class="text-gold">Luxury</em></h2>
+        <p class="section-sub reveal delay-200">Skip the cramped bus — your private Maxi Taxi awaits, taking your entire group directly to Victoria's most iconic destinations.</p>
+
+        <div class="tours-grid reveal">
+          <article class="tour-card">
+            <div class="tour-img-wrap">
+              <Image src={scenicImg} alt="Great Ocean Road private Maxi Taxi tour from Melbourne" width={600} height={380} class="tour-img" quality={65} />
+              <div class="tour-img-overlay">
+                <span>Great Ocean Road</span>
+              </div>
+            </div>
+            <div class="tour-body">
+              <h3>Great Ocean Road Tour</h3>
+              <p class="text-muted">Witness the Twelve Apostles, Loch Ard Gorge, and pristine coastal scenery — all from the comfort of your private Maxi Cab.</p>
+              <a href="/tours" class="btn btn-outline-sm" id="tour-gor-btn">Learn More →</a>
+            </div>
+          </article>
+
+          <article class="tour-card">
+            <div class="tour-img-wrap">
+              <Image src={wineryImg} alt="Yarra Valley wine tour private Maxi Taxi group transport" width={600} height={380} class="tour-img" quality={65} />
+              <div class="tour-img-overlay">
+                <span>Yarra Valley</span>
+              </div>
+            </div>
+            <div class="tour-body">
+              <h3>Yarra Valley Wine Tours</h3>
+              <p class="text-muted">Sample world-class wines with your group and let us handle the driving. The ultimate worry-free winery experience from Melbourne.</p>
+              <a href="/tours" class="btn btn-outline-sm" id="tour-yv-btn">Learn More →</a>
+            </div>
+          </article>
+
+          <article class="tour-card">
+            <div class="tour-img-wrap">
+              <Image src={airportImg} alt="Melbourne airport maxi taxi group transfer 24 hour" width={600} height={380} class="tour-img" quality={65} />
+              <div class="tour-img-overlay">
+                <span>Airport Transfers</span>
+              </div>
+            </div>
+            <div class="tour-body">
+              <h3>Phillip Island &amp; Beyond</h3>
+              <p class="text-muted">From the famous Penguin Parade to Peninsula Hot Springs — private, punctual, and perfect for groups of all sizes.</p>
+              <a href="/tours" class="btn btn-outline-sm" id="tour-pi-btn">Learn More →</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="text-center" style="margin-top:48px;">
+          <a href="/tours" class="btn btn-primary" id="all-tours-btn">View All Tours</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ TESTIMONIALS ═══ -->
+    <section class="section section-light" id="testimonials">
+      <div class="container">
+        <div class="section-tag reveal">Client Reviews</div>
+        <h2 class="section-title reveal delay-100">What Passengers <em class="text-gold">Say About Us</em></h2>
+
+        <div class="reviews-grid">
+          <div class="review-card reveal">
+            <div class="stars">★★★★★</div>
+            <p class="review-text">"Booked an 11-seater for our family's Yarra Valley trip. Immaculate vehicle, incredibly punctual driver, and the ride was genuinely luxurious. We'll never use a standard taxi again."</p>
+            <div class="reviewer">
+              <div class="reviewer-avatar">SM</div>
+              <div>
+                <strong>Sarah M.</strong>
+                <span class="text-muted">Melbourne CBD</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card review-featured reveal delay-100">
+            <div class="stars">★★★★★</div>
+            <p class="review-text">"Our corporate team uses Premium Maxi Taxi for every airport transfer. They track flights, adjust for delays, and the executive team always arrives calm and on time. Outstanding service."</p>
+            <div class="reviewer">
+              <div class="reviewer-avatar">DL</div>
+              <div>
+                <strong>David L.</strong>
+                <span class="text-muted">Corporate Client, Victoria</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card reveal delay-200">
+            <div class="stars">★★★★★</div>
+            <p class="review-text">"The wheelchair-accessible service was exceptional. The driver was patient, professional, and had my father securely on board in minutes. Stress-free and dignified transport."</p>
+            <div class="reviewer">
+              <div class="reviewer-avatar">ET</div>
+              <div>
+                <strong>Emma T.</strong>
+                <span class="text-muted">Mornington Peninsula</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ FAQ STRIP ═══ -->
+    <section class="section" id="faq-strip">
+      <div class="container split-section">
+        <div class="split-content reveal">
+          <div class="section-tag">Common Questions</div>
+          <h2 class="section-title">Quick <em class="text-gold">Answers</em></h2>
+          <p>Everything you need to know before your booking — fast.</p>
+          <a href="/faq" class="btn btn-dark" style="margin-top:2rem;" id="faq-all-btn">Full FAQ Page →</a>
+        </div>
+        <div class="faq-list reveal delay-200">
+          <details class="faq-item">
+            <summary>How many passengers can a Maxi Taxi fit?</summary>
+            <p>Our fleet includes 11-seater luxury vans and 13-seater Maxi Cabs, both with generous luggage space for large groups and airport runs.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Do you operate 24 hours a day?</summary>
+            <p>Yes — we operate 24/7 including all public holidays across Melbourne and Victoria. Pre-booking is strongly recommended for early morning or late night transfers.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Are your vehicles wheelchair accessible?</summary>
+            <p>Absolutely. We have specialist hoist-equipped vehicles with certified restraint systems operated by trained drivers. Please select "Wheelchair" when booking.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What areas in Victoria do you cover?</summary>
+            <p>We cover all of Melbourne and regional Victoria — from the Yarra Valley and Great Ocean Road to Phillip Island, Geelong, Bendigo, and beyond.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ BOOKING CTA BANNER ═══ -->
+    <section class="cta-banner">
+      <div class="container text-center">
+        <h2 class="cta-title">Ready to Ride in <em class="text-gold">Premium Comfort?</em></h2>
+        <p class="cta-sub">Book online in minutes or call us directly. Our team is ready 24/7.</p>
+        <div class="cta-actions">
+          <a href="/book" class="btn btn-primary" id="cta-book-btn">Book Online Now</a>
+          <a href="tel:+61432405388" class="btn btn-outline-dark" id="cta-call-btn">📞 Call Now</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+/* ── Hero ───────────────────────── */
+.hero {
+  position: relative;
+  height: 100vh;
+  min-height: 640px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(105deg, rgba(0,0,0,0.84) 0%, rgba(0,0,0,0.35) 60%, rgba(0,0,0,0.1) 100%);
+}
+.hero-content {
+  position: relative;
+  z-index: 10;
+  color: white;
+  max-width: 760px;
+  padding-top: 80px;
+}
+.badge {
+  display: inline-block;
+  background: rgba(212,175,55,0.2);
+  border: 1px solid var(--accent-gold);
+  color: var(--accent-gold);
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 6px 14px;
+  border-radius: 100px;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+.hero-title {
+  color: white;
+  font-size: clamp(2.5rem, 5vw, 4.2rem);
+  letter-spacing: -1px;
+  line-height: 1.1;
+  margin-bottom: 1.25rem;
+  font-style: normal;
+}
+.hero-sub {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-weight: 300;
+  opacity: 0.88;
+  max-width: 560px;
+  margin-bottom: 2.5rem;
+}
+.hero-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 2.5rem;
+}
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: 1rem;
+  border-radius: var(--border-radius-sm);
+  background: rgba(255,255,255,0.1);
+  border: 1.5px solid rgba(255,255,255,0.5);
+  color: white;
+  transition: var(--transition);
+}
+.btn-ghost:hover {
+  background: rgba(255,255,255,0.2);
+  border-color: white;
+}
+.trust-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.875rem;
+  color: rgba(255,255,255,0.75);
+}
+.trust-bar .divider { opacity: 0.4; }
+
+/* ── Strip ───────────────────────── */
+.strip { padding: 50px 0; }
+.strip-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+.strip-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 28px 20px;
+  background: var(--bg-primary);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--bg-tertiary);
+  transition: var(--transition);
+}
+.strip-card:hover {
+  border-color: var(--accent-gold);
+  box-shadow: var(--shadow-sm);
+  transform: translateY(-3px);
+}
+.strip-icon { font-size: 2rem; flex-shrink: 0; }
+.strip-card h3 { font-size: 1rem; margin-bottom: 4px; }
+.strip-card p { font-size: 0.875rem; }
+
+/* ── Section Helpers ───────────────── */
+.section-tag {
+  display: inline-block;
+  color: var(--accent-gold);
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.section-title {
+  font-size: clamp(1.75rem, 3.5vw, 2.6rem);
+  margin-bottom: 1rem;
+}
+.section-sub {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  max-width: 620px;
+  margin: 0 auto 3rem;
+  text-align: center;
+}
+
+/* ── Fleet Gallery ───────────────── */
+.fleet-gallery {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 16px;
+  margin-bottom: 40px;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+.gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+.gallery-main { overflow: hidden; max-height: 540px; }
+.gallery-main:hover .gallery-img { transform: scale(1.03); }
+.gallery-side {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 16px;
+}
+.gallery-side > * { overflow: hidden; border-radius: 0; }
+.gallery-side > *:hover .gallery-img { transform: scale(1.05); }
+
+.fleet-specs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+.spec-card {
+  text-align: center;
+  padding: 28px 20px;
+  background: var(--bg-secondary);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--bg-tertiary);
+}
+.spec-num {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--accent-gold);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.spec-lbl {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+/* ── Split Sections ───────────────── */
+.split-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+.img-stack {
+  position: relative;
+  padding-bottom: 60px;
+  padding-right: 60px;
+}
+.stack-main {
+  border-radius: var(--border-radius);
+  width: 100%;
+  object-fit: cover;
+  max-height: 380px;
+  box-shadow: var(--shadow-lg);
+}
+.stack-accent {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 55%;
+  max-height: 210px;
+  border-radius: var(--border-radius);
+  object-fit: cover;
+  border: 4px solid var(--bg-primary);
+  box-shadow: var(--shadow-md);
+}
+.feature-list {
+  list-style: none;
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.feature-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 500;
+}
+.check {
+  color: var(--accent-gold);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+/* ── Tours Grid ───────────────────── */
+.tours-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+.tour-card {
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  background: var(--bg-primary);
+  border: 1px solid var(--bg-tertiary);
+  transition: var(--transition);
+}
+.tour-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--accent-gold);
+}
+.tour-img-wrap {
+  position: relative;
+  overflow: hidden;
+  height: 220px;
+}
+.tour-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+.tour-card:hover .tour-img { transform: scale(1.06); }
+.tour-img-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 8px 16px;
+  background: linear-gradient(transparent, rgba(0,0,0,0.65));
+  color: rgba(255,255,255,0.9);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-family: var(--font-heading);
+  font-weight: 600;
+}
+.tour-body {
+  padding: 24px;
+}
+.tour-body h3 { font-size: 1.2rem; margin-bottom: 8px; }
+.tour-body p { font-size: 0.9rem; margin-bottom: 16px; }
+.btn-outline-sm {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--font-heading);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--accent-gold);
+  border: 1.5px solid var(--accent-gold);
+  padding: 8px 16px;
+  border-radius: var(--border-radius-sm);
+  transition: var(--transition);
+}
+.btn-outline-sm:hover {
+  background: var(--accent-gold);
+  color: white;
+}
+
+/* ── Reviews ─────────────────────── */
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 48px;
+}
+.review-card {
+  padding: 36px;
+  background: var(--bg-primary);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--bg-tertiary);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.review-featured {
+  border-color: var(--accent-gold);
+  box-shadow: 0 0 0 1px var(--accent-gold);
+}
+.stars { color: var(--accent-gold); font-size: 1rem; letter-spacing: 2px; }
+.review-text {
+  font-style: italic;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  flex: 1;
+  line-height: 1.7;
+}
+.reviewer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.reviewer-avatar {
+  width: 44px;
+  height: 44px;
+  background: var(--accent-gold);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.875rem;
+  flex-shrink: 0;
+}
+.reviewer strong { display: block; font-size: 0.95rem; }
+.reviewer span { font-size: 0.8rem; }
+
+/* ── FAQ Details ──────────────────── */
+.faq-list { display: flex; flex-direction: column; gap: 12px; }
+.faq-item {
+  padding: 0;
+  border-radius: var(--border-radius-sm);
+  border: 1px solid var(--bg-tertiary);
+  background: var(--bg-primary);
+  overflow: hidden;
+  transition: var(--transition);
+}
+.faq-item:hover { border-color: var(--accent-gold); }
+.faq-item summary {
+  padding: 18px 24px;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--text-main);
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: '+';
+  color: var(--accent-gold);
+  font-size: 1.4rem;
+  line-height: 1;
+  transition: transform 0.3s ease;
+}
+.faq-item[open] summary::after { content: '−'; }
+.faq-item p {
+  padding: 0 24px 18px;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* ── CTA Banner ────────────────────── */
+.cta-banner {
+  background: var(--accent-dark);
+  padding: 80px 0;
+}
+.cta-title {
+  color: white;
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  margin-bottom: 1rem;
+}
+.cta-sub {
+  color: rgba(255,255,255,0.7);
+  font-size: 1.1rem;
+  margin-bottom: 2.5rem;
+}
+.cta-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.btn-outline-dark {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: 1rem;
+  border-radius: var(--border-radius-sm);
+  border: 1.5px solid rgba(255,255,255,0.3);
+  color: white;
+  transition: var(--transition);
+}
+.btn-outline-dark:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: rgba(255,255,255,0.6);
+}
+
+/* ── Responsive ───────────────────── */
+@media (max-width: 1024px) {
+  .strip-grid { grid-template-columns: repeat(2, 1fr); }
+  .tours-grid { grid-template-columns: repeat(2, 1fr); }
+  .reviews-grid { grid-template-columns: repeat(2, 1fr); }
+  .fleet-gallery { grid-template-columns: 1fr; }
+  .gallery-side { grid-template-columns: 1fr 1fr; grid-template-rows: 1fr; }
+  .fleet-specs { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .strip-grid { grid-template-columns: 1fr; gap: 16px; }
+  .split-section { grid-template-columns: 1fr; gap: 40px; }
+  .tours-grid { grid-template-columns: 1fr; }
+  .reviews-grid { grid-template-columns: 1fr; }
+  .fleet-specs { grid-template-columns: repeat(2, 1fr); }
+  .img-stack { padding-bottom: 40px; padding-right: 40px; }
+}
+
+@media (max-width: 480px) {
+  .hero-cta { flex-direction: column; }
+  .cta-actions { flex-direction: column; align-items: center; }
+  .fleet-specs { grid-template-columns: repeat(2, 1fr); }
+  .gallery-side { grid-template-columns: 1fr; }
+}</style>

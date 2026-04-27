@@ -1,0 +1,242 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { Image } from 'astro:assets';
+
+import scenicImg  from '../assets/van-scenic-1.jpeg';
+import scenic2    from '../assets/van-scenic-2.jpeg';
+import wineryImg  from '../assets/van-winery-1.jpeg';
+import winery2    from '../assets/van-winery-2.jpeg';
+import airportImg from '../assets/van-airport-1.jpeg';
+import airport2   from '../assets/van-airport-2.jpeg';
+import oceanImg   from '../assets/van-ocean-1.jpeg';
+---
+
+<Layout 
+  title="Victoria Day Tours | Great Ocean Road, Yarra Valley & Phillip Island Maxi Taxi"
+  description="Private Maxi Taxi tours across Victoria. Explore the Great Ocean Road, Yarra Valley wine country, and Phillip Island with up to 13 passengers in luxury."
+>
+  <Header />
+
+  <main>
+    <!-- Page Hero -->
+    <section class="page-hero">
+      <div class="page-hero-bg">
+        <Image src={scenicImg} alt="Scenic Victoria tour Maxi Taxi route Great Ocean Road" width={1920} height={700} class="page-hero-img" quality={65} />
+        <div class="page-hero-overlay"></div>
+      </div>
+      <div class="container page-hero-content">
+        <span class="badge">✦ Victoria Wide</span>
+        <h1>Private <em class="text-gold">Day Tours</em><br/>Across Victoria</h1>
+        <p>Your whole group — one luxury Maxi Taxi. No buses, no strangers, no compromise.</p>
+        <a href="/book" class="btn btn-primary" id="tours-hero-book">Book a Custom Tour</a>
+      </div>
+    </section>
+
+    <!-- Tours List -->
+    <section class="section">
+      <div class="container">
+
+        <!-- Tour 1: Great Ocean Road -->
+        <article class="tour-full-card" id="great-ocean-road">
+          <div class="tfc-image">
+            <Image src={scenicImg} alt="Great Ocean Road Maxi Taxi private tour from Melbourne — Twelve Apostles" width={700} height={460} class="tfc-img" quality={70} />
+          </div>
+          <div class="tfc-content">
+            <span class="section-tag">Full Day Tour</span>
+            <h2>Great Ocean Road</h2>
+            <p>One of Australia's most spectacular drives — and you don't have to worry about the wheel. Your private Maxi Taxi takes up to 13 passengers through the iconic coastal towns of Lorne and Apollo Bay, to the breathtaking Twelve Apostles and Loch Ard Gorge.</p>
+            <ul class="feature-list">
+              <li><span class="check">✓</span> Door-to-door pickup from your Melbourne address</li>
+              <li><span class="check">✓</span> Flexible itinerary — stop where you want, when you want</li>
+              <li><span class="check">✓</span> Suits families, friend groups, and corporate retreats</li>
+              <li><span class="check">✓</span> Approx. 10–12 hour experience</li>
+            </ul>
+            <a href="/book?tour=great-ocean-road" class="btn btn-primary" id="book-gor">Request a Quote</a>
+          </div>
+        </article>
+
+        <div class="tour-gallery-strip">
+          <Image src={scenic2} alt="Great Ocean Road scenic viewpoint from private taxi tour" width={400} height={240} class="strip-photo" quality={60} />
+          <Image src={oceanImg} alt="Twelve Apostles viewed from Maxi Taxi tour Victoria" width={400} height={240} class="strip-photo" quality={60} />
+        </div>
+
+        <hr class="section-divider" />
+
+        <!-- Tour 2: Yarra Valley -->
+        <article class="tour-full-card reverse" id="yarra-valley">
+          <div class="tfc-content">
+            <span class="section-tag">Full Day Tour</span>
+            <h2>Yarra Valley Wine Tours</h2>
+            <p>Victoria's premier wine region is just over an hour from Melbourne. Let us chauffeur your group through rolling green hills and world-class wineries — so everyone can enjoy a glass (or three) without a single worry about the drive home.</p>
+            <ul class="feature-list">
+              <li><span class="check">✓</span> Spacious cabin — plenty of room for wine purchases</li>
+              <li><span class="check">✓</span> Driver waits while your group tours each winery</li>
+              <li><span class="check">✓</span> Includes Healesville Sanctuary visit if desired</li>
+              <li><span class="check">✓</span> Up to 13 passengers in one vehicle</li>
+            </ul>
+            <a href="/book?tour=yarra-valley" class="btn btn-primary" id="book-yv">Request a Quote</a>
+          </div>
+          <div class="tfc-image">
+            <Image src={wineryImg} alt="Yarra Valley winery Maxi Taxi group tour private chauffeur" width={700} height={460} class="tfc-img" quality={70} />
+          </div>
+        </article>
+
+        <div class="tour-gallery-strip">
+          <Image src={winery2} alt="Yarra Valley wine tasting group transport private" width={400} height={240} class="strip-photo" quality={60} />
+          <Image src={wineryImg} alt="Yarra Valley vineyard scenery maxi taxi tour" width={400} height={240} class="strip-photo" quality={60} />
+        </div>
+
+        <hr class="section-divider" />
+
+        <!-- Tour 3: Phillip Island -->
+        <article class="tour-full-card" id="phillip-island">
+          <div class="tfc-image">
+            <Image src={airportImg} alt="Phillip Island Penguin Parade private Maxi Taxi group tour" width={700} height={460} class="tfc-img" quality={70} />
+          </div>
+          <div class="tfc-content">
+            <span class="section-tag">Half or Full Day Tour</span>
+            <h2>Phillip Island &amp; Mornington Peninsula</h2>
+            <p>From the famous Penguin Parade to the relaxing Peninsula Hot Springs, Phillip Island and the Mornington Peninsula offer world-class family-friendly experiences just a couple of hours from Melbourne.</p>
+            <ul class="feature-list">
+              <li><span class="check">✓</span> Penguin Parade, Churchill Island &amp; more</li>
+              <li><span class="check">✓</span> Combine with Mornington Peninsula Hot Springs</li>
+              <li><span class="check">✓</span> Perfect for families and birthday groups</li>
+              <li><span class="check">✓</span> Half-day or full-day options available</li>
+            </ul>
+            <a href="/book?tour=phillip-island" class="btn btn-primary" id="book-pi">Request a Quote</a>
+          </div>
+        </article>
+
+        <div class="tour-gallery-strip">
+          <Image src={airport2} alt="Phillip Island Maxi Taxi comfortable group transport" width={400} height={240} class="strip-photo" quality={60} />
+          <Image src={scenic2} alt="Mornington Peninsula scenic tour route" width={400} height={240} class="strip-photo" quality={60} />
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="cta-banner">
+      <div class="container text-center">
+        <h2 class="cta-title">Can't Find Your Perfect Tour?</h2>
+        <p class="cta-sub">We build fully <strong style="color: var(--accent-gold);">custom Victoria itineraries</strong> for groups of all sizes and interests. Just describe your dream day.</p>
+        <div class="cta-actions">
+          <a href="/book" class="btn btn-primary" id="tours-cta-book">Request Custom Tour</a>
+          <a href="tel:+61432405388" class="btn btn-outline-dark" id="tours-cta-call">📞 Call Us</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+/* Page Hero */
+.page-hero {
+  position: relative;
+  height: 70vh;
+  min-height: 480px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.page-hero-bg { position: absolute; inset: 0; z-index: 0; }
+.page-hero-img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.page-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(0,0,0,0.78) 0%, rgba(0,0,0,0.25) 80%);
+}
+.page-hero-content {
+  position: relative;
+  z-index: 10;
+  color: white;
+  padding-top: 80px;
+  max-width: 700px;
+}
+.page-hero-content .badge {
+  display: inline-block;
+  background: rgba(212,175,55,0.2);
+  border: 1px solid var(--accent-gold);
+  color: var(--accent-gold);
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 6px 14px;
+  border-radius: 100px;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+.page-hero-content h1 { color: white; font-size: clamp(2rem, 4.5vw, 3.5rem); line-height: 1.15; margin-bottom: 1rem; }
+.page-hero-content p { color: rgba(255,255,255,0.8); font-size: 1.1rem; margin-bottom: 2rem; }
+
+/* Tour Cards */
+.tour-full-card {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  margin-bottom: 60px;
+}
+.tour-full-card.reverse { grid-template-columns: 1fr 1.1fr; }
+.tfc-img {
+  width: 100%;
+  height: 460px;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md);
+  display: block;
+  transition: transform 0.5s ease;
+}
+.tfc-image:hover .tfc-img { transform: scale(1.02); }
+.tfc-image { overflow: hidden; border-radius: var(--border-radius); }
+.tfc-content h2 { font-size: 2.2rem; margin-bottom: 1rem; }
+.tfc-content p { color: var(--text-muted); margin-bottom: 1.5rem; }
+.section-tag {
+  display: inline-block;
+  color: var(--accent-gold);
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.feature-list { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 2rem; }
+.feature-list li { display: flex; align-items: center; gap: 10px; font-weight: 500; font-size: 0.95rem; }
+.check { color: var(--accent-gold); font-weight: 700; font-size: 1rem; }
+
+/* Gallery Strip */
+.tour-gallery-strip {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 60px;
+}
+.strip-photo { width: 100%; height: 240px; object-fit: cover; border-radius: var(--border-radius); display: block; }
+
+/* Divider */
+.section-divider { border: none; border-top: 1px solid var(--bg-tertiary); margin: 20px 0 60px; }
+
+/* CTA */
+.cta-banner { background: var(--accent-dark); padding: 80px 0; }
+.cta-title { color: white; font-size: clamp(1.75rem, 3.5vw, 2.5rem); margin-bottom: 1rem; }
+.cta-sub { color: rgba(255,255,255,0.7); font-size: 1.1rem; margin-bottom: 2.5rem; }
+.cta-actions { display: flex; justify-content: center; flex-wrap: wrap; gap: 16px; }
+.btn-outline-dark {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 14px 28px; font-family: var(--font-heading); font-weight: 500; font-size: 1rem;
+  border-radius: var(--border-radius-sm); border: 1.5px solid rgba(255,255,255,0.3); color: white; transition: var(--transition);
+}
+.btn-outline-dark:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.6); }
+
+@media (max-width: 900px) {
+  .tour-full-card, .tour-full-card.reverse { grid-template-columns: 1fr; gap: 30px; }
+  .tfc-img { height: 300px; }
+  .tour-gallery-strip { grid-template-columns: 1fr; }
+}
+</style>

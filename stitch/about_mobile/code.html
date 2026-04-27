@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-container": "#b4b5b7",
+                        "on-secondary-fixed-variant": "#454749",
+                        "on-secondary": "#2f3133",
+                        "on-primary-fixed": "#221b00",
+                        "secondary": "#c6c6c9",
+                        "surface-container": "#1e2022",
+                        "on-tertiary-fixed-variant": "#45474a",
+                        "outline-variant": "#4d4732",
+                        "surface-bright": "#38393c",
+                        "surface-variant": "#333537",
+                        "inverse-on-surface": "#2f3133",
+                        "on-primary-container": "#705e00",
+                        "surface-container-low": "#1a1c1e",
+                        "surface-container-lowest": "#0c0e10",
+                        "surface-dim": "#121416",
+                        "on-primary": "#3a3000",
+                        "on-background": "#e2e2e5",
+                        "secondary-fixed-dim": "#c6c6c9",
+                        "secondary-container": "#454749",
+                        "tertiary": "#f6f5f9",
+                        "primary-fixed-dim": "#e9c400",
+                        "error-container": "#93000a",
+                        "surface": "#121416",
+                        "on-tertiary-container": "#5d5f62",
+                        "on-surface": "#e2e2e5",
+                        "error": "#ffb4ab",
+                        "primary": "#fff6df",
+                        "outline": "#999077",
+                        "on-error-container": "#ffdad6",
+                        "on-primary-fixed-variant": "#544600",
+                        "on-secondary-fixed": "#1a1c1e",
+                        "background": "#121416",
+                        "primary-container": "#ffd700",
+                        "on-tertiary": "#2f3034",
+                        "on-error": "#690005",
+                        "primary-fixed": "#ffe16d",
+                        "on-surface-variant": "#d0c6ab",
+                        "inverse-primary": "#705d00",
+                        "surface-tint": "#e9c400",
+                        "tertiary-fixed-dim": "#c6c6ca",
+                        "on-tertiary-fixed": "#1a1c1f",
+                        "tertiary-fixed": "#e2e2e6",
+                        "tertiary-container": "#d9d9dd",
+                        "surface-container-highest": "#333537",
+                        "surface-container-high": "#282a2c",
+                        "secondary-fixed": "#e2e2e5",
+                        "inverse-surface": "#e2e2e5"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Manrope', sans-serif; }
+        h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface selection:bg-primary-container selection:text-on-primary-fixed">
+<!-- Top Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-[#121416]/60 backdrop-blur-xl flex justify-between items-center px-6 h-20 shadow-[0_0_32px_rgba(226,226,229,0.06)]">
+<div class="text-2xl font-bold tracking-tighter text-[#ffd700]">Maxi Taxi Melbourne</div>
+<button class="material-symbols-outlined text-[#ffd700] text-3xl">menu</button>
+</nav>
+<!-- Hero Section -->
+<header class="relative pt-32 pb-20 px-6 overflow-hidden">
+<div class="absolute inset-0 z-0 opacity-30">
+<img class="w-full h-full object-cover" data-alt="Moody cinematic night view of Melbourne skyline with blurred city lights and deep blue architectural shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQrpYJVabauDxBQjHi22lTwP54tdqCsQSTEC65nIBvpSD9eHZ7u-JMTTdwenuHyDxcryV83kVg2v98HERrFWkJjCYeOp0rtmILbTBsh-rkNUOZ1Wh-lpuku48q5WcVQcVFpb46HfAdVs2mNuIV-VUKAsXDbZX1mrofhhFGxvcTtR1FZUAhcw4FRYgTxdIZl3AvQMKTkUo5IVX46zdyMxO6YG_yNNYEO1zAzGloRtKBgC04ZSDPgEedMGp_3BS3Bh2N1J8ry7W8Rpw"/>
+<div class="absolute inset-0 bg-gradient-to-b from-surface/20 via-surface to-surface"></div>
+</div>
+<div class="relative z-10">
+<span class="inline-block px-3 py-1 bg-surface-container-high text-[#ffd700] text-[10px] font-['Space_Grotesk'] uppercase tracking-[0.2em] rounded-sm mb-6">Established 2012</span>
+<h1 class="text-5xl font-bold tracking-tighter leading-none mb-8">Redefining Urban <span class="text-[#ffd700]">Mobility.</span></h1>
+<p class="text-on-surface-variant text-lg max-w-sm font-light leading-relaxed">
+                Maxi Taxi Melbourne was born from a simple observation: group travel in the city lacked the sophistication of a private concierge.
+            </p>
+</div>
+</header>
+<!-- Narrative Section: The Origin -->
+<section class="px-6 py-12 space-y-16">
+<div class="space-y-6">
+<div class="h-1 w-12 bg-[#ffd700]"></div>
+<h2 class="text-3xl font-semibold tracking-tight">The Vision</h2>
+<div class="space-y-8">
+<p class="text-on-surface-variant leading-relaxed">
+                    We didn't just want to be another transport service. We aimed to create a kinetic experience that matched the energy of Melbourne—dynamic, reliable, and premium.
+                </p>
+<div class="rounded-xl overflow-hidden shadow-2xl">
+<img class="w-full aspect-[4/3] object-cover" data-alt="Close up of a premium black luxury vehicle wheel and bodywork reflecting Melbourne street lights at night" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXk3ElXU_Fpkan1GVQDCw3vkZWPvYCWa9aUaU2VrnAFuC5vaFhu6rjVfSdVRGitgni1h7j9h_J3IcoQNy-YAqv9Oh1981PwriNC9JNAEB6R07G1PRqcw7kz-0lFt8Y0THUx6B1sot5CdEcJcfV5e7gWLren7C0kRbgP_58pJJv1SZ8oF-CQfMaLsCI8bPQCkH45ZRfUaGJRA4a-cSuC261oFPEtd37DpFM-1jihVFd4O_dqaOSdoQM3YS2GhLPxhManpw9rDzAkhc"/>
+</div>
+</div>
+</div>
+<!-- Bento Grid Insights -->
+<div class="grid grid-cols-2 gap-4">
+<div class="col-span-2 bg-surface-container-low p-8 rounded-xl space-y-4">
+<span class="material-symbols-outlined text-[#ffd700] text-4xl">verified_user</span>
+<h3 class="text-xl font-bold">Uncompromising Quality</h3>
+<p class="text-sm text-on-surface-variant">Every driver is hand-selected and trained in the art of professional chauffeuring, ensuring your journey is as smooth as the Melbourne skyline.</p>
+</div>
+<div class="bg-surface-container-high p-6 rounded-xl flex flex-col justify-between aspect-square">
+<span class="text-4xl font-bold text-[#ffd700]">50+</span>
+<span class="text-xs uppercase tracking-widest font-headline">Premium Fleet</span>
+</div>
+<div class="bg-surface-container-high p-6 rounded-xl flex flex-col justify-between aspect-square">
+<span class="text-4xl font-bold text-[#ffd700]">24/7</span>
+<span class="text-xs uppercase tracking-widest font-headline">Service</span>
+</div>
+</div>
+<!-- Narrative Section: The Commitment -->
+<div class="space-y-6">
+<h2 class="text-3xl font-semibold tracking-tight">Our Promise</h2>
+<div class="p-8 bg-gradient-to-br from-surface-container-low to-surface-container-lowest rounded-xl border-l-4 border-[#ffd700]">
+<p class="italic text-xl font-light leading-relaxed text-on-surface">
+                    "To provide more than just a ride; to deliver a seamless transition between destinations, where luxury and group utility finally coexist."
+                </p>
+</div>
+<p class="text-on-surface-variant leading-relaxed pt-4">
+                Whether it's an airport transfer at dawn or a night out in the CBD, our commitment remains the same: punctuality, privacy, and prestige.
+            </p>
+</div>
+</section>
+<!-- Asymmetric Feature Image -->
+<section class="py-12 relative">
+<div class="ml-6 mr-0 rounded-l-3xl overflow-hidden h-[400px]">
+<img class="w-full h-full object-cover" data-alt="Wide shot of modern urban architecture in Melbourne with deep shadows and warm interior lighting glowing through glass" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPYREX0tVEcxGREbf1I575xrWXl8guJvxYjzXyc6YTRRqbjc0swKwHVkSlWfgfeCuRfgwjYQrcK0G0HvLcGN1DT8if_o27iz-n2UnHpEXi5Jp39zE-bcK82NF98R0ch1seTnf8aHyK7PPTJ-vpL23Tw7JRgOStP9CfM16PKgyA1ifVXiZULHWGuJjqChqo8bqN3B_GfpsS8qrg8XEfUAFqveZ0LH06b9i4IrQkpHwxYi68IzOIx9txWN210CGVp1xWiWz0oEkbQaE"/>
+</div>
+<div class="absolute bottom-12 left-10 right-10 bg-surface-container-high/90 backdrop-blur-md p-6 rounded-lg shadow-xl">
+<h4 class="text-[#ffd700] font-headline uppercase tracking-widest text-xs mb-2">Our Reach</h4>
+<p class="text-sm font-medium">Serving the entire Melbourne Metropolitan area, from the Mornington Peninsula to the Yarra Valley.</p>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-[#1a1c1e] w-full py-12 px-8 border-t border-[#4d4732]/15">
+<div class="max-w-7xl mx-auto flex flex-col items-center text-center">
+<div class="text-lg font-bold text-[#ffd700] mb-4">Maxi Taxi Melbourne</div>
+<nav class="grid grid-cols-2 gap-x-8 gap-y-4 mb-8">
+<a class="text-[#e2e2e5]/60 text-xs font-['Manrope'] hover:text-[#ffd700] transition-colors duration-200" href="#">Privacy Policy</a>
+<a class="text-[#e2e2e5]/60 text-xs font-['Manrope'] hover:text-[#ffd700] transition-colors duration-200" href="#">Terms of Service</a>
+<a class="text-[#e2e2e5]/60 text-xs font-['Manrope'] hover:text-[#ffd700] transition-colors duration-200" href="#">Contact Us</a>
+<a class="text-[#e2e2e5]/60 text-xs font-['Manrope'] hover:text-[#ffd700] transition-colors duration-200" href="#">Drivers</a>
+</nav>
+<p class="text-[10px] text-[#e2e2e5]/40 uppercase tracking-widest">© 2024 Maxi Taxi Melbourne. Premium Urban Transport.</p>
+</div>
+</footer>
+<!-- Bottom Navigation Bar (Mobile) -->
+<div class="fixed bottom-0 left-0 right-0 bg-[#121416]/90 backdrop-blur-2xl px-6 py-3 flex justify-between items-center z-50 md:hidden border-t border-white/5">
+<div class="flex flex-col items-center text-on-surface-variant">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] mt-1 font-headline uppercase tracking-tighter">Home</span>
+</div>
+<div class="flex flex-col items-center text-on-surface-variant">
+<span class="material-symbols-outlined">directions_car</span>
+<span class="text-[10px] mt-1 font-headline uppercase tracking-tighter">Services</span>
+</div>
+<div class="flex flex-col items-center text-[#ffd700]">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">info</span>
+<span class="text-[10px] mt-1 font-headline uppercase tracking-tighter font-bold border-b border-[#ffd700]">About</span>
+</div>
+<div class="flex flex-col items-center text-on-surface-variant">
+<span class="material-symbols-outlined">payments</span>
+<span class="text-[10px] mt-1 font-headline uppercase tracking-tighter">Pricing</span>
+</div>
+</div>
+<!-- Booking CTA (Floating) -->
+<div class="fixed bottom-24 right-6 z-40">
+<button class="bg-[#ffd700] text-on-primary-fixed w-14 h-14 rounded-full flex items-center justify-center shadow-[0_8px_24px_rgba(255,215,0,0.3)] active:scale-95 transition-transform">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">add_task</span>
+</button>
+</div>
+</body></html>

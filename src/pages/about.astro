@@ -1,0 +1,176 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { Image } from 'astro:assets';
+
+import aboutHero  from '../assets/van-exterior-6.jpeg';
+import teamImg    from '../assets/van-exterior-7.jpeg';
+import roadImg    from '../assets/van-road-1.jpeg';
+import road2      from '../assets/van-road-2.jpeg';
+---
+
+<Layout 
+  title="About Premium Maxi Taxi | Victoria's Trusted Group Transport Since Day One"
+  description="Learn about Premium Maxi Taxi Victoria — our story, mission, and commitment to delivering the most reliable, spacious, and professional group transport in Melbourne."
+>
+  <Header />
+
+  <main>
+    <!-- Page Hero -->
+    <section class="page-hero">
+      <div class="page-hero-bg">
+        <Image src={aboutHero} alt="Premium Maxi Taxi Victoria fleet about us story" width={1920} height={700} class="page-hero-img" quality={65} />
+        <div class="page-hero-overlay"></div>
+      </div>
+      <div class="container page-hero-content">
+        <span class="badge">✦ Melbourne & Victoria</span>
+        <h1>About <em class="text-gold">Premium<br/>Maxi Taxi</em></h1>
+        <p>Victoria's most trusted large-group Maxi Taxi service — built on punctuality, comfort, and genuine care for every passenger.</p>
+      </div>
+    </section>
+
+    <!-- Our Story -->
+    <section class="section">
+      <div class="container split-section">
+        <div class="split-content">
+          <div class="section-tag">Our Story</div>
+          <h2 class="section-title">Born from a Simple Idea:<br/><em class="text-gold">Groups Deserve Better</em></h2>
+          <p>Premium Maxi Taxi was founded by drivers who understood the frustration of large groups having to split across multiple taxis — losing time, losing money, and losing the joy of travelling together.</p>
+          <p style="margin-top: 1rem;">We set out to build a service that put the passenger experience first. Starting with a single 11-seater van, we grew our fleet by focusing obsessively on cleanliness, punctuality, and professionalism — the three pillars every group transport customer truly cares about.</p>
+          <p style="margin-top: 1rem;">Today, we serve thousands of passengers across Melbourne and all of Victoria — from families heading to Phillip Island, to corporations hosting interstate executives, to couples hiring us for their wedding day.</p>
+        </div>
+        <div class="split-image">
+          <Image src={roadImg} alt="Premium Maxi Taxi on the road Victoria scenic" width={600} height={420} class="about-img" quality={70} />
+        </div>
+      </div>
+    </section>
+
+    <!-- Values -->
+    <section class="section section-light">
+      <div class="container">
+        <div class="section-tag text-center" style="display:block;">Our Values</div>
+        <h2 class="section-title text-center">What We Stand For</h2>
+
+        <div class="values-grid">
+          <div class="value-card">
+            <div class="value-icon">🕐</div>
+            <h3>Punctuality</h3>
+            <p class="text-muted">We track your flights, monitor traffic, and plan ahead so you never wait and never rush.</p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon">✨</div>
+            <h3>Immaculate Vehicles</h3>
+            <p class="text-muted">Every vehicle is professionally cleaned and inspected before each and every booking — no exceptions.</p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon">🛡️</div>
+            <h3>Safety First</h3>
+            <p class="text-muted">All drivers are licensed, background-checked, and trained to Victorian transport authority standards.</p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon">🤝</div>
+            <h3>Genuine Care</h3>
+            <p class="text-muted">From the first booking call to the final drop-off, our team treats every passenger like a valued guest.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Road Photo Feature -->
+    <section class="section">
+      <div class="container split-section">
+        <div class="split-image">
+          <Image src={road2} alt="Maxi Taxi driving through Victoria scenic route group tour" width={600} height={420} class="about-img" quality={70} />
+        </div>
+        <div class="split-content">
+          <div class="section-tag">Victoria Wide</div>
+          <h2 class="section-title">We Go Where<br/>You Need to <em class="text-gold">Go</em></h2>
+          <p>Unlike standard taxi services that only cover the metro area, our Maxi Taxis operate across the entire state of Victoria. From the Yarra Ranges to the Great Ocean Road, Geelong to Bendigo — if you need to get there as a group, we'll take you.</p>
+          <ul class="feature-list" style="margin-top: 1.5rem;">
+            <li><span class="check">✓</span> Melbourne CBD &amp; Metro Area</li>
+            <li><span class="check">✓</span> Melbourne Airport (Tullamarine &amp; Avalon)</li>
+            <li><span class="check">✓</span> Mornington Peninsula &amp; Phillip Island</li>
+            <li><span class="check">✓</span> Yarra Valley &amp; Dandenong Ranges</li>
+            <li><span class="check">✓</span> Great Ocean Road &amp; Geelong</li>
+            <li><span class="check">✓</span> Bendigo, Ballarat &amp; Regional Victoria</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Image -->
+    <section class="section section-light">
+      <div class="container text-center">
+        <div class="section-tag" style="display:block; text-align:center;">Professional Team</div>
+        <h2 class="section-title">Drivers You Can <em class="text-gold">Trust</em></h2>
+        <p class="section-sub">All our drivers are VHA/VHB licensed, undergo regular police checks, and complete ongoing customer service training to ensure every ride feels personal and professional.</p>
+        <Image src={teamImg} alt="Premium Maxi Taxi driver professional Victoria licensed" width={1000} height={500} class="team-img" quality={70} />
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-banner">
+      <div class="container text-center">
+        <h2 class="cta-title">Experience the <em class="text-gold">Premium Difference</em></h2>
+        <p class="cta-sub">Book your next group journey with us and discover why thousands of Victorians trust Premium Maxi Taxi.</p>
+        <div class="cta-actions">
+          <a href="/book" class="btn btn-primary" id="about-cta-book">Book Now</a>
+          <a href="/services" class="btn btn-outline-dark" id="about-cta-services">Our Services</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+.page-hero { position: relative; height: 70vh; min-height: 480px; display: flex; align-items: center; overflow: hidden; }
+.page-hero-bg { position: absolute; inset: 0; z-index: 0; }
+.page-hero-img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.page-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to right, rgba(0,0,0,0.78) 0%, rgba(0,0,0,0.25) 80%); }
+.page-hero-content { position: relative; z-index: 10; color: white; padding-top: 80px; max-width: 700px; }
+.page-hero-content .badge { display: inline-block; background: rgba(212,175,55,0.2); border: 1px solid var(--accent-gold); color: var(--accent-gold); font-family: var(--font-heading); font-size: 0.8rem; font-weight: 600; letter-spacing: 1px; padding: 6px 14px; border-radius: 100px; margin-bottom: 1rem; text-transform: uppercase; }
+.page-hero-content h1 { color: white; font-size: clamp(2rem, 4.5vw, 3.5rem); line-height: 1.15; margin-bottom: 1rem; }
+.page-hero-content p { color: rgba(255,255,255,0.8); font-size: 1.1rem; margin-bottom: 2rem; }
+
+.section-tag { display: inline-block; color: var(--accent-gold); font-family: var(--font-heading); font-size: 0.8rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 12px; }
+.section-title { font-size: clamp(1.75rem, 3.5vw, 2.6rem); margin-bottom: 1rem; }
+.section-sub { font-size: 1.05rem; color: var(--text-muted); max-width: 620px; margin: 0 auto 3rem; }
+
+.split-section { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+.split-content p { color: var(--text-muted); line-height: 1.8; }
+.about-img { width: 100%; height: 420px; object-fit: cover; border-radius: var(--border-radius); box-shadow: var(--shadow-md); display: block; }
+
+.values-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 48px; }
+.value-card { text-align: center; padding: 40px 24px; background: var(--bg-primary); border-radius: var(--border-radius); border: 1px solid var(--bg-tertiary); transition: var(--transition); }
+.value-card:hover { border-color: var(--accent-gold); box-shadow: var(--shadow-sm); transform: translateY(-4px); }
+.value-icon { font-size: 2.5rem; margin-bottom: 16px; }
+.value-card h3 { font-size: 1.1rem; margin-bottom: 8px; }
+
+.feature-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.feature-list li { display: flex; align-items: center; gap: 10px; font-weight: 500; }
+.check { color: var(--accent-gold); font-weight: 700; }
+
+.team-img { width: 100%; max-height: 480px; object-fit: cover; border-radius: var(--border-radius); box-shadow: var(--shadow-md); margin-top: 40px; }
+
+.cta-banner { background: var(--accent-dark); padding: 80px 0; }
+.cta-title { color: white; font-size: clamp(1.75rem, 3.5vw, 2.5rem); margin-bottom: 1rem; }
+.cta-sub { color: rgba(255,255,255,0.7); font-size: 1.1rem; margin-bottom: 2.5rem; }
+.cta-actions { display: flex; justify-content: center; flex-wrap: wrap; gap: 16px; }
+.btn-outline-dark { display: inline-flex; align-items: center; gap: 8px; padding: 14px 28px; font-family: var(--font-heading); font-weight: 500; font-size: 1rem; border-radius: var(--border-radius-sm); border: 1.5px solid rgba(255,255,255,0.3); color: white; transition: var(--transition); }
+.btn-outline-dark:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.6); }
+
+@media (max-width: 1024px) {
+  .values-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .split-section { grid-template-columns: 1fr; gap: 36px; }
+  .values-grid { grid-template-columns: repeat(2, 1fr); }
+  .about-img { height: 280px; }
+}
+@media (max-width: 480px) {
+  .values-grid { grid-template-columns: 1fr; }
+}
+</style>

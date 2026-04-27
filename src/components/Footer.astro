@@ -1,0 +1,146 @@
+---
+// src/components/Footer.astro
+const year = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <div class="container footer-container">
+    <div class="footer-col brand-col">
+      <div class="logo">
+        <span class="logo-accent">Premium</span>MaxiTaxi
+      </div>
+      <p class="text-muted mt-4">
+        Reliable, spacious, and luxury group transportation across Melbourne and Victoria. Your comfort is our premium priority.
+      </p>
+    </div>
+    
+    <div class="footer-col">
+      <h4 class="footer-heading">Services</h4>
+      <ul class="footer-links">
+        <li><a href="/services/maxi-cab-melbourne">Maxi Cab Melbourne</a></li>
+        <li><a href="/services/wheelchair-accessible-taxi-melbourne">Wheelchair Accessible Taxi</a></li>
+        <li><a href="/services/baby-seat-taxi-melbourne">Baby Seat Taxi</a></li>
+        <li><a href="/services/parcel-delivery-taxi-melbourne">Parcel Delivery Taxi</a></li>
+        <li><a href="/services/group-transfers-melbourne">Group Transfers</a></li>
+      </ul>
+    </div>
+    
+    <div class="footer-col">
+      <h4 class="footer-heading">Company</h4>
+      <ul class="footer-links">
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/fleet">Our Fleet</a></li>
+        <li><a href="/tours">Day Tours</a></li>
+        <li><a href="/faq">FAQ</a></li>
+      </ul>
+    </div>
+    
+    <div class="footer-col">
+      <h4 class="footer-heading">Top Service Areas</h4>
+      <ul class="footer-links">
+        <li><a href="/locations/melbourne-cbd">Melbourne CBD</a></li>
+        <li><a href="/locations/st-kilda">St Kilda</a></li>
+        <li><a href="/locations/richmond">Richmond</a></li>
+        <li><a href="/locations/tullamarine">Tullamarine</a></li>
+      </ul>
+    </div>
+    
+    <div class="footer-col">
+      <h4 class="footer-heading">Contact</h4>
+      <ul class="footer-links">
+        <li><a href="tel:+61432405388">Book: +61 432 405 388</a></li>
+        <li><a href="mailto:booking@premiummaxitaxi.com.au">booking@premiummaxitaxi.com.au</a></li>
+        <li>Serving Melbourne & Victoria Wide</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="container footer-bottom">
+    <p>&copy; {year} Premium Maxi Taxi Victoria. All rights reserved.</p>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background-color: var(--bg-secondary);
+    padding: 80px 0 30px;
+    border-top: 1px solid var(--bg-tertiary);
+  }
+
+  .footer-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 60px;
+  }
+
+  .logo {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  .logo-accent {
+    color: var(--accent-gold);
+    font-weight: 300;
+  }
+
+  .mt-4 {
+    margin-top: 1rem;
+  }
+
+  .footer-heading {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+  }
+  
+  .footer-heading::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background-color: var(--accent-gold);
+  }
+
+  .footer-links {
+    list-style: none;
+  }
+
+  .footer-links li {
+    margin-bottom: 0.8rem;
+  }
+
+  .footer-links a {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+  }
+
+  .footer-links a:hover {
+    color: var(--accent-gold);
+    padding-left: 5px;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid var(--bg-tertiary);
+    color: var(--text-muted);
+    font-size: 0.9rem;
+  }
+
+  @media (max-width: 992px) {
+    .footer-container {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .footer-container {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

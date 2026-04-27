@@ -1,0 +1,292 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { Image } from 'astro:assets';
+
+import heroFaq from '../assets/van-exterior-9.jpeg';
+
+const faqItems = [
+  {
+    q: "How many passengers can a Maxi Taxi hold?",
+    a: "Our fleet includes 11-seater luxury vans and 13-seater Maxi Cabs. Both options include substantial luggage space in addition to the full passenger capacity."
+  },
+  {
+    q: "Do your vehicles have extra luggage space?",
+    a: "Yes. All our vehicles have dedicated underfloor cargo compartments separate from the passenger cabin, which is useful for airport runs and multi-day tours."
+  },
+  {
+    q: "How do I book a Premium Maxi Taxi?",
+    a: "You can book via the online booking form, by phone, or by email. Pre-booking at least 24 hours in advance is recommended for planned trips."
+  },
+  {
+    q: "How far in advance should I book?",
+    a: "For airport transfers, booking 24 to 48 hours in advance is recommended. For tours and special occasions, 3 to 7 days ahead is ideal."
+  },
+  {
+    q: "How do you calculate your prices?",
+    a: "Pricing is based on distance, vehicle type, and service. Fixed, transparent pricing is available before confirming a booking."
+  },
+  {
+    q: "Which airports do you service?",
+    a: "Premium Maxi Taxi services Melbourne Tullamarine Airport and Avalon Airport, along with private airstrips in Victoria on request."
+  },
+  {
+    q: "Do you track flights for arrivals?",
+    a: "Yes. Customers can provide a flight number at booking so pickup timing can be adjusted for early or delayed arrivals."
+  },
+  {
+    q: "Do you provide wheelchair-accessible taxis?",
+    a: "Yes. Wheelchair-accessible Maxi Taxis include electric hoist boarding, certified restraint systems, and space for carers or family members."
+  },
+  {
+    q: "Can I create a custom tour itinerary?",
+    a: "Yes. Private day trips can be tailored to the group's preferred lookouts, wineries, towns, and attractions."
+  },
+  {
+    q: "What areas in Victoria do you serve?",
+    a: "Premium Maxi Taxi covers Melbourne, airport corridors, the Yarra Valley, Mornington Peninsula, Geelong, Great Ocean Road, Phillip Island, Ballarat, Bendigo, and wider Victoria."
+  }
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqItems.map((item) => ({
+    "@type": "Question",
+    "name": item.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": item.a
+    }
+  }))
+};
+---
+
+<Layout 
+  title="FAQ | Maxi Taxi Melbourne — Booking, Capacity & Victoria Tours"
+  description="Frequently asked questions about Premium Maxi Taxi. Learn about pricing, wheelchair access, airport transfers, capacity, and booking procedures for Melbourne and Victoria."
+>
+  <Header />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <main>
+    <!-- Page Hero -->
+    <section class="page-hero">
+      <div class="page-hero-bg">
+        <Image src={heroFaq} alt="Frequently asked questions Premium Maxi Taxi Melbourne" width={1920} height={600} class="page-hero-img" quality={60} />
+        <div class="page-hero-overlay"></div>
+      </div>
+      <div class="container page-hero-content">
+        <span class="badge">✦ Quick Answers</span>
+        <h1>Frequently Asked <em class="text-gold">Questions</em></h1>
+        <p>Everything you need to know about booking a Premium Maxi Taxi across Melbourne and Victoria.</p>
+      </div>
+    </section>
+
+    <!-- FAQ Content -->
+    <section class="section">
+      <div class="container faq-layout">
+
+        <!-- Category Navigation -->
+        <aside class="faq-sidebar">
+          <div class="sidebar-card glass">
+            <h4>Jump to Topic</h4>
+            <ul class="faq-nav">
+              <li><a href="#capacity">Vehicle Capacity</a></li>
+              <li><a href="#booking">Booking Process</a></li>
+              <li><a href="#pricing">Pricing & Payment</a></li>
+              <li><a href="#airport">Airport Transfers</a></li>
+              <li><a href="#accessibility">Accessibility</a></li>
+              <li><a href="#tours">Tours & Destinations</a></li>
+              <li><a href="#coverage">Service Coverage</a></li>
+            </ul>
+            <hr style="border: none; border-top: 1px solid var(--bg-tertiary); margin: 20px 0;" />
+            <p class="text-muted" style="font-size: 0.875rem; margin-bottom: 12px;">Still have a question?</p>
+            <a href="/contact" class="btn btn-dark" style="width:100%; text-align:center; display:block; font-size:0.9rem;" id="faq-contact">Contact Us</a>
+          </div>
+        </aside>
+
+        <!-- FAQ Items -->
+        <div class="faq-content">
+          
+          <div class="faq-group" id="capacity">
+            <h2 class="faq-group-title"><span class="group-icon">🚐</span> Vehicle Capacity</h2>
+            
+            <details class="faq-item">
+              <summary>How many passengers can a Maxi Taxi hold?</summary>
+              <p>Our fleet includes <strong>11-seater luxury vans</strong> and <strong>13-seater Maxi Cabs</strong>. Both options include substantial luggage space in addition to the full passenger capacity, making them ideal for families and groups with luggage.</p>
+            </details>
+
+            <details class="faq-item">
+              <summary>Do your vehicles have extra luggage space?</summary>
+              <p>Yes. All our vehicles have dedicated underfloor cargo compartments separate from the passenger cabin. Our 13-seaters especially accommodate large volumes of luggage, suitcases, and equipment — perfect for airport runs or multi-day tours.</p>
+            </details>
+
+            <details class="faq-item">
+              <summary>Can I book a Maxi Taxi for just a small group?</summary>
+              <p>Absolutely. While our vehicles can hold up to 13 passengers, you can book them for any group size — from 2 people upwards. Many customers prefer the extra space and comfort even for smaller groups.</p>
+            </details>
+          </div>
+
+          <div class="faq-group" id="booking">
+            <h2 class="faq-group-title"><span class="group-icon">📅</span> Booking Process</h2>
+
+            <details class="faq-item">
+              <summary>How do I book a Premium Maxi Taxi?</summary>
+              <p>You can book via our <a href="/book" style="color: var(--accent-gold); font-weight: 600;">online booking form</a>, by calling <a href="tel:+61432405388" style="color: var(--accent-gold); font-weight: 600;">+61 432 405 388</a>, or by emailing <a href="mailto:booking@premiummaxitaxi.com.au" style="color: var(--accent-gold);">booking@premiummaxitaxi.com.au</a>. We recommend pre-booking at least 24 hours in advance for planned trips.</p>
+            </details>
+
+            <details class="faq-item">
+              <summary>How far in advance should I book?</summary>
+              <p>For airport transfers, we recommend booking at least <strong>24–48 hours</strong> in advance. For tours and special occasions, <strong>3–7 days</strong> ahead is ideal to guarantee availability. However, we always try to accommodate last-minute requests — just call us.</p>
+            </details>
+
+            <details class="faq-item">
+              <summary>Can I cancel or change my booking?</summary>
+              <p>Yes. Please contact us as early as possible if you need to modify or cancel. Cancellations made more than 24 hours before the booking incur no charge. Within 24 hours, a partial fee may apply pending circumstances.</p>
+            </details>
+          </div>
+
+          <div class="faq-group" id="pricing">
+            <h2 class="faq-group-title"><span class="group-icon">💳</span> Pricing & Payment</h2>
+
+            <details class="faq-item">
+              <summary>How do you calculate your prices?</summary>
+              <p>We offer <strong>fixed, transparent pricing</strong> based on the distance, vehicle type, and service. We never apply surge pricing or hidden fees. You'll always know the exact price before you confirm your booking.</p>
+            </details>
+
+            <details class="faq-item">
+              <summary>What payment methods do you accept?</summary>
+              <p>We accept all major cards (Visa, Mastercard, Amex), PayPal, Apple Pay, Google Pay, cash, and Cabcharge. Corporate invoicing with NET-30 terms is available for business accounts.</p>
+            </details>
+          </div>
+
+          <div class="faq-group" id="airport">
+            <h2 class="faq-group-title"><span class="group-icon">✈️</span> Airport Transfers</h2>
+
+            <details class="faq-item">
+              <summary>Do you track flights for arrivals?</summary>
+              <p>Yes — simply provide your flight number at booking and we monitor it in real-time. If your flight is delayed, we adjust your driver's arrival time accordingly. You will <strong>never be charged for airline delays</strong>.</p>
+            </details>
+
+            <details class="faq-item">
+              <summary>Which airports do you service?</summary>
+              <p>We service both <strong>Melbourne Tullamarine (MEL)</strong> and <strong>Avalon Airport (AVV)</strong>, along with any private airstrips in Victoria on request. We cover all terminals and departure points.</p>
+            </details>
+
+            <details class="faq-item">
+              <summary>Do you offer a meet-and-greet service?</summary>
+              <p>Yes. Our drivers can meet you inside the terminal with a name sign for an additional fee. This is especially popular for corporate clients arriving from interstate or international flights.</p>
+            </details>
+          </div>
+
+          <div class="faq-group" id="accessibility">
+            <h2 class="faq-group-title"><span class="group-icon">♿</span> Accessibility</h2>
+
+            <details class="faq-item">
+              <summary>Do you provide wheelchair-accessible taxis?</summary>
+              <p>Yes. Our wheelchair-accessible Maxi Taxis feature <strong>electric hoist boarding</strong>, certified tie-down restraint systems, and plenty of space for carers or family members. Simply select "Wheelchair Accessible" or "Mobility Scooter" when booking.</p>
+            </details>
+
+            <details class="faq-item">
+              <summary>Are your drivers trained for passengers with disabilities?</summary>
+              <p>All drivers providing accessible transport hold specific government-approved certifications for assisting passengers with mobility challenges. They undergo regular refresher training in passenger handling and first-aid.</p>
+            </details>
+          </div>
+
+          <div class="faq-group" id="tours">
+            <h2 class="faq-group-title"><span class="group-icon">🗺️</span> Tours & Destinations</h2>
+
+            <details class="faq-item">
+              <summary>Can I create a custom tour itinerary?</summary>
+              <p>Absolutely. Many customers prefer a <strong>fully custom day trip</strong> tailored to their group's interests — stopping at specific lookouts, wineries, or towns along the way. Just describe your ideal day in the booking form notes and we'll make it happen.</p>
+            </details>
+
+            <details class="faq-item">
+              <summary>Are food and breaks included on tours?</summary>
+              <p>Our drivers are your dedicated chauffeur for the day and guide you to top-rated stops. Meals and entry fees at destinations are at your own expense, but your driver will happily suggest the best spots along the route.</p>
+            </details>
+          </div>
+
+          <div class="faq-group" id="coverage">
+            <h2 class="faq-group-title"><span class="group-icon">📍</span> Service Coverage</h2>
+
+            <details class="faq-item">
+              <summary>What areas in Victoria do you serve?</summary>
+              <p>We cover <strong>all of Victoria</strong> — Melbourne CBD, inner suburbs, airport corridors, the Yarra Valley, Mornington Peninsula, Geelong, Great Ocean Road, Phillip Island, Ballarat, Bendigo, and beyond. If it's in Victoria, we'll get you there.</p>
+            </details>
+
+            <details class="faq-item">
+              <summary>Do you operate on public holidays?</summary>
+              <p>Yes — we operate 24/7, 365 days a year, including all Victorian and national public holidays. Public holiday surcharges may apply; these will always be communicated at the time of booking.</p>
+            </details>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Still have questions CTA -->
+    <section class="cta-banner">
+      <div class="container text-center">
+        <h2 class="cta-title">Still Have a Question?</h2>
+        <p class="cta-sub">Our friendly team is ready to help — call, email, or submit a booking enquiry.</p>
+        <div class="cta-actions">
+          <a href="/contact" class="btn btn-primary" id="faq-cta-contact">Contact Us</a>
+          <a href="tel:+61432405388" class="btn btn-outline-dark" id="faq-cta-call">📞 +61 432 405 388</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+.page-hero { position: relative; height: 55vh; min-height: 360px; display: flex; align-items: center; overflow: hidden; }
+.page-hero-bg { position: absolute; inset: 0; z-index: 0; }
+.page-hero-img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.page-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to right, rgba(0,0,0,0.80) 0%, rgba(0,0,0,0.3) 80%); }
+.page-hero-content { position: relative; z-index: 10; color: white; padding-top: 80px; max-width: 700px; }
+.page-hero-content .badge { display: inline-block; background: rgba(212,175,55,0.2); border: 1px solid var(--accent-gold); color: var(--accent-gold); font-family: var(--font-heading); font-size: 0.8rem; font-weight: 600; letter-spacing: 1px; padding: 6px 14px; border-radius: 100px; margin-bottom: 1rem; text-transform: uppercase; }
+.page-hero-content h1 { color: white; font-size: clamp(2rem, 4.5vw, 3.2rem); line-height: 1.15; margin-bottom: 1rem; }
+.page-hero-content p { color: rgba(255,255,255,0.8); font-size: 1.05rem; }
+
+/* Layout */
+.faq-layout { display: grid; grid-template-columns: 260px 1fr; gap: 48px; align-items: start; }
+.faq-sidebar { position: sticky; top: 100px; }
+.sidebar-card { padding: 28px; border-radius: var(--border-radius); background: var(--bg-secondary); border: 1px solid var(--bg-tertiary); }
+.sidebar-card h4 { font-size: 1rem; margin-bottom: 16px; }
+.faq-nav { list-style: none; display: flex; flex-direction: column; gap: 4px; }
+.faq-nav a { display: block; padding: 8px 12px; border-radius: var(--border-radius-sm); font-size: 0.9rem; font-weight: 500; color: var(--text-muted); transition: var(--transition); }
+.faq-nav a:hover { background: var(--bg-tertiary); color: var(--accent-gold); }
+
+/* FAQ Groups */
+.faq-content { display: flex; flex-direction: column; gap: 40px; }
+.faq-group-title { font-size: 1.3rem; margin-bottom: 16px; display: flex; align-items: center; gap: 12px; padding-bottom: 12px; border-bottom: 2px solid var(--bg-tertiary); }
+.group-icon { font-size: 1.4rem; }
+
+/* Accordion */
+.faq-item { border-radius: var(--border-radius-sm); border: 1px solid var(--bg-tertiary); background: var(--bg-primary); overflow: hidden; transition: var(--transition); margin-bottom: 10px; }
+.faq-item:hover { border-color: var(--accent-gold); }
+.faq-item[open] { border-color: var(--accent-gold); }
+.faq-item summary { padding: 18px 24px; font-family: var(--font-heading); font-weight: 600; font-size: 0.975rem; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after { content: '+'; color: var(--accent-gold); font-size: 1.4rem; line-height: 1; flex-shrink: 0; transition: transform 0.3s ease; font-weight: 300; }
+.faq-item[open] summary::after { content: '−'; }
+.faq-item p { padding: 4px 24px 20px; color: var(--text-muted); font-size: 0.9rem; line-height: 1.75; }
+
+/* CTA */
+.cta-banner { background: var(--accent-dark); padding: 80px 0; }
+.cta-title { color: white; font-size: clamp(1.75rem, 3.5vw, 2.5rem); margin-bottom: 1rem; }
+.cta-sub { color: rgba(255,255,255,0.7); font-size: 1.1rem; margin-bottom: 2.5rem; }
+.cta-actions { display: flex; justify-content: center; flex-wrap: wrap; gap: 16px; }
+.btn-outline-dark { display: inline-flex; align-items: center; gap: 8px; padding: 14px 28px; font-family: var(--font-heading); font-weight: 500; font-size: 1rem; border-radius: var(--border-radius-sm); border: 1.5px solid rgba(255,255,255,0.3); color: white; transition: var(--transition); }
+.btn-outline-dark:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.6); }
+
+@media (max-width: 900px) {
+  .faq-layout { grid-template-columns: 1fr; }
+  .faq-sidebar { position: static; }
+}
+</style>

@@ -9,7 +9,12 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "seo:keywords": "node scripts/seo/keywords.mjs --mode=aggressive",
+    "seo:serps": "node scripts/seo/serps.mjs --mode=aggressive",
+    "seo:local": "node scripts/seo/local.mjs --mode=aggressive",
+    "seo:competitors": "node scripts/seo/competitors.mjs",
+    "seo:roadmap": "node scripts/seo/roadmap.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.2",

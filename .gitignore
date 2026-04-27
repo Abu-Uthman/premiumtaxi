@@ -15,8 +15,13 @@ pnpm-debug.log*
 
 # environment variables
 .env
+.env.local
 .env.production
+.env.*.local
 .codex
+
+# generated SEO research outputs
+src/data/seoResearch/*.json
 
 # macOS-specific files
 .DS_Store

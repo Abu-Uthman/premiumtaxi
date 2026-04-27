@@ -4,14 +4,11 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { Image } from 'astro:assets';
 
-import fleetMain    from '../assets/van-exterior-3.webp';
-import fleet11      from '../assets/van-exterior-1.webp';
-import fleet13      from '../assets/van-exterior-2.webp';
-import interior1    from '../assets/van-interior-1.webp';
 import interior2    from '../assets/van-interior-2.webp';
-import corpImg      from '../assets/van-corp-1.webp';
 import groupImg     from '../assets/van-group-1.webp';
-import airportImg   from '../assets/van-airport-1.webp';
+import familyBabyImg from '../assets/family-baby-seat-taxi.webp';
+import familyInteriorImg from '../assets/family-maxi-taxi-interior.webp';
+import hotelAirportImg from '../assets/hotel-airport-maxi-taxi.webp';
 import servicesData from '../data/services.json';
 
 const serviceSchema = {
@@ -74,7 +71,7 @@ const serviceSchema = {
     <!-- Page Hero -->
     <section class="page-hero">
       <div class="page-hero-bg">
-        <Image src={fleetMain} alt="Premium Maxi Taxi exterior fleet Melbourne Victoria" width={1440} height={525} class="page-hero-img" quality={55} />
+        <Image src={hotelAirportImg} alt="Premium Maxi Taxi Melbourne hotel airport luggage transfer" width={1440} height={525} class="page-hero-img" quality={55} />
         <div class="page-hero-overlay"></div>
       </div>
       <div class="container page-hero-content">
@@ -112,7 +109,7 @@ const serviceSchema = {
         <!-- Service 1: Airport -->
         <article class="tour-full-card" id="airport-transfers">
           <div class="tfc-image">
-            <Image src={airportImg} alt="Melbourne airport maxi taxi group transfer Tullamarine Avalon" width={700} height={460} class="tfc-img" quality={62} />
+            <Image src={hotelAirportImg} alt="Melbourne airport maxi taxi group luggage transfer Tullamarine Avalon" width={700} height={460} class="tfc-img" quality={58} />
           </div>
           <div class="tfc-content">
             <span class="section-tag">Most Popular</span>
@@ -145,7 +142,7 @@ const serviceSchema = {
             <a href="/book?service=corporate" class="btn btn-primary" id="book-corp">Book Corporate</a>
           </div>
           <div class="tfc-image">
-            <Image src={corpImg} alt="Corporate Maxi Taxi group Melbourne executive transport" width={700} height={460} class="tfc-img" quality={62} />
+            <Image src={hotelAirportImg} alt="Corporate maxi taxi hotel and airport transfer Melbourne" width={700} height={460} class="tfc-img" quality={58} />
           </div>
         </article>
 
@@ -187,7 +184,7 @@ const serviceSchema = {
             <a href="/book?service=group" class="btn btn-primary" id="book-group">Book Group Hire</a>
           </div>
           <div class="tfc-image">
-            <Image src={interior1} alt="Maxi Taxi spacious interior group comfort seating" width={700} height={460} class="tfc-img" quality={62} />
+            <Image src={familyInteriorImg} alt="Spacious maxi taxi interior for family and group transport" width={700} height={460} class="tfc-img" quality={58} />
           </div>
         </article>
 
@@ -200,9 +197,9 @@ const serviceSchema = {
         <div class="section-tag">The Interior Experience</div>
         <h2 class="section-title">Spacious, Clean &amp; <em class="text-gold">Comfortable</em></h2>
         <div class="interior-gallery">
-          <Image src={interior1} alt="Maxi Taxi interior luxury seating Melbourne" width={600} height={400} class="int-photo" quality={65} />
-          <Image src={interior2} alt="Maxi Taxi interior headroom and legroom comfort" width={600} height={400} class="int-photo" quality={65} />
-          <Image src={fleet11}   alt="11-seater maxi taxi exterior Melbourne clean" width={600} height={400} class="int-photo" quality={65} />
+          <Image src={familyBabyImg} alt="Baby seat taxi interior for Melbourne family transfers" width={600} height={400} class="int-photo" quality={58} />
+          <Image src={familyInteriorImg} alt="Family maxi taxi interior with child seat and passenger space" width={600} height={400} class="int-photo" quality={58} />
+          <Image src={interior2} alt="Maxi Taxi interior headroom and legroom comfort" width={600} height={400} class="int-photo" quality={62} />
         </div>
       </div>
     </section>

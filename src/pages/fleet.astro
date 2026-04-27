@@ -4,16 +4,16 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { Image } from 'astro:assets';
 
-import heroFleet  from '../assets/van-exterior-4.webp';
 import van11a     from '../assets/van-exterior-1.webp';
 import van11b     from '../assets/van-exterior-2.webp';
 import van13a     from '../assets/van-exterior-3.webp';
 import van13b     from '../assets/van-exterior-5.webp';
-import int1       from '../assets/van-interior-1.webp';
 import int2       from '../assets/van-interior-2.webp';
 import int3       from '../assets/van-interior-3.webp';
-import fleet2     from '../assets/van-fleet-2.webp';
 import fleet3     from '../assets/van-fleet-3.webp';
+import familyBabyImg from '../assets/family-baby-seat-taxi.webp';
+import familyInteriorImg from '../assets/family-maxi-taxi-interior.webp';
+import hotelAirportImg from '../assets/hotel-airport-maxi-taxi.webp';
 ---
 
 <Layout 
@@ -26,7 +26,7 @@ import fleet3     from '../assets/van-fleet-3.webp';
     <!-- Page Hero -->
     <section class="page-hero">
       <div class="page-hero-bg">
-        <Image src={heroFleet} alt="Premium Maxi Taxi fleet exterior Melbourne 13-seater" width={1440} height={525} class="page-hero-img" quality={55} />
+        <Image src={familyInteriorImg} alt="Premium Maxi Taxi family and group seating interior Melbourne" width={1440} height={525} class="page-hero-img" quality={55} />
         <div class="page-hero-overlay"></div>
       </div>
       <div class="container page-hero-content">
@@ -46,10 +46,10 @@ import fleet3     from '../assets/van-fleet-3.webp';
 
         <div class="vehicle-layout">
           <div class="vehicle-images">
-            <Image src={van11a} alt="11-seater Maxi Taxi exterior Melbourne" width={700} height={460} class="v-main-img" quality={62} />
+            <Image src={familyBabyImg} alt="11-seater maxi taxi interior with family seating and baby seat" width={700} height={460} class="v-main-img" quality={58} />
             <div class="v-thumbs">
               <Image src={van11b} alt="11-seater Maxi Cab side view premium" width={340} height={220} class="v-thumb" quality={60} />
-              <Image src={int1}   alt="11-seater interior seating and luggage planning" width={340} height={220} class="v-thumb" quality={60} />
+              <Image src={familyInteriorImg} alt="11-seater interior seating and child-seat planning" width={340} height={220} class="v-thumb" quality={58} />
             </div>
           </div>
           <div class="vehicle-specs-panel">
@@ -96,7 +96,7 @@ import fleet3     from '../assets/van-fleet-3.webp';
             <Image src={van13a} alt="13-seater Maxi Taxi exterior large group Victoria" width={700} height={460} class="v-main-img" quality={62} />
             <div class="v-thumbs">
               <Image src={van13b} alt="13-seater Maxi Cab exterior rear view" width={340} height={220} class="v-thumb" quality={60} />
-              <Image src={int2}   alt="13-seater interior group seating" width={340} height={220} class="v-thumb" quality={60} />
+              <Image src={hotelAirportImg} alt="Maxi taxi luggage space for hotel and airport transfers" width={340} height={220} class="v-thumb" quality={58} />
             </div>
           </div>
         </div>
@@ -110,12 +110,12 @@ import fleet3     from '../assets/van-fleet-3.webp';
         <h2 class="section-title">Interior and Exterior <em class="text-gold">Reference Photos</em></h2>
         <p class="section-sub">Use these photos to understand the type of space available, then include passenger count, luggage, prams, wheelchair notes, or equipment details in the booking.</p>
         <div class="photo-grid">
-          <Image src={int1} alt="Maxi Taxi interior front seats comfort legroom" width={600} height={380} class="grid-photo" quality={65} />
-          <Image src={int2} alt="Maxi Taxi interior rear cabin temperature control" width={600} height={380} class="grid-photo" quality={65} />
-          <Image src={int3} alt="Maxi Cab interior door side storage" width={600} height={380} class="grid-photo" quality={65} />
-          <Image src={fleet2} alt="Maxi Taxi fleet exterior Melbourne all vehicles" width={600} height={380} class="grid-photo" quality={65} />
-          <Image src={fleet3} alt="Premium Maxi Taxi side profile Melbourne" width={600} height={380} class="grid-photo" quality={65} />
-          <Image src={van13b} alt="Maxi Cab rear exterior vehicle reference" width={600} height={380} class="grid-photo" quality={65} />
+          <Image src={familyBabyImg} alt="Baby-seat taxi interior for Melbourne family bookings" width={600} height={380} class="grid-photo" quality={58} />
+          <Image src={familyInteriorImg} alt="Maxi taxi interior for families groups and prams" width={600} height={380} class="grid-photo" quality={58} />
+          <Image src={hotelAirportImg} alt="Hotel and airport maxi taxi transfer with luggage" width={600} height={380} class="grid-photo" quality={58} />
+          <Image src={int2} alt="Maxi Taxi interior rear cabin temperature control" width={600} height={380} class="grid-photo" quality={62} />
+          <Image src={fleet3} alt="Premium Maxi Taxi side profile Melbourne" width={600} height={380} class="grid-photo" quality={62} />
+          <Image src={van13b} alt="Maxi Cab rear exterior vehicle reference" width={600} height={380} class="grid-photo" quality={62} />
         </div>
       </div>
     </section>

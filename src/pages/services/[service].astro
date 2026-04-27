@@ -4,6 +4,9 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import { Image } from 'astro:assets';
 import heroImg from '../../assets/van-exterior-3.webp';
+import familyBabyImg from '../../assets/family-baby-seat-taxi.webp';
+import familyInteriorImg from '../../assets/family-maxi-taxi-interior.webp';
+import hotelAirportImg from '../../assets/hotel-airport-maxi-taxi.webp';
 import servicesData from '../../data/services.json';
 import locationsData from '../../data/locations.js';
 import priorityPagesData from '../../data/priorityPages.json';
@@ -28,6 +31,18 @@ const serviceBenefits = [
   "Passenger, luggage, child-seat and accessibility notes",
   "Clear booking details before dispatch"
 ];
+const serviceHeroImages = {
+  "baby-seat-taxi-melbourne": familyBabyImg,
+  "corporate-transfers-melbourne": hotelAirportImg,
+  "cruise-transfer-melbourne": hotelAirportImg,
+  "suv-wagon-taxi-melbourne": hotelAirportImg,
+  "silver-service-taxi-melbourne": hotelAirportImg,
+  "outer-melbourne-taxi": hotelAirportImg,
+  "maxi-cab-melbourne": familyInteriorImg,
+  "group-transfers-melbourne": familyInteriorImg,
+  "school-runs-student-transport-melbourne": familyBabyImg
+};
+const serviceHeroImage = serviceHeroImages[service.slug] || heroImg;
 
 const serviceSchema = {
   "@context": "https://schema.org",
@@ -69,7 +84,7 @@ const faqSchema = {
   <main>
     <section class="service-hero">
       <div class="service-hero-bg">
-        <Image src={heroImg} alt={`${service.name} in Melbourne and Victoria`} width={1440} height={525} class="hero-img" loading="eager" quality={55} />
+        <Image src={serviceHeroImage} alt={`${service.name} in Melbourne and Victoria`} width={1440} height={525} class="hero-img" loading="eager" quality={55} />
         <div class="hero-overlay"></div>
       </div>
       <div class="container hero-content">

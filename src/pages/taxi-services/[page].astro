@@ -4,7 +4,9 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import { Image } from 'astro:assets';
 import heroImg from '../../assets/van-exterior-1.webp';
-import interiorImg from '../../assets/van-interior-1.webp';
+import familyBabyImg from '../../assets/family-baby-seat-taxi.webp';
+import familyInteriorImg from '../../assets/family-maxi-taxi-interior.webp';
+import hotelAirportImg from '../../assets/hotel-airport-maxi-taxi.webp';
 import servicesData from '../../data/services.json';
 import locationsData from '../../data/locations.js';
 import priorityPagesData from '../../data/priorityPages.json';
@@ -115,6 +117,19 @@ const playbooks = {
 const playbook = playbooks[service.slug] || playbooks["maxi-cab-melbourne"];
 const locationName = primaryLocation?.name || "Melbourne";
 const nearbySuburbNames = primaryLocation?.nearbySuburbs || relatedLocations.map((loc) => loc.name).slice(0, 3);
+const priorityHeroImages = {
+  "baby-seat-taxi-melbourne": familyBabyImg,
+  "corporate-transfers-melbourne": hotelAirportImg,
+  "cruise-transfer-melbourne": hotelAirportImg,
+  "suv-wagon-taxi-melbourne": hotelAirportImg,
+  "silver-service-taxi-melbourne": hotelAirportImg,
+  "outer-melbourne-taxi": hotelAirportImg,
+  "maxi-cab-melbourne": familyInteriorImg,
+  "group-transfers-melbourne": familyInteriorImg,
+  "school-runs-student-transport-melbourne": familyBabyImg
+};
+const priorityHeroImage = priorityHeroImages[service.slug] || heroImg;
+const priorityPanelImage = service.slug === "baby-seat-taxi-melbourne" ? familyBabyImg : familyInteriorImg;
 
 const canonical = new URL(Astro.url.pathname, Astro.site || 'https://premiummaxitaxi.com.au').href;
 const breadcrumbSchema = {
@@ -168,7 +183,7 @@ const faqSchema = {
   <main>
     <section class="priority-hero">
       <div class="priority-hero-bg">
-        <Image src={heroImg} alt={`${page.h1} taxi service Melbourne Victoria`} width={1440} height={570} class="hero-img" loading="eager" quality={55} />
+        <Image src={priorityHeroImage} alt={`${page.h1} taxi service Melbourne Victoria`} width={1440} height={570} class="hero-img" loading="eager" quality={55} />
         <div class="hero-overlay"></div>
       </div>
       <div class="container hero-content">
@@ -240,7 +255,7 @@ const faqSchema = {
         </article>
 
         <aside class="booking-panel">
-          <Image src={interiorImg} alt="Clean maxi taxi interior with spacious passenger seating" width={520} height={340} class="panel-img" quality={58} />
+          <Image src={priorityPanelImage} alt="Clean maxi taxi interior with spacious passenger seating" width={520} height={340} class="panel-img" quality={58} />
           <div class="panel-body">
             <h2>Plan the Ride Properly</h2>
             <p>For this page, the most important booking details are: {playbook.bookingFields.join(", ")}. Add pickup, destination, preferred time, and any notes that affect loading or timing.</p>

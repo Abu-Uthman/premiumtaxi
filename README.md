@@ -1,46 +1,48 @@
-# Astro Starter Kit: Basics
+# Premium Maxi Taxi
+
+Astro website for Premium Maxi Taxi Victoria, focused on Melbourne and Victoria taxi, maxi cab, airport transfer, accessible transport, and regional trip search visibility.
+
+## Stack
+
+- Astro 6
+- Static site generation
+- Vercel deployment
+- Resend email endpoint at `/api/send-email`
+- Sitemap generation with `@astrojs/sitemap`
+
+## Commands
 
 ```sh
-pnpm create astro@latest -- --template basics
+npm install
+npm run dev
+npm run build
+npm run preview
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Deployment
 
-## 🚀 Project Structure
+This project is configured for Vercel:
 
-Inside of your Astro project, you'll see the following folders and files:
+- Build command: `npm run build`
+- Output directory: `dist`
+- Node version: `22.x`
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
+Required Vercel environment variables for form emails:
+
+```sh
+RESEND_API_KEY=
+BOOKING_EMAIL_TO=booking@premiummaxitaxi.com.au
+RESEND_FROM_EMAIL="Premium Maxi Taxi <booking@premiummaxitaxi.com.au>"
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+`RESEND_FROM_EMAIL` must use a domain verified in Resend before production emails can send reliably.
 
-## 🧞 Commands
+## SEO Structure
 
-All commands are run from the root of the project, from a terminal:
+The site generates:
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
+- Core service pages from `src/data/services.json`
+- Location pages from `src/data/locations.js`
+- High-intent service/location pages from `src/data/priorityPages.json`
 
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Run `npm run build` before deployment to verify all generated routes.

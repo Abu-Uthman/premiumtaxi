@@ -1,4 +1,4 @@
-const ENDPOINTS = ["/api/send-email", "/.netlify/functions/send-email"];
+const FORM_ENDPOINT = "/api/send-email";
 
 function setStatus(form, message, tone = "neutral") {
   const status = form.querySelector("[data-form-status]");
@@ -10,27 +10,16 @@ function setStatus(form, message, tone = "neutral") {
 
 async function postForm(form) {
   const body = JSON.stringify(Object.fromEntries(new FormData(form).entries()));
-  let lastError = null;
 
-  for (const endpoint of ENDPOINTS) {
-    try {
-      const response = await fetch(endpoint, {
-        method: "POST",
-        headers: { "content-type": "application/json" },
-        body,
-      });
+  const response = await fetch(FORM_ENDPOINT, {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body,
+  });
 
-      if (response.ok) {
-        return;
-      }
-
-      lastError = new Error(`Endpoint ${endpoint} returned ${response.status}`);
-    } catch (error) {
-      lastError = error;
-    }
+  if (!response.ok) {
+    throw new Error(`Email endpoint returned ${response.status}`);
   }
-
-  throw lastError || new Error("Unable to send form");
 }
 
 document.addEventListener("DOMContentLoaded", () => {

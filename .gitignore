@@ -22,6 +22,7 @@ pnpm-debug.log*
 
 # generated SEO research outputs
 src/data/seoResearch/*.json
+src/data/seoResearch/*.md
 
 # macOS-specific files
 .DS_Store

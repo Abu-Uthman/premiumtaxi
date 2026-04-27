@@ -1,4 +1,5 @@
-import { nowIso, readJson, writeJson } from './config.mjs';
+import { nowIso, readJson, writeJson, writeText } from './config.mjs';
+import { markdownTable } from './report-utils.mjs';
 
 const ownDomains = new Set(['premiummaxitaxi.com.au', 'premiumtaxi.vercel.app']);
 const serps = readJson('serps.json', { serps: [] }).serps || [];
@@ -103,5 +104,43 @@ writeJson('competitors.json', {
   organicCompetitors,
   localCompetitors
 });
+
+const organicRows = organicCompetitors.slice(0, 30).map((item, index) => [
+  index + 1,
+  item.domain,
+  item.score,
+  item.keywordCount,
+  item.top3,
+  item.top10,
+  item.appearances.slice(0, 3).map((appearance) => `${appearance.keyword} (#${appearance.rank})`).join('; ')
+]);
+
+const localRows = localCompetitors.slice(0, 30).map((item, index) => [
+  index + 1,
+  item.business,
+  item.domain || '',
+  item.score,
+  item.keywordCount,
+  item.top3,
+  item.ratingValue || '',
+  item.votesCount || '',
+  item.appearances.slice(0, 3).map((appearance) => `${appearance.keyword} (#${appearance.rank})`).join('; ')
+]);
+
+writeText('competitors.md', `
+# Competitor Report
+
+Generated: ${nowIso()}
+
+Competitors are scored by repeated visibility across high-intent keywords. A one-off ranking is not treated as a true top competitor.
+
+## Organic Competitors
+
+${organicRows.length ? markdownTable(['#', 'Domain', 'Score', 'Keyword Count', 'Top 3', 'Top 10', 'Sample Rankings'], organicRows) : 'No organic SERP data yet. Run `npm run seo:serps`, then `npm run seo:competitors`.'}
+
+## Local Pack / GBP Competitors
+
+${localRows.length ? markdownTable(['#', 'Business', 'Domain', 'Score', 'Keyword Count', 'Top 3', 'Rating', 'Reviews', 'Sample Rankings'], localRows) : 'No local pack data yet. Run `npm run seo:local`, then `npm run seo:competitors`.'}
+`);
 
 console.log(`Wrote ${organicCompetitors.length} organic and ${localCompetitors.length} local competitors to src/data/seoResearch/competitors.json`);

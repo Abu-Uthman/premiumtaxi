@@ -21,7 +21,7 @@ export const runLimits = {
     local: 8
   },
   aggressive: {
-    keywords: 420,
+    keywords: Infinity,
     serps: 80,
     local: 60
   }
@@ -82,6 +82,11 @@ export function ensureOutputDir() {
 export function writeJson(filename, payload) {
   ensureOutputDir();
   fs.writeFileSync(path.join(outputDir, filename), `${JSON.stringify(payload, null, 2)}\n`);
+}
+
+export function writeText(filename, content) {
+  ensureOutputDir();
+  fs.writeFileSync(path.join(outputDir, filename), `${content.trim()}\n`);
 }
 
 export function readJson(filename, fallback = null) {

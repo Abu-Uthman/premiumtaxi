@@ -2,8 +2,9 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import locations from '../../src/data/locations.js';
-import { nowIso, readJson, writeJson } from './config.mjs';
-import { buildKeywordUniverse } from './keyword-universe.mjs';
+import { nowIso, readJson, writeJson, writeText } from './config.mjs';
+import { buildKeywordUniverse, summarizeKeywordUniverse } from './keyword-universe.mjs';
+import { formatMoney, listItems, markdownTable } from './report-utils.mjs';
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const repoRoot = path.resolve(here, '../..');
@@ -12,6 +13,8 @@ const priorityPages = JSON.parse(fs.readFileSync(path.join(repoRoot, 'src/data/p
 
 const keywordsReport = readJson('keywords.json', { keywords: [] });
 const competitorsReport = readJson('competitors.json', { organicCompetitors: [], localCompetitors: [] });
+const keywordUniverse = buildKeywordUniverse();
+const keywordUniverseSummary = summarizeKeywordUniverse(keywordUniverse);
 
 const existingPrioritySlugs = new Set(priorityPages.map((page) => page.slug));
 const serviceBySlug = new Map(services.map((service) => [service.slug, service]));
@@ -62,7 +65,7 @@ const pageCandidates = rankedKeywords.map((item) => {
 const topOrganicCompetitors = (competitorsReport.organicCompetitors || []).slice(0, 20);
 const topLocalCompetitors = (competitorsReport.localCompetitors || []).slice(0, 20);
 
-const aeoQuestions = buildKeywordUniverse()
+const aeoQuestions = keywordUniverse
   .filter((item) => /price|quote|near me|to melbourne airport|from melbourne airport|with luggage|for 7 passengers|24 hour/.test(item.keyword))
   .slice(0, 80)
   .map((item) => ({
@@ -123,4 +126,74 @@ writeJson('seoRoadmap.json', {
   }
 });
 
-console.log('Wrote contentGaps.json and seoRoadmap.json to src/data/seoResearch/');
+const familyRows = keywordUniverseSummary.familyCounts.map((family) => [
+  family.label,
+  family.count,
+  family.examples.slice(0, 4).join(', ')
+]);
+
+const candidateRows = pageCandidates.slice(0, 50).map((item, index) => [
+  index + 1,
+  item.keyword,
+  item.searchVolume || '',
+  formatMoney(item.cpc),
+  item.competition || '',
+  item.status,
+  item.recommendedSlug
+]);
+
+const organicRows = topOrganicCompetitors.slice(0, 15).map((item, index) => [
+  index + 1,
+  item.domain,
+  item.score,
+  item.keywordCount,
+  item.top3,
+  item.top10
+]);
+
+const localRows = topLocalCompetitors.slice(0, 15).map((item, index) => [
+  index + 1,
+  item.business,
+  item.domain || '',
+  item.score,
+  item.keywordCount,
+  item.top3
+]);
+
+writeText('seoRoadmap.md', `
+# SEO, AEO and GBP Roadmap
+
+Generated: ${nowIso()}
+
+## Keyword Universe
+
+- Total generated keywords: ${keywordUniverseSummary.totalKeywords}
+- Aggressive keyword mode researches: ${keywordUniverseSummary.selectedByDefault.aggressiveKeywords} keywords
+- Primary money family: Maxi Taxi
+
+${markdownTable(['Family', 'Count', 'Examples'], familyRows)}
+
+## Keyword Opportunities
+
+${candidateRows.length ? markdownTable(['#', 'Keyword', 'Volume', 'CPC', 'Competition', 'Action', 'Recommended Slug'], candidateRows) : 'No keyword metrics yet. Run `npm run seo:keywords`, then `npm run seo:roadmap`.'}
+
+## Organic Competitors
+
+${organicRows.length ? markdownTable(['#', 'Domain', 'Score', 'Keyword Count', 'Top 3', 'Top 10'], organicRows) : 'No organic competitor data yet. Run `npm run seo:serps`, `npm run seo:competitors`, then `npm run seo:roadmap`.'}
+
+## Local Pack / GBP Competitors
+
+${localRows.length ? markdownTable(['#', 'Business', 'Domain', 'Score', 'Keyword Count', 'Top 3'], localRows) : 'No local pack competitor data yet. Run `npm run seo:local`, `npm run seo:competitors`, then `npm run seo:roadmap`.'}
+
+## AEO Question Targets
+
+${listItems(aeoQuestions.slice(0, 40).map((item) => `${item.question} -> ${item.targetKeyword}`))}
+
+## GBP Preparation
+
+- Recommended categories: Taxi service, Transportation service, Airport shuttle service
+- Photo plan: vehicle exterior, interior seating, baby seat setup, luggage space, accessibility setup when available, airport/hotel transfer context
+- Review guidance: ask real customers to mention the actual trip type and suburb if they are comfortable; do not script, gate, or incentivise reviews.
+`);
+
+console.log('Wrote contentGaps.json, seoRoadmap.json and seoRoadmap.md to src/data/seoResearch/');

@@ -47,8 +47,8 @@ For the compact mark, leave at least 12.5% of the mark width as empty space arou
 - Header/footer/logo wording: Premium Maxi Taxi.
 - Domain: `https://www.premiummaxicab.com.au/`.
 - Booking email: `booking@premiummaxicab.com.au`.
-- Primary phone: `0474 707 005`.
-- Secondary phone: `0424 438 088`.
+- Primary phone: `0424 438 088`.
+- Secondary phone: `(03) 8338 0283`.
 - Service wording examples: Maxi Cab Melbourne, Airport Taxi Melbourne, Wheelchair Taxi Melbourne, Baby Seat Taxi Melbourne, Melbourne and regional Victoria.
 
 ## Trust Rules

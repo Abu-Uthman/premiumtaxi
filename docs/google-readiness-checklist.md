@@ -4,8 +4,8 @@
 
 - Business name: Premium Maxi Taxi Melbourne
 - Website: https://www.premiummaxicab.com.au/
-- Primary phone: 0474 707 005
-- Second phone: 0424 438 088
+- Primary phone: 0424 438 088
+- Second phone: (03) 8338 0283
 - Email: booking@premiummaxicab.com.au
 - GBP type: service-area business
 - Public address policy: address hidden for service-area bookings

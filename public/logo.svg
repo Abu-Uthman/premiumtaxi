@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="Premium Maxi Taxi Melbourne logo">
+  <rect width="256" height="256" rx="56" fill="#111111"/>
+  <path fill="#D4AF37" d="M60 89c5-17 18-27 36-27h64c18 0 31 10 36 27l8 29h10c8 0 14 6 14 14v52h-15c-4 15-16 25-34 25s-30-10-34-25H111c-4 15-16 25-34 25s-30-10-34-25H28v-52c0-8 6-14 14-14h10l8-29Z"/>
+  <path fill="#111111" d="M82 91c3-8 9-12 18-12h56c9 0 15 4 18 12l6 28H76l6-28Zm-20 58h132v18H62z"/>
+  <circle cx="77" cy="183" r="14" fill="#111111"/>
+  <circle cx="179" cy="183" r="14" fill="#111111"/>
+  <path fill="#F7E7A5" d="M100 46h56v20h-56z"/>
+  <path fill="#F7E7A5" d="M52 134h22v14H52zm130 0h22v14h-22z"/>
+  <path fill="#111111" d="M96 134h16v14H96zm24 0h16v14h-16zm24 0h16v14h-16z"/>
+</svg>

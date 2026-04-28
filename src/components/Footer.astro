@@ -9,7 +9,8 @@ const year = new Date().getFullYear();
   <div class="container footer-container">
     <div class="footer-col brand-col">
       <div class="logo" aria-label={business.name}>
-        <span class="logo-accent">Premium</span> Maxi Taxi
+        <img src="/logo.svg" alt="" class="logo-mark" width="40" height="40" aria-hidden="true" />
+        <span class="logo-text"><span class="logo-accent">Premium</span> Maxi Taxi</span>
       </div>
       <p class="text-muted mt-4">
         Taxi and maxi cab bookings across Melbourne and Victoria for airport transfers, families, accessibility requests, parcels, events, schools, corporate travel, and outer-suburb trips.
@@ -79,9 +80,23 @@ const year = new Date().getFullYear();
   }
 
   .logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
     font-family: var(--font-heading);
     font-size: 1.5rem;
     font-weight: 700;
+  }
+
+  .logo-mark {
+    width: 40px;
+    height: 40px;
+    flex: 0 0 40px;
+    border-radius: 11px;
+  }
+
+  .logo-text {
+    white-space: nowrap;
   }
 
   .logo-accent {

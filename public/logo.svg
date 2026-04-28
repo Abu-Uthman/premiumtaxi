@@ -1,28 +1,35 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 144" role="img" aria-labelledby="logoTitle logoDesc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 156" role="img" aria-labelledby="logoTitle logoDesc">
   <title id="logoTitle">Premium Maxi Taxi</title>
-  <desc id="logoDesc">Premium Maxi Taxi Melbourne horizontal brand logo</desc>
+  <desc id="logoDesc">Premium Maxi Taxi Melbourne horizontal brand logo with premium maxi van mark</desc>
   <defs>
-    <linearGradient id="pmtGold" x1="32" x2="136" y1="28" y2="118" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#F3D878"/>
-      <stop offset=".45" stop-color="#D4AF37"/>
-      <stop offset="1" stop-color="#A87C1B"/>
+    <linearGradient id="pmtGold" x1="24" x2="138" y1="24" y2="132" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF1B8"/>
+      <stop offset=".38" stop-color="#D4AF37"/>
+      <stop offset="1" stop-color="#9D7418"/>
+    </linearGradient>
+    <linearGradient id="pmtBlack" x1="18" x2="140" y1="16" y2="140" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#282828"/>
+      <stop offset="1" stop-color="#080808"/>
     </linearGradient>
   </defs>
 
-  <rect x="8" y="8" width="128" height="128" rx="30" fill="#111111"/>
-  <path fill="url(#pmtGold)" d="M38 66c3.6-16.3 15.8-26.3 32-26.3h27.8c16.2 0 28.4 10 32 26.3l3.2 14.4h5.4c5.4 0 9.6 4.2 9.6 9.6v27.2h-13.7c-3.2 10.7-12.1 17.3-24.2 17.3s-21-6.6-24.2-17.3H82.1c-3.2 10.7-12.1 17.3-24.2 17.3s-21-6.6-24.2-17.3H20V90c0-5.4 4.2-9.6 9.6-9.6H35L38 66Z"/>
-  <path fill="#111111" d="M57 67.2c2.1-7.9 7.2-11.9 15.2-11.9h23.6c8 0 13.1 4 15.2 11.9l3 13.2H54l3-13.2Zm-16.3 29.2h62v13.8h-62z"/>
-  <path fill="#111111" d="M108 96.4h18.5v13.8H108z"/>
-  <circle cx="57.9" cy="117.2" r="9.6" fill="#111111"/>
-  <circle cx="110.1" cy="117.2" r="9.6" fill="#111111"/>
-  <path fill="#F7E7A5" d="M61.4 24h49.2v15.8H61.4z"/>
-  <path fill="#F7E7A5" d="M38.2 89.8h15v10h-15zm80.6 0h15v10h-15z"/>
-  <path fill="#111111" d="M69 90h9.8v9.8H69zm16.4 0h9.8v9.8h-9.8z"/>
+  <rect x="8" y="8" width="140" height="140" rx="32" fill="url(#pmtBlack)"/>
+  <path fill="#D4AF37" d="M46 31h67c7.7 0 14 6.3 14 14v4H32v-4c0-7.7 6.3-14 14-14Z"/>
+  <text x="79.5" y="45" text-anchor="middle" fill="#111111" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="900" letter-spacing="1.2">MAXI</text>
+  <path fill="url(#pmtGold)" d="M26 77c0-17.7 14.3-32 32-32h42.5c17.2 0 31.7 12.9 33.7 30l4.2 35.6c.7 6.3-4.2 11.8-10.6 11.8H25.2C18.5 122.4 13 117 13 110.2V90c0-7.2 5.8-13 13-13Z"/>
+  <path fill="#111111" d="M39 69c0-6.6 5.4-12 12-12h18v25H39V69Zm37-12h23.5c7.6 0 14.5 4.3 17.8 11.1l6.7 13.9H76V57Z"/>
+  <path fill="#111111" d="M35 88h82v9H35zm43 9h5v22h-5z"/>
+  <path fill="#F7E7A5" d="M21 96h17v10H21zm98-1h14v11h-14z"/>
+  <circle cx="45" cy="123" r="13" fill="#111111"/>
+  <circle cx="45" cy="123" r="5" fill="#F7E7A5"/>
+  <circle cx="111" cy="123" r="13" fill="#111111"/>
+  <circle cx="111" cy="123" r="5" fill="#F7E7A5"/>
+  <path fill="#111111" d="M55 99h14v10H55zm36 0h14v10H91z"/>
 
   <g fill="#111111">
-    <text x="164" y="61" font-family="Outfit, Inter, Arial, sans-serif" font-size="39" font-weight="700" letter-spacing=".2">Premium</text>
-    <text x="164" y="103" font-family="Outfit, Inter, Arial, sans-serif" font-size="43" font-weight="800" letter-spacing=".4">Maxi Taxi</text>
+    <text x="178" y="65" font-family="Outfit, Inter, Arial, sans-serif" font-size="43" font-weight="700">Premium</text>
+    <text x="178" y="111" font-family="Outfit, Inter, Arial, sans-serif" font-size="48" font-weight="850">Maxi Taxi</text>
   </g>
-  <path fill="#D4AF37" d="M164 113h176v6H164z"/>
-  <text x="362" y="118" fill="#5F5F5F" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="3.2">MELBOURNE</text>
+  <path fill="#D4AF37" d="M178 123h190v6H178z"/>
+  <text x="394" y="129" fill="#555555" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="800" letter-spacing="3.6">MELBOURNE</text>
 </svg>

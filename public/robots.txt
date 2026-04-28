@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://premiummaxitaxi.com.au/sitemap-index.xml
+Sitemap: https://premiummaxicab.com.au/sitemap-index.xml

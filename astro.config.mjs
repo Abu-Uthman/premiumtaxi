@@ -4,6 +4,6 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://premiummaxitaxi.com.au/',
+  site: 'https://premiummaxicab.com.au/',
   integrations: [sitemap()],
 });

@@ -3,13 +3,14 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { Image } from 'astro:assets';
+import business from '../data/business.js';
 
 import heroBook from '../assets/hotel-airport-maxi-taxi.webp';
 ---
 
 <Layout 
-  title="Book a Maxi Taxi | Melbourne Airport Transfers & Victoria Tours"
-  description="Book your Premium Maxi Taxi online for airport transfers, winery tours, wheelchair-accessible taxi requests, corporate transport, events, parcels, and regional trips across Melbourne and Victoria."
+  title="Book a Maxi Taxi Melbourne"
+  description="Send a Melbourne maxi taxi booking request for airport, family, wheelchair, corporate, event, parcel, school, and regional trips."
 >
   <Header />
 
@@ -36,9 +37,9 @@ import heroBook from '../assets/hotel-airport-maxi-taxi.webp';
           <div class="sidebar-card glass">
             <h3>Contact Directly</h3>
             <p class="text-muted" style="font-size: 0.9rem; margin-bottom: 1.5rem;">For immediate or urgent booking requests, call us now:</p>
-            <a href="tel:+61432405388" class="btn btn-primary" style="width:100%; text-align:center; display:block;" id="book-call-btn">📞 +61 432 405 388</a>
+            <a href={business.phoneHref} class="btn btn-primary" style="width:100%; text-align:center; display:block;" id="book-call-btn">Call {business.phoneDisplay}</a>
             <div class="divider-or"><span>or email</span></div>
-            <a href="mailto:booking@premiummaxitaxi.com.au" class="sidebar-email">booking@premiummaxitaxi.com.au</a>
+            <a href={business.emailHref} class="sidebar-email">{business.email}</a>
           </div>
 
           <div class="sidebar-card">
@@ -57,7 +58,7 @@ import heroBook from '../assets/hotel-airport-maxi-taxi.webp';
         <!-- Booking Form -->
         <div class="booking-form-container">
           <h2 class="form-title">Booking Request</h2>
-          <p class="text-muted" style="margin-bottom: 2rem; font-size: 0.95rem;">Fields marked with <span style="color:var(--accent-gold);">*</span> are required. We aim to confirm within 1 hour.</p>
+          <p class="text-muted" style="margin-bottom: 2rem; font-size: 0.95rem;">Fields marked with <span style="color:var(--accent-gold);">*</span> are required. For urgent bookings, call directly.</p>
 
           <form class="booking-form" action="/api/send-email" method="POST" id="booking-form" data-resend-form>
             <input type="hidden" name="form_type" value="booking">
@@ -152,7 +153,7 @@ import heroBook from '../assets/hotel-airport-maxi-taxi.webp';
               Submit Booking Request →
             </button>
             <p class="form-status" data-form-status aria-live="polite"></p>
-            <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 12px; text-align: center;">We'll confirm within 1 hour during business hours. For urgent bookings, please call.</p>
+            <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 12px; text-align: center;">Online requests are reviewed from the booking details supplied. For urgent bookings, please call.</p>
           </form>
         </div>
 

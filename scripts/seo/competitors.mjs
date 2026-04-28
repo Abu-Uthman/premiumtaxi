@@ -1,7 +1,7 @@
 import { nowIso, readJson, writeJson, writeText } from './config.mjs';
 import { markdownTable } from './report-utils.mjs';
 
-const ownDomains = new Set(['premiummaxitaxi.com.au', 'premiumtaxi.vercel.app']);
+const ownDomains = new Set(['premiummaxicab.com.au', 'premiumtaxi.vercel.app']);
 const serps = readJson('serps.json', { serps: [] }).serps || [];
 const localPack = readJson('localPack.json', { localPack: [] }).localPack || [];
 

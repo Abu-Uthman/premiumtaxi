@@ -10,6 +10,7 @@ import hotelAirportImg from '../../assets/hotel-airport-maxi-taxi.webp';
 import servicesData from '../../data/services.json';
 import locationsData from '../../data/locations.js';
 import priorityPagesData from '../../data/priorityPages.json';
+import business, { getBusinessProviderSchema } from '../../data/business.js';
 
 export async function getStaticPaths() {
   return servicesData.map((service) => ({
@@ -51,17 +52,13 @@ const serviceSchema = {
   "@type": "Service",
   "name": service.name,
   "description": service.description,
-  "provider": {
-    "@type": "LocalBusiness",
-    "name": "Premium Maxi Taxi Victoria",
-    "url": "https://premiummaxitaxi.com.au/"
-  },
+  "provider": getBusinessProviderSchema(),
   "areaServed": [
     { "@type": "City", "name": "Melbourne" },
     { "@type": "AdministrativeArea", "name": "Victoria" }
   ],
   "serviceType": service.name,
-  "url": new URL(Astro.url.pathname, Astro.site || 'https://premiummaxitaxi.com.au').href
+  "url": new URL(Astro.url.pathname, Astro.site || 'https://premiummaxicab.com.au').href
 };
 
 const faqSchema = {
@@ -78,7 +75,7 @@ const faqSchema = {
 };
 ---
 
-<Layout title={service.title} description={service.description}>
+<Layout title={`${service.name} Booking`} description={service.description}>
   <Header />
   <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
   <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
@@ -159,7 +156,7 @@ const faqSchema = {
             <h2>Book by Service</h2>
             <p>Choose the service, vehicle type, pickup location, destination, passengers, luggage, and any accessibility or child-seat requirements.</p>
             <a href="/book" class="btn btn-primary">Start Booking</a>
-            <a href="tel:+61432405388" class="side-call">Call +61 432 405 388</a>
+            <a href={business.phoneHref} class="side-call">Call {business.phoneDisplay}</a>
           </div>
           <div class="side-card">
             <h2>Related Services</h2>

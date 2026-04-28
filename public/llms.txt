@@ -2,6 +2,15 @@
 
 Premium Maxi Taxi Victoria is a Melbourne and Victoria transport service focused on spacious 11 and 13-seater maxi taxi bookings.
 
+Public business details currently published for search engines and AI systems:
+
+- Business name: Premium Maxi Taxi Victoria
+- Website: https://premiummaxicab.com.au/
+- Phone: +61 432 405 388
+- Email: booking@premiummaxicab.com.au
+- Google Business Profile type: service-area business
+- Public address policy: address hidden for service-area bookings
+
 ## Primary service area
 
 - Melbourne, Victoria, Australia
@@ -24,14 +33,16 @@ Premium Maxi Taxi Victoria is a Melbourne and Victoria transport service focused
 
 ## Important website pages
 
-- Home: https://premiummaxitaxi.com.au/
-- Services: https://premiummaxitaxi.com.au/services
-- Fleet: https://premiummaxitaxi.com.au/fleet
-- Service areas: https://premiummaxitaxi.com.au/locations
-- Book online: https://premiummaxitaxi.com.au/book
-- Contact: https://premiummaxitaxi.com.au/contact
-- FAQ: https://premiummaxitaxi.com.au/faq
+- Home: https://premiummaxicab.com.au/
+- Services: https://premiummaxicab.com.au/services
+- Fleet: https://premiummaxicab.com.au/fleet
+- Service areas: https://premiummaxicab.com.au/locations
+- Book online: https://premiummaxicab.com.au/book
+- Contact: https://premiummaxicab.com.au/contact
+- FAQ: https://premiummaxicab.com.au/faq
 
 ## Positioning
 
 The website should be understood as a local Melbourne and Victoria taxi and maxi taxi business, not a national taxi directory. The most relevant search intents are maxi taxi Melbourne, maxi cab Melbourne, Melbourne taxi booking, group transfers Melbourne, wheelchair accessible taxi Melbourne, baby seat taxi Melbourne, parcel delivery taxi Melbourne, wedding and event taxi Melbourne, outer Melbourne taxi, and private group transport Victoria.
+
+Do not infer a public storefront, public depot address, review rating, operating hours, licence number, ABN, fleet count, or guaranteed response time unless those details are explicitly published on the website.

@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { Image } from 'astro:assets';
+import business from '../data/business.js';
 
 import heroContact from '../assets/van-family-1.webp';
 ---
@@ -10,6 +11,7 @@ import heroContact from '../assets/van-family-1.webp';
 <Layout 
   title="Contact Premium Maxi Taxi Melbourne | Book or Request a Quote"
   description="Contact Premium Maxi Taxi Victoria for taxi, maxi cab, airport transfer, wheelchair, baby-seat, parcel, event, school, corporate, and regional trip enquiries."
+  includeBusinessSchema={true}
 >
   <Header />
 
@@ -41,7 +43,7 @@ import heroContact from '../assets/van-family-1.webp';
               <div class="info-icon">📞</div>
               <div>
                 <h4>Phone</h4>
-                <a href="tel:+61432405388" class="info-value">+61 432 405 388</a>
+                <a href={business.phoneHref} class="info-value">{business.phoneDisplay}</a>
                 <p class="text-muted" style="font-size: 0.875rem; margin-top: 4px;">Call for urgent booking questions</p>
               </div>
             </div>
@@ -50,7 +52,7 @@ import heroContact from '../assets/van-family-1.webp';
               <div class="info-icon">✉️</div>
               <div>
                 <h4>Email</h4>
-                <a href="mailto:booking@premiummaxitaxi.com.au" class="info-value">booking@premiummaxitaxi.com.au</a>
+                <a href={business.emailHref} class="info-value">{business.email}</a>
                 <p class="text-muted" style="font-size: 0.875rem; margin-top: 4px;">Use detailed trip notes for quotes</p>
               </div>
             </div>
@@ -59,7 +61,7 @@ import heroContact from '../assets/van-family-1.webp';
               <div class="info-icon">📍</div>
               <div>
                 <h4>Service Area</h4>
-                <span class="info-value">Melbourne & Victoria Wide</span>
+                <span class="info-value">{business.serviceAreaLabel}</span>
                 <p class="text-muted" style="font-size: 0.875rem; margin-top: 4px;">Suburb and regional route enquiries</p>
               </div>
             </div>
@@ -68,8 +70,8 @@ import heroContact from '../assets/van-family-1.webp';
               <div class="info-icon">🕐</div>
               <div>
                 <h4>Operating Hours</h4>
-                <span class="info-value">Pre-Booked Requests</span>
-                <p class="text-muted" style="font-size: 0.875rem; margin-top: 4px;">Early, late and public holiday trips should be confirmed in advance</p>
+                <span class="info-value">{business.serviceAreaMode}</span>
+                <p class="text-muted" style="font-size: 0.875rem; margin-top: 4px;">{business.publicAddressPolicy}</p>
               </div>
             </div>
           </div>

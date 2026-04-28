@@ -1,5 +1,7 @@
 ---
 // src/components/Footer.astro
+import business from '../data/business.js';
+
 const year = new Date().getFullYear();
 ---
 
@@ -48,15 +50,16 @@ const year = new Date().getFullYear();
     <div class="footer-col">
       <h4 class="footer-heading">Contact</h4>
       <ul class="footer-links">
-        <li><a href="tel:+61432405388">Book: +61 432 405 388</a></li>
-        <li><a href="mailto:booking@premiummaxitaxi.com.au">booking@premiummaxitaxi.com.au</a></li>
-        <li>Serving Melbourne & Victoria Wide</li>
+        <li><a href={business.phoneHref}>Book: {business.phoneDisplay}</a></li>
+        <li><a href={business.emailHref}>{business.email}</a></li>
+        <li>{business.serviceAreaLabel}</li>
+        <li>{business.publicAddressPolicy}</li>
       </ul>
     </div>
   </div>
   
   <div class="container footer-bottom">
-    <p>&copy; {year} Premium Maxi Taxi Victoria. All rights reserved.</p>
+    <p>&copy; {year} {business.name}. All rights reserved.</p>
   </div>
 </footer>
 

@@ -15,7 +15,8 @@
     "seo:serps": "node scripts/seo/serps.mjs --mode=aggressive",
     "seo:local": "node scripts/seo/local.mjs --mode=aggressive",
     "seo:competitors": "node scripts/seo/competitors.mjs",
-    "seo:roadmap": "node scripts/seo/roadmap.mjs"
+    "seo:roadmap": "node scripts/seo/roadmap.mjs",
+    "seo:audit": "node scripts/seo/static-audit.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.2",

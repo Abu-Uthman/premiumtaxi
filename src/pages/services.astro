@@ -10,6 +10,9 @@ import familyBabyImg from '../assets/family-baby-seat-taxi.webp';
 import familyInteriorImg from '../assets/family-maxi-taxi-interior.webp';
 import hotelAirportImg from '../assets/hotel-airport-maxi-taxi.webp';
 import servicesData from '../data/services.json';
+import business, { getBusinessProviderSchema } from '../data/business.js';
+
+const provider = getBusinessProviderSchema();
 
 const serviceSchema = {
   "@context": "https://schema.org",
@@ -23,7 +26,7 @@ const serviceSchema = {
         "@type": "Service",
         "name": "Melbourne Airport Maxi Taxi Transfers",
         "areaServed": "Melbourne and Victoria",
-        "provider": { "@type": "LocalBusiness", "name": "Premium Maxi Taxi Victoria" }
+        "provider": provider
       }
     },
     {
@@ -33,7 +36,7 @@ const serviceSchema = {
         "@type": "Service",
         "name": "Corporate Group Transport Melbourne",
         "areaServed": "Melbourne and Victoria",
-        "provider": { "@type": "LocalBusiness", "name": "Premium Maxi Taxi Victoria" }
+        "provider": provider
       }
     },
     {
@@ -43,7 +46,7 @@ const serviceSchema = {
         "@type": "Service",
         "name": "Wheelchair Accessible Taxi Melbourne",
         "areaServed": "Melbourne and Victoria",
-        "provider": { "@type": "LocalBusiness", "name": "Premium Maxi Taxi Victoria" }
+        "provider": provider
       }
     },
     {
@@ -53,7 +56,7 @@ const serviceSchema = {
         "@type": "Service",
         "name": "Large Group Transport Victoria",
         "areaServed": "Melbourne and Victoria",
-        "provider": { "@type": "LocalBusiness", "name": "Premium Maxi Taxi Victoria" }
+        "provider": provider
       }
     }
   ]
@@ -61,8 +64,8 @@ const serviceSchema = {
 ---
 
 <Layout 
-  title="Our Services | Maxi Taxi Airport Transfers, Corporate & Wheelchair Accessible Melbourne"
-  description="Premium Maxi Taxi supports airport transfers, wheelchair requests, baby-seat taxis, parcel delivery, corporate trips, events, schools, group transfers, and outer Melbourne travel."
+  title="Melbourne Taxi Services"
+  description="Taxi and maxi cab services for Melbourne airport transfers, wheelchair requests, baby-seat taxis, parcels, events, schools, groups, and outer suburbs."
 >
   <Header />
   <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
@@ -211,7 +214,7 @@ const serviceSchema = {
         <p class="cta-sub">We customise every booking. Tell us your requirements and we'll handle everything else.</p>
         <div class="cta-actions">
           <a href="/book" class="btn btn-primary" id="services-cta-book">Book Now</a>
-          <a href="tel:+61432405388" class="btn btn-outline-dark" id="services-cta-call">📞 +61 432 405 388</a>
+          <a href={business.phoneHref} class="btn btn-outline-dark" id="services-cta-call">Call {business.phoneDisplay}</a>
         </div>
       </div>
     </section>

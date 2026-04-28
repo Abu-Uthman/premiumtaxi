@@ -64,7 +64,7 @@ async function handleRequest(request) {
   }
 
   const apiKey = process.env.RESEND_API_KEY;
-  const to = process.env.BOOKING_EMAIL_TO || "booking@premiummaxitaxi.com.au";
+  const to = process.env.BOOKING_EMAIL_TO || "booking@premiummaxicab.com.au";
   const from = process.env.RESEND_FROM_EMAIL || "Premium Maxi Taxi <onboarding@resend.dev>";
 
   if (!apiKey) {
@@ -115,7 +115,7 @@ async function handleRequest(request) {
       <table style="border-collapse:collapse;width:100%;max-width:760px;border:1px solid #eee;">
         ${renderRows(rows)}
       </table>
-      <p style="color:#777;font-size:13px;margin-top:18px;">Sent from premiummaxitaxi.com.au</p>
+      <p style="color:#777;font-size:13px;margin-top:18px;">Sent from premiummaxicab.com.au</p>
     </div>
   `;
 

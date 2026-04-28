@@ -13,11 +13,13 @@ import scenicImg    from '../assets/van-scenic-1.webp';
 import wineryImg    from '../assets/van-winery-1.webp';
 import familyInteriorImg from '../assets/family-maxi-taxi-interior.webp';
 import hotelAirportImg from '../assets/hotel-airport-maxi-taxi.webp';
+import business from '../data/business.js';
 ---
 
 <Layout
-  title="Premium Maxi Taxi Melbourne | Maxi Cab, Airport, Family & Regional Taxi"
-  description="Book Melbourne maxi taxis, standard taxis, SUV and wagon taxis, wheelchair-accessible requests, baby-seat taxis, parcel delivery, airport transfers, events, schools, cruise trips, and outer Melbourne travel."
+  title="Premium Maxi Taxi Melbourne | Maxi Cab Booking"
+  description="Book Melbourne maxi taxis, airport transfers, family taxi requests, wheelchair access, parcels, events, schools, and outer Victoria trips."
+  includeBusinessSchema={true}
 >
   <Header />
 
@@ -274,7 +276,7 @@ import hotelAirportImg from '../assets/hotel-airport-maxi-taxi.webp';
         <p class="cta-sub">Book online in minutes or call directly for urgent requests.</p>
         <div class="cta-actions">
           <a href="/book" class="btn btn-primary" id="cta-book-btn">Book Online Now</a>
-          <a href="tel:+61432405388" class="btn btn-outline-dark" id="cta-call-btn">📞 Call Now</a>
+          <a href={business.phoneHref} class="btn btn-outline-dark" id="cta-call-btn">Call Now</a>
         </div>
       </div>
     </section>

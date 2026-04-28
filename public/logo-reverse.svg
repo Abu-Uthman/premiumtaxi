@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 144" role="img" aria-labelledby="logoTitle logoDesc">
   <title id="logoTitle">Premium Maxi Taxi</title>
-  <desc id="logoDesc">Premium Maxi Taxi Melbourne horizontal brand logo</desc>
+  <desc id="logoDesc">Premium Maxi Taxi Melbourne reverse logo for dark backgrounds</desc>
   <defs>
     <linearGradient id="pmtGold" x1="32" x2="136" y1="28" y2="118" gradientUnits="userSpaceOnUse">
       <stop stop-color="#F3D878"/>
@@ -9,7 +9,7 @@
     </linearGradient>
   </defs>
 
-  <rect x="8" y="8" width="128" height="128" rx="30" fill="#111111"/>
+  <rect x="8" y="8" width="128" height="128" rx="30" fill="#FFFFFF"/>
   <path fill="url(#pmtGold)" d="M38 66c3.6-16.3 15.8-26.3 32-26.3h27.8c16.2 0 28.4 10 32 26.3l3.2 14.4h5.4c5.4 0 9.6 4.2 9.6 9.6v27.2h-13.7c-3.2 10.7-12.1 17.3-24.2 17.3s-21-6.6-24.2-17.3H82.1c-3.2 10.7-12.1 17.3-24.2 17.3s-21-6.6-24.2-17.3H20V90c0-5.4 4.2-9.6 9.6-9.6H35L38 66Z"/>
   <path fill="#111111" d="M57 67.2c2.1-7.9 7.2-11.9 15.2-11.9h23.6c8 0 13.1 4 15.2 11.9l3 13.2H54l3-13.2Zm-16.3 29.2h62v13.8h-62z"/>
   <path fill="#111111" d="M108 96.4h18.5v13.8H108z"/>
@@ -19,10 +19,10 @@
   <path fill="#F7E7A5" d="M38.2 89.8h15v10h-15zm80.6 0h15v10h-15z"/>
   <path fill="#111111" d="M69 90h9.8v9.8H69zm16.4 0h9.8v9.8h-9.8z"/>
 
-  <g fill="#111111">
+  <g fill="#FFFFFF">
     <text x="164" y="61" font-family="Outfit, Inter, Arial, sans-serif" font-size="39" font-weight="700" letter-spacing=".2">Premium</text>
     <text x="164" y="103" font-family="Outfit, Inter, Arial, sans-serif" font-size="43" font-weight="800" letter-spacing=".4">Maxi Taxi</text>
   </g>
   <path fill="#D4AF37" d="M164 113h176v6H164z"/>
-  <text x="362" y="118" fill="#5F5F5F" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="3.2">MELBOURNE</text>
+  <text x="362" y="118" fill="#F7E7A5" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="3.2">MELBOURNE</text>
 </svg>

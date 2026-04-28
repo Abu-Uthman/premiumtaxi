@@ -1,10 +1,18 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Premium Maxi Taxi Melbourne">
+  <defs>
+    <linearGradient id="pmtFavGold" x1="24" x2="108" y1="22" y2="110" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F3D878"/>
+      <stop offset=".45" stop-color="#D4AF37"/>
+      <stop offset="1" stop-color="#A87C1B"/>
+    </linearGradient>
+  </defs>
   <rect width="128" height="128" rx="28" fill="#111111"/>
-  <path fill="#D4AF37" d="M30 44c2-8 8-13 17-13h34c9 0 15 5 17 13l4 15h6c4 0 7 3 7 7v26h-8c-2 8-8 13-17 13s-15-5-17-13H55c-2 8-8 13-17 13s-15-5-17-13h-8V66c0-4 3-7 7-7h6l4-15Z"/>
-  <path fill="#111111" d="M41 45c1-3 4-5 8-5h30c4 0 7 2 8 5l3 14H38l3-14ZM31 74h66v9H31z"/>
-  <circle cx="38" cy="91" r="7" fill="#111111"/>
-  <circle cx="90" cy="91" r="7" fill="#111111"/>
-  <path fill="#F7E7A5" d="M50 23h28v10H50z"/>
-  <path fill="#F7E7A5" d="M26 67h11v7H26zm65 0h11v7H91z"/>
-  <path fill="#111111" d="M48 68h8v7h-8zm12 0h8v7h-8zm12 0h8v7h-8z"/>
+  <path fill="url(#pmtFavGold)" d="M29 62c4-15 15-24 30-24h10c15 0 26 9 30 24l4 16h5c5 0 9 4 9 9v23h-13c-3 9-11 15-22 15s-19-6-22-15h-1c-3 9-11 15-22 15s-19-6-22-15H2V87c0-5 4-9 9-9h5l4-16Z"/>
+  <path fill="#111111" d="M42 62c2-7 6-11 14-11h16c8 0 12 4 14 11l3 13H39l3-13Zm-13 28h56v12H29z"/>
+  <path fill="#111111" d="M89 90h14v12H89z"/>
+  <circle cx="37" cy="111" r="8" fill="#111111"/>
+  <circle cx="82" cy="111" r="8" fill="#111111"/>
+  <path fill="#F7E7A5" d="M43 20h42v14H43z"/>
+  <path fill="#F7E7A5" d="M28 83h14v9H28zm58 0h14v9H86z"/>
+  <path fill="#111111" d="M53 83h8v9h-8zm14 0h8v9h-8z"/>
 </svg>

@@ -6,7 +6,7 @@
 - Website: https://www.premiummaxicab.com.au/
 - Primary phone: 0424 438 088
 - Second phone: (03) 8338 0283
-- Email: booking@premiummaxicab.com.au
+- Email: book@premiummaxicab.com.au
 - GBP type: service-area business
 - Public address policy: address hidden for service-area bookings
 - Service area: Melbourne and Victoria
@@ -57,6 +57,6 @@ These facts are centralized in `src/data/business.js`. Keep public site copy, JS
 ## Lead Handling Checklist
 
 - Verify the Resend sender domain before launch.
-- Set `RESEND_API_KEY`, `BOOKING_EMAIL_TO`, and `RESEND_FROM_EMAIL` in Vercel.
+- Set `RESEND_API_KEY`, `BOOKING_EMAIL_TO=awaledev36@gmail.com`, and `RESEND_FROM_EMAIL="Premium Maxi Taxi Melbourne <book@premiummaxicab.com.au>"` in Vercel.
 - Test `/api/send-email` from the deployed site.
 - Add spam protection before paid traffic or aggressive GBP posting.

@@ -35,8 +35,8 @@ Required Vercel environment variables for form emails:
 
 ```sh
 RESEND_API_KEY=
-BOOKING_EMAIL_TO=booking@premiummaxicab.com.au
-RESEND_FROM_EMAIL="Premium Maxi Taxi Melbourne <booking@premiummaxicab.com.au>"
+BOOKING_EMAIL_TO=awaledev36@gmail.com
+RESEND_FROM_EMAIL="Premium Maxi Taxi Melbourne <book@premiummaxicab.com.au>"
 ```
 
 `RESEND_FROM_EMAIL` must use a domain verified in Resend before production emails can send reliably.

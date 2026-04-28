@@ -64,8 +64,8 @@ async function handleRequest(request) {
   }
 
   const apiKey = process.env.RESEND_API_KEY;
-  const to = process.env.BOOKING_EMAIL_TO || "booking@premiummaxicab.com.au";
-  const from = process.env.RESEND_FROM_EMAIL || "Premium Maxi Taxi <onboarding@resend.dev>";
+  const to = process.env.BOOKING_EMAIL_TO || "awaledev36@gmail.com";
+  const from = process.env.RESEND_FROM_EMAIL || "Premium Maxi Taxi Melbourne <book@premiummaxicab.com.au>";
 
   if (!apiKey) {
     return json(500, { ok: false, message: "RESEND_API_KEY is not configured" });

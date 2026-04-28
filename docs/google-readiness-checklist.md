@@ -58,5 +58,6 @@ These facts are centralized in `src/data/business.js`. Keep public site copy, JS
 
 - Verify the Resend sender domain before launch.
 - Set `RESEND_API_KEY`, `BOOKING_EMAIL_TO=awaledev36@gmail.com`, and `RESEND_FROM_EMAIL="Premium Maxi Taxi Melbourne <book@premiummaxicab.com.au>"` in Vercel.
+- Set `CLOUDFLARE_TURNSTILE_SITE_KEY`, `PUBLIC_CLOUDFLARE_TURNSTILE_SITE_KEY`, `CLOUDFLARE_TURNSTILE_SECRET_KEY`, `UPSTASH_REDIS_REST_URL`, and `UPSTASH_REDIS_REST_TOKEN` in Vercel before testing forms.
 - Test `/api/send-email` from the deployed site.
 - Add spam protection before paid traffic or aggressive GBP posting.

@@ -37,9 +37,15 @@ Required Vercel environment variables for form emails:
 RESEND_API_KEY=
 BOOKING_EMAIL_TO=awaledev36@gmail.com
 RESEND_FROM_EMAIL="Premium Maxi Taxi Melbourne <book@premiummaxicab.com.au>"
+CLOUDFLARE_TURNSTILE_SITE_KEY=
+CLOUDFLARE_TURNSTILE_SECRET_KEY=
+PUBLIC_CLOUDFLARE_TURNSTILE_SITE_KEY=
+UPSTASH_REDIS_REST_URL=
+UPSTASH_REDIS_REST_TOKEN=
 ```
 
 `RESEND_FROM_EMAIL` must use a domain verified in Resend before production emails can send reliably.
+`PUBLIC_CLOUDFLARE_TURNSTILE_SITE_KEY` should match `CLOUDFLARE_TURNSTILE_SITE_KEY`; it is exposed in the form HTML so Turnstile can render. The secret key and Upstash token must remain server-only.
 
 ## SEO Structure
 
@@ -50,6 +56,7 @@ The site generates:
 - High-intent service/location pages from `src/data/priorityPages.json`
 
 Run `npm run build` before deployment to verify all generated routes.
+Run `npm run seo:duplicates` after a build to confirm sitemap URLs and generated source slugs/titles are not duplicated.
 
 ## Google Readiness
 
@@ -60,5 +67,6 @@ Run `npm run build` before deployment to verify all generated routes.
 - Before Search Console submission, run `npm run build` and validate representative URLs in Google's Rich Results Test.
 - Submit `https://www.premiummaxicab.com.au/sitemap-index.xml` only after generated page metadata and schema checks pass.
 - Confirm the Resend sender domain before relying on `/api/send-email` in production.
+- Configure Cloudflare Turnstile and Upstash Redis before relying on `/api/send-email`; the server rejects form submissions when either protection layer is not configured.
 
 See `docs/google-readiness-checklist.md` for the deployment, Search Console, GBP, and lead-handling checklist.

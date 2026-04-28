@@ -16,6 +16,7 @@
     "seo:local": "node scripts/seo/local.mjs --mode=aggressive",
     "seo:competitors": "node scripts/seo/competitors.mjs",
     "seo:roadmap": "node scripts/seo/roadmap.mjs",
+    "seo:duplicates": "node scripts/seo/duplicate-audit.mjs",
     "seo:audit": "node scripts/seo/static-audit.mjs"
   },
   "dependencies": {

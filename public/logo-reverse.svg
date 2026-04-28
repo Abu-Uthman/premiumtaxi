@@ -1,31 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 156" role="img" aria-labelledby="logoTitle logoDesc">
   <title id="logoTitle">Premium Maxi Taxi</title>
-  <desc id="logoDesc">Premium Maxi Taxi Melbourne reverse logo with premium maxi van mark</desc>
+  <desc id="logoDesc">Premium Maxi Taxi Melbourne reverse logo with real maxi taxi photo mark</desc>
   <defs>
-    <linearGradient id="pmtGold" x1="24" x2="138" y1="24" y2="132" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#FFF1B8"/>
-      <stop offset=".38" stop-color="#D4AF37"/>
-      <stop offset="1" stop-color="#9D7418"/>
+    <clipPath id="photoClip">
+      <rect x="8" y="12" width="132" height="132" rx="24" />
+    </clipPath>
+    <linearGradient id="goldStroke" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f3d878" />
+      <stop offset="1" stop-color="#a87c1b" />
     </linearGradient>
   </defs>
-
-  <rect x="8" y="8" width="140" height="140" rx="32" fill="#FFFFFF"/>
-  <path fill="#D4AF37" d="M46 31h67c7.7 0 14 6.3 14 14v4H32v-4c0-7.7 6.3-14 14-14Z"/>
-  <text x="79.5" y="45" text-anchor="middle" fill="#111111" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="900" letter-spacing="1.2">MAXI</text>
-  <path fill="url(#pmtGold)" d="M26 77c0-17.7 14.3-32 32-32h42.5c17.2 0 31.7 12.9 33.7 30l4.2 35.6c.7 6.3-4.2 11.8-10.6 11.8H25.2C18.5 122.4 13 117 13 110.2V90c0-7.2 5.8-13 13-13Z"/>
-  <path fill="#111111" d="M39 69c0-6.6 5.4-12 12-12h18v25H39V69Zm37-12h23.5c7.6 0 14.5 4.3 17.8 11.1l6.7 13.9H76V57Z"/>
-  <path fill="#111111" d="M35 88h82v9H35zm43 9h5v22h-5z"/>
-  <path fill="#F7E7A5" d="M21 96h17v10H21zm98-1h14v11h-14z"/>
-  <circle cx="45" cy="123" r="13" fill="#111111"/>
-  <circle cx="45" cy="123" r="5" fill="#F7E7A5"/>
-  <circle cx="111" cy="123" r="13" fill="#111111"/>
-  <circle cx="111" cy="123" r="5" fill="#F7E7A5"/>
-  <path fill="#111111" d="M55 99h14v10H55zm36 0h14v10H91z"/>
-
-  <g fill="#FFFFFF">
-    <text x="178" y="65" font-family="Outfit, Inter, Arial, sans-serif" font-size="43" font-weight="700">Premium</text>
-    <text x="178" y="111" font-family="Outfit, Inter, Arial, sans-serif" font-size="48" font-weight="850">Maxi Taxi</text>
-  </g>
-  <path fill="#D4AF37" d="M178 123h190v6H178z"/>
-  <text x="394" y="129" fill="#F7E7A5" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="800" letter-spacing="3.6">MELBOURNE</text>
+  <rect x="8" y="12" width="132" height="132" rx="24" fill="#111111" />
+  <image href="/brand-vehicle-mark.webp" x="8" y="12" width="132" height="132" preserveAspectRatio="xMidYMid slice" clip-path="url(#photoClip)" />
+  <rect x="8" y="12" width="132" height="132" rx="24" fill="none" stroke="url(#goldStroke)" stroke-width="5" />
+  <path d="M28 119h92" stroke="#d4af37" stroke-width="5" stroke-linecap="round" opacity="0.9" />
+  <text x="162" y="68" fill="#ffffff" font-family="Outfit, Arial, sans-serif" font-size="44" font-weight="800" letter-spacing="0">Premium</text>
+  <text x="162" y="112" fill="#ffffff" font-family="Outfit, Arial, sans-serif" font-size="44" font-weight="800" letter-spacing="0">Maxi Taxi</text>
+  <text x="164" y="136" fill="#f3d878" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="2">MELBOURNE AND VICTORIA</text>
 </svg>

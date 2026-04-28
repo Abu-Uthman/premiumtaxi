@@ -8,13 +8,14 @@ Use "maxi cab" as a service and SEO phrase, not as the primary brand name.
 
 ## Logo Assets
 
-- `/logo.svg` is the primary horizontal logo for light backgrounds, including the header and footer.
+- `/logo.svg` is the primary horizontal logo for light backgrounds, including the header and footer. It uses the current vehicle photo mark from `/brand-vehicle-mark.webp`.
 - `/logo-reverse.svg` is the horizontal logo for dark backgrounds.
-- `/logo-mark.svg` is the compact square brand mark for app icons, social previews, and small placements.
-- `/favicon.svg` is the browser favicon source.
+- `/logo-mark.svg` is the compact square brand mark for small placements.
+- `/favicon.svg` and `/favicon-32x32.png` are browser favicon sources.
+- `/icon-192.png`, `/icon-512.png`, and `/apple-touch-icon.png` are generated app icon assets.
 - `/favicon.ico` is the generated fallback for older browser and platform support.
 
-Do not rebuild the logo from separate text and icon elements in page templates. Use the SVG files so spacing, color, and proportions remain consistent.
+Do not rebuild the logo from separate text and icon elements in page templates. Use the prepared logo files so spacing, color, and proportions remain consistent. When a better approved business vehicle photo is supplied, regenerate the photo-based mark and keep the filenames stable.
 
 ## Colors
 

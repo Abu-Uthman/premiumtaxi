@@ -2,7 +2,7 @@ import { existsSync, readFileSync, readdirSync } from "node:fs";
 import { join, relative } from "node:path";
 
 const root = "dist";
-const site = "https://premiummaxicab.com.au/";
+const site = "https://www.premiummaxicab.com.au/";
 const warnTitleLength = 65;
 const warnDescriptionLength = 165;
 

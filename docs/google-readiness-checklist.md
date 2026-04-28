@@ -2,9 +2,10 @@
 
 ## Current Public Business Facts
 
-- Business name: Premium Maxi Taxi Victoria
-- Website: https://premiummaxicab.com.au/
-- Phone: +61 432 405 388
+- Business name: Premium Maxi Taxi Melbourne
+- Website: https://www.premiummaxicab.com.au/
+- Primary phone: 0474 707 005
+- Second phone: 0424 438 088
 - Email: booking@premiummaxicab.com.au
 - GBP type: service-area business
 - Public address policy: address hidden for service-area bookings
@@ -26,15 +27,17 @@ These facts are centralized in `src/data/business.js`. Keep public site copy, JS
 
 - Run `npm run build`.
 - Run `npm run seo:audit`.
-- Confirm `/robots.txt` allows crawling and references `https://premiummaxicab.com.au/sitemap-index.xml`.
-- Confirm every indexable page has one canonical URL on `https://premiummaxicab.com.au/`.
+- Confirm `/robots.txt` allows crawling and references `https://www.premiummaxicab.com.au/sitemap-index.xml`.
+- Confirm every indexable page has one canonical URL on `https://www.premiummaxicab.com.au/`.
+- Confirm the Vercel primary production domain and source canonicals both use the same host.
 - Confirm generated JSON-LD parses on home, contact, one service page, one location page, and one taxi-services page.
 - Confirm generated service-area pages do not imply fake suburb offices.
 
 ## Search Console Launch Steps
 
 - Verify the HTTPS domain property.
-- Submit `https://premiummaxicab.com.au/sitemap-index.xml`.
+- Submit `https://www.premiummaxicab.com.au/sitemap-index.xml`.
+- If the live site continues to redirect apex to `www`, use `https://www.premiummaxicab.com.au/` as the main URL-prefix property.
 - Use URL Inspection on:
   - home,
   - contact,

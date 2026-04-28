@@ -10,7 +10,7 @@ import heroContact from '../assets/van-family-1.webp';
 
 <Layout 
   title="Contact Premium Maxi Taxi Melbourne | Book or Request a Quote"
-  description="Contact Premium Maxi Taxi Victoria for taxi, maxi cab, airport transfer, wheelchair, baby-seat, parcel, event, school, corporate, and regional trip enquiries."
+  description="Contact Premium Maxi Taxi Melbourne for taxi, maxi cab, airport transfer, wheelchair, baby-seat, parcel, event, school, corporate, and regional trip enquiries."
   includeBusinessSchema={true}
 >
   <Header />
@@ -42,9 +42,18 @@ import heroContact from '../assets/van-family-1.webp';
             <div class="info-card">
               <div class="info-icon">📞</div>
               <div>
-                <h4>Phone</h4>
+                <h4>Primary Phone</h4>
                 <a href={business.phoneHref} class="info-value">{business.phoneDisplay}</a>
                 <p class="text-muted" style="font-size: 0.875rem; margin-top: 4px;">Call for urgent booking questions</p>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <div class="info-icon">☎️</div>
+              <div>
+                <h4>Second Phone</h4>
+                <a href={business.secondaryPhoneHref} class="info-value">{business.secondaryPhoneDisplay}</a>
+                <p class="text-muted" style="font-size: 0.875rem; margin-top: 4px;">Alternative number for booking enquiries</p>
               </div>
             </div>
 

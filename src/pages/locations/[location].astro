@@ -38,7 +38,7 @@ const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   "name": `Maxi taxi and taxi bookings in ${loc.name}`,
-  "image": new URL(optimizedLocationSchemaImage.src, Astro.site || 'https://premiummaxicab.com.au').href,
+  "image": new URL(optimizedLocationSchemaImage.src, Astro.site || 'https://www.premiummaxicab.com.au').href,
   "description": loc.shortDescription,
   "provider": getBusinessProviderSchema(),
   "areaServed": {
@@ -48,7 +48,7 @@ const serviceSchema = {
     "postalCode": loc.postcode,
     "addressCountry": "AU"
   },
-  "url": new URL(Astro.url.pathname, Astro.site || 'https://premiummaxicab.com.au').href,
+  "url": new URL(Astro.url.pathname, Astro.site || 'https://www.premiummaxicab.com.au').href,
   "serviceType": "Taxi and maxi cab bookings"
 };
 
@@ -79,7 +79,7 @@ const faqSchema = {
   <main>
     <section class="hero-short">
       <div class="hero-bg">
-        <Image src={heroImg} alt={`Premium Maxi Taxi ${loc.name}`} width={1440} height={450} class="hero-img" loading="eager" quality={55} />
+        <Image src={heroImg} alt={`Premium Maxi Taxi Melbourne ${loc.name}`} width={1440} height={450} class="hero-img" loading="eager" quality={55} />
          <div class="hero-overlay"></div>
       </div>
       <div class="container hero-content text-center" style="max-width: 800px; margin: 0 auto;">
@@ -104,7 +104,7 @@ const faqSchema = {
           <div class="section-tag">Local Insights</div>
           <h2 class="section-title">Reliable Group Transport in <em class="text-gold">{loc.name}</em></h2>
           <p>
-            Whether you're heading to the airport, booking a local taxi, arranging wheelchair transport, moving a family group, or visiting local destinations like <strong>{poiText}</strong>, Premium Maxi Taxi can match the trip to the right taxi type.
+            Whether you're heading to the airport, booking a local taxi, arranging wheelchair transport, moving a family group, or visiting local destinations like <strong>{poiText}</strong>, Premium Maxi Taxi Melbourne can match the trip to the right taxi type.
           </p>
           <p>
             <strong>Airport transfers from {loc.name}:</strong> {loc.airportRouteNote} Add flight details, luggage, passenger count, child-seat requests, accessibility needs, and pickup notes so the booking is prepared before dispatch.

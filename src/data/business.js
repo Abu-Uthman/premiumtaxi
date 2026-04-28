@@ -1,13 +1,16 @@
-const siteUrl = "https://premiummaxicab.com.au/";
+const siteUrl = "https://www.premiummaxicab.com.au/";
 
 const business = {
-  name: "Premium Maxi Taxi Victoria",
+  name: "Premium Maxi Taxi Melbourne",
   shortName: "Premium Maxi Taxi",
   domain: "premiummaxicab.com.au",
   url: siteUrl,
-  phoneDisplay: "+61 432 405 388",
-  phoneHref: "tel:+61432405388",
-  telephone: "+61432405388",
+  phoneDisplay: "0474 707 005",
+  phoneHref: "tel:+61474707005",
+  telephone: "+61474707005",
+  secondaryPhoneDisplay: "0424 438 088",
+  secondaryPhoneHref: "tel:+61424438088",
+  secondaryTelephone: "+61424438088",
   email: "booking@premiummaxicab.com.au",
   emailHref: "mailto:booking@premiummaxicab.com.au",
   serviceAreaMode: "Service-area business",
@@ -26,7 +29,7 @@ const business = {
     "Great Ocean Road"
   ],
   description:
-    "Premium Maxi Taxi Victoria supports Melbourne and Victorian taxi, maxi cab, airport, family, accessibility, parcel, event, school, corporate, and regional booking requests.",
+    "Premium Maxi Taxi Melbourne supports Melbourne and Victorian taxi, maxi cab, airport, family, accessibility, parcel, event, school, corporate, and regional booking requests.",
   schemaId: `${siteUrl}#business`,
 };
 
@@ -35,14 +38,24 @@ export function getBusinessUrl(path = "/") {
 }
 
 export function getBusinessContactPoint() {
-  return {
-    "@type": "ContactPoint",
-    telephone: business.telephone,
-    email: business.email,
-    contactType: "bookings",
-    areaServed: "AU-VIC",
-    availableLanguage: "en-AU"
-  };
+  return [
+    {
+      "@type": "ContactPoint",
+      telephone: business.telephone,
+      email: business.email,
+      contactType: "primary bookings",
+      areaServed: "AU-VIC",
+      availableLanguage: "en-AU"
+    },
+    {
+      "@type": "ContactPoint",
+      telephone: business.secondaryTelephone,
+      email: business.email,
+      contactType: "booking enquiries",
+      areaServed: "AU-VIC",
+      availableLanguage: "en-AU"
+    }
+  ];
 }
 
 export function getBusinessProviderSchema() {
@@ -52,6 +65,11 @@ export function getBusinessProviderSchema() {
     name: business.name,
     url: business.url,
     telephone: business.telephone,
+    additionalProperty: {
+      "@type": "PropertyValue",
+      name: "Secondary booking phone",
+      value: business.secondaryTelephone
+    },
     email: business.email,
     areaServed: [
       { "@type": "City", name: "Melbourne" },
@@ -83,7 +101,7 @@ export function getBusinessSchema(imageUrl) {
     ],
     hasOfferCatalog: {
       "@type": "OfferCatalog",
-      name: "Premium Maxi Taxi Services",
+      name: "Premium Maxi Taxi Melbourne Services",
       itemListElement: [
         { "@type": "Offer", itemOffered: { "@type": "Service", name: "Maxi Cab Melbourne" } },
         { "@type": "Offer", itemOffered: { "@type": "Service", name: "Airport Taxi Melbourne" } },

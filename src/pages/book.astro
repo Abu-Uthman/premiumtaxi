@@ -38,6 +38,7 @@ import heroBook from '../assets/hotel-airport-maxi-taxi.webp';
             <h3>Contact Directly</h3>
             <p class="text-muted" style="font-size: 0.9rem; margin-bottom: 1.5rem;">For immediate or urgent booking requests, call us now:</p>
             <a href={business.phoneHref} class="btn btn-primary" style="width:100%; text-align:center; display:block;" id="book-call-btn">Call {business.phoneDisplay}</a>
+            <a href={business.secondaryPhoneHref} class="sidebar-phone">Or call {business.secondaryPhoneDisplay}</a>
             <div class="divider-or"><span>or email</span></div>
             <a href={business.emailHref} class="sidebar-email">{business.email}</a>
           </div>
@@ -184,6 +185,8 @@ import heroBook from '../assets/hotel-airport-maxi-taxi.webp';
 .sidebar-card h4 { font-size: 1rem; }
 .divider-or { display: flex; align-items: center; gap: 12px; margin: 16px 0; color: var(--text-muted); font-size: 0.875rem; }
 .divider-or::before, .divider-or::after { content: ''; flex: 1; height: 1px; background: var(--bg-tertiary); }
+.sidebar-phone { display: block; margin-top: 12px; text-align: center; font-size: 0.9rem; color: var(--text-main); font-weight: 600; }
+.sidebar-phone:hover { color: var(--accent-gold); }
 .sidebar-email { display: block; font-size: 0.875rem; color: var(--accent-gold); word-break: break-all; font-weight: 500; }
 .sidebar-email:hover { text-decoration: underline; }
 .feature-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }

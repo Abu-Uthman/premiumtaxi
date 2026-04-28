@@ -148,13 +148,13 @@ const priorityHeroImages = {
 const priorityHeroImage = priorityHeroImages[service.slug] || heroImg;
 const priorityPanelImage = service.slug === "baby-seat-taxi-melbourne" ? familyBabyImg : familyInteriorImg;
 
-const canonical = new URL(Astro.url.pathname, Astro.site || 'https://premiummaxicab.com.au').href;
+const canonical = new URL(Astro.url.pathname, Astro.site || 'https://www.premiummaxicab.com.au').href;
 const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Home", "item": new URL('/', Astro.site || 'https://premiummaxicab.com.au').href },
-    { "@type": "ListItem", "position": 2, "name": "Taxi Services", "item": new URL('/taxi-services/', Astro.site || 'https://premiummaxicab.com.au').href },
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": new URL('/', Astro.site || 'https://www.premiummaxicab.com.au').href },
+    { "@type": "ListItem", "position": 2, "name": "Taxi Services", "item": new URL('/taxi-services/', Astro.site || 'https://www.premiummaxicab.com.au').href },
     { "@type": "ListItem", "position": 3, "name": page.h1, "item": canonical }
   ]
 };

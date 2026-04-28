@@ -1,11 +1,12 @@
 ---
 // src/components/Header.astro
+import business from '../data/business.js';
 ---
 
 <header class="header glass" id="site-header">
   <div class="container header-container">
-    <a href="/" class="logo">
-      <span class="logo-accent">Premium</span>MaxiTaxi
+    <a href="/" class="logo" aria-label={business.name}>
+      <span class="logo-accent">Premium</span> Maxi Taxi
     </a>
     
     <!-- Desktop Nav -->

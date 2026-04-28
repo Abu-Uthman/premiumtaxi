@@ -8,8 +8,8 @@ const year = new Date().getFullYear();
 <footer class="footer">
   <div class="container footer-container">
     <div class="footer-col brand-col">
-      <div class="logo">
-        <span class="logo-accent">Premium</span>MaxiTaxi
+      <div class="logo" aria-label={business.name}>
+        <span class="logo-accent">Premium</span> Maxi Taxi
       </div>
       <p class="text-muted mt-4">
         Taxi and maxi cab bookings across Melbourne and Victoria for airport transfers, families, accessibility requests, parcels, events, schools, corporate travel, and outer-suburb trips.
@@ -51,6 +51,7 @@ const year = new Date().getFullYear();
       <h4 class="footer-heading">Contact</h4>
       <ul class="footer-links">
         <li><a href={business.phoneHref}>Book: {business.phoneDisplay}</a></li>
+        <li><a href={business.secondaryPhoneHref}>Bookings: {business.secondaryPhoneDisplay}</a></li>
         <li><a href={business.emailHref}>{business.email}</a></li>
         <li>{business.serviceAreaLabel}</li>
         <li>{business.publicAddressPolicy}</li>

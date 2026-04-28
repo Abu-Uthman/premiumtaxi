@@ -1,6 +1,6 @@
-# Premium Maxi Taxi
+# Premium Maxi Taxi Melbourne
 
-Astro website for Premium Maxi Taxi Victoria, focused on Melbourne and Victoria taxi, maxi cab, airport transfer, accessible transport, and regional trip search visibility.
+Astro website for Premium Maxi Taxi Melbourne, focused on Melbourne and Victoria taxi, maxi cab, airport transfer, accessible transport, and regional trip search visibility.
 
 ## Stack
 
@@ -27,13 +27,16 @@ This project is configured for Vercel:
 - Build command: `npm run build`
 - Output directory: `dist`
 - Node version: `22.x`
+- Production canonical host: `https://www.premiummaxicab.com.au/`
+
+Keep the Vercel primary production domain, sitemap host, canonical tags, Open Graph URLs, and JSON-LD URLs on the same host. If Vercel redirects apex to `www`, source canonicals must also use `www`.
 
 Required Vercel environment variables for form emails:
 
 ```sh
 RESEND_API_KEY=
 BOOKING_EMAIL_TO=booking@premiummaxicab.com.au
-RESEND_FROM_EMAIL="Premium Maxi Taxi <booking@premiummaxicab.com.au>"
+RESEND_FROM_EMAIL="Premium Maxi Taxi Melbourne <booking@premiummaxicab.com.au>"
 ```
 
 `RESEND_FROM_EMAIL` must use a domain verified in Resend before production emails can send reliably.
@@ -55,7 +58,7 @@ Run `npm run build` before deployment to verify all generated routes.
 - Keep business name, phone, email, website, and service areas aligned with `src/data/business.js`.
 - Do not add fake reviews, ratings, addresses, operating hours, licence numbers, ABNs, fleet counts, or response-time guarantees.
 - Before Search Console submission, run `npm run build` and validate representative URLs in Google's Rich Results Test.
-- Submit `https://premiummaxicab.com.au/sitemap-index.xml` only after generated page metadata and schema checks pass.
+- Submit `https://www.premiummaxicab.com.au/sitemap-index.xml` only after generated page metadata and schema checks pass.
 - Confirm the Resend sender domain before relying on `/api/send-email` in production.
 
 See `docs/google-readiness-checklist.md` for the deployment, Search Console, GBP, and lead-handling checklist.

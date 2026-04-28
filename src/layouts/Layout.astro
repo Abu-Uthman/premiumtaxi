@@ -18,7 +18,7 @@ const {
   includeBusinessSchema = false
 } = Astro.props;
 
-const site = Astro.site || new URL('https://premiummaxicab.com.au');
+const site = Astro.site || new URL('https://www.premiummaxicab.com.au');
 const canonicalUrl = new URL(Astro.url.pathname, site).href;
 const optimizedOgImage = await getImage({
   src: ogImageSource,

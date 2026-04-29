@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="logoTitle logoDesc">
   <title id="logoTitle">Premium Maxi Taxi mark</title>
-  <desc id="logoDesc">Square photo mark for Premium Maxi Taxi Melbourne</desc>
+  <desc id="logoDesc">Square realistic premium maxi van photo mark for Premium Maxi Taxi Melbourne</desc>
   <defs>
     <clipPath id="photoClip">
       <rect x="32" y="32" width="448" height="448" rx="92" />
@@ -13,6 +13,6 @@
   <rect width="512" height="512" rx="112" fill="#111111" />
   <image href="/brand-vehicle-mark.webp" x="32" y="32" width="448" height="448" preserveAspectRatio="xMidYMid slice" clip-path="url(#photoClip)" />
   <rect x="32" y="32" width="448" height="448" rx="92" fill="none" stroke="url(#goldStroke)" stroke-width="18" />
-  <rect x="70" y="362" width="372" height="84" rx="28" fill="#111111" opacity="0.82" />
+  <rect x="70" y="362" width="372" height="84" rx="28" fill="#111111" opacity="0.86" />
   <text x="256" y="417" text-anchor="middle" fill="#f3d878" font-family="Outfit, Arial, sans-serif" font-size="54" font-weight="800" letter-spacing="0">PMT</text>
 </svg>

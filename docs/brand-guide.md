@@ -8,14 +8,15 @@ Use "maxi cab" as a service and SEO phrase, not as the primary brand name.
 
 ## Logo Assets
 
-- `/logo.svg` is the primary horizontal logo for light backgrounds, including the header and footer. It uses the current realistic premium van photo mark from `/brand-vehicle-mark.webp`.
+- `/logo.svg` is the primary horizontal logo for light backgrounds, including the header and footer. It keeps the Premium Maxi Taxi wordmark and uses the approved premium van badge from `/brand-vehicle-mark.webp`.
 - `/logo-reverse.svg` is the horizontal logo for dark backgrounds.
-- `/logo-mark.svg` is the compact square brand mark for small placements.
-- `/favicon.svg` and `/favicon-32x32.png` are browser favicon sources.
+- `/logo-mark.svg` is the compact square premium van badge for hero, app icon, and social placements.
+- `/favicon.svg` and `/favicon-32x32.png` are browser favicon sources. Keep the badge simple enough to remain recognizable at browser-tab size.
 - `/icon-192.png`, `/icon-512.png`, and `/apple-touch-icon.png` are generated app icon assets.
 - `/favicon.ico` is the generated fallback for older browser and platform support.
+- `/brand-vehicle-mark.webp` is the approved no-text premium van badge used inside the logo mark and app icons.
 
-Do not rebuild the logo from separate text and icon elements in page templates. Use the prepared logo files so spacing, color, and proportions remain consistent. The supporting website imagery should stay realistic, clean, and premium: white or black maxi vans, uncluttered Melbourne/Victoria settings, and no fake plates, fake signage, fake reviews, or invented operational claims. When a better approved business vehicle photo is supplied, regenerate the photo-based mark and keep the filenames stable.
+Do not rebuild the logo from separate text and icon elements in page templates. Use the prepared logo files so spacing, color, and proportions remain consistent. The supporting website imagery should stay realistic, clean, and premium: white or black maxi vans, uncluttered Melbourne/Victoria settings, and no fake plates, fake signage, fake reviews, or invented operational claims. When a better approved business vehicle photo is supplied, update the supporting image assets while keeping filenames stable.
 
 ## Colors
 

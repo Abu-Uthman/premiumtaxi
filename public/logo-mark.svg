@@ -1,18 +1,22 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="logoTitle logoDesc">
-  <title id="logoTitle">Premium Maxi Taxi mark</title>
-  <desc id="logoDesc">Square realistic premium maxi van photo mark for Premium Maxi Taxi Melbourne</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="logoMarkTitle logoMarkDesc">
+  <title id="logoMarkTitle">Premium Maxi Taxi mark</title>
+  <desc id="logoMarkDesc">Compact Premium Maxi Taxi Melbourne emblem</desc>
   <defs>
     <clipPath id="photoClip">
-      <rect x="32" y="32" width="448" height="448" rx="92" />
+      <rect x="34" y="34" width="444" height="444" rx="96"/>
     </clipPath>
-    <linearGradient id="goldStroke" x1="0" x2="1" y1="0" y2="1">
-      <stop offset="0" stop-color="#f3d878" />
-      <stop offset="1" stop-color="#a87c1b" />
+    <linearGradient id="gold" x1="72" y1="54" x2="440" y2="458" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f7df87"/>
+      <stop offset="0.48" stop-color="#d4af37"/>
+      <stop offset="1" stop-color="#9f7419"/>
+    </linearGradient>
+    <linearGradient id="black" x1="88" y1="76" x2="424" y2="436" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#262626"/>
+      <stop offset="1" stop-color="#050505"/>
     </linearGradient>
   </defs>
-  <rect width="512" height="512" rx="112" fill="#111111" />
-  <image href="/brand-vehicle-mark.webp" x="32" y="32" width="448" height="448" preserveAspectRatio="xMidYMid slice" clip-path="url(#photoClip)" />
-  <rect x="32" y="32" width="448" height="448" rx="92" fill="none" stroke="url(#goldStroke)" stroke-width="18" />
-  <rect x="70" y="362" width="372" height="84" rx="28" fill="#111111" opacity="0.86" />
-  <text x="256" y="417" text-anchor="middle" fill="#f3d878" font-family="Outfit, Arial, sans-serif" font-size="54" font-weight="800" letter-spacing="0">PMT</text>
+  <rect width="512" height="512" rx="112" fill="#101010"/>
+  <rect x="34" y="34" width="444" height="444" rx="96" fill="url(#black)" stroke="url(#gold)" stroke-width="18"/>
+  <image href="/brand-vehicle-mark.webp" x="34" y="34" width="444" height="444" preserveAspectRatio="xMidYMid slice" clip-path="url(#photoClip)"/>
+  <rect x="34" y="34" width="444" height="444" rx="96" fill="none" stroke="url(#gold)" stroke-width="18"/>
 </svg>

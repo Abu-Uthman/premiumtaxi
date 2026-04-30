@@ -10,6 +10,6 @@
     </linearGradient>
   </defs>
   <rect width="64" height="64" rx="15" fill="#101010"/>
-  <image href="/brand-vehicle-mark.webp" x="4" y="4" width="56" height="56" preserveAspectRatio="xMidYMid slice" clip-path="url(#photoClip)"/>
+  <image href="/brand-vehicle-mark.webp?v=20260430-premium-badge" x="4" y="4" width="56" height="56" preserveAspectRatio="xMidYMid slice" clip-path="url(#photoClip)"/>
   <rect x="4" y="4" width="56" height="56" rx="13" fill="none" stroke="url(#gold)" stroke-width="4"/>
 </svg>

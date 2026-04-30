@@ -17,7 +17,7 @@
   </defs>
   <rect x="10" y="10" width="130" height="130" rx="30" fill="url(#dark)"/>
   <rect x="15" y="15" width="120" height="120" rx="26" fill="none" stroke="url(#gold)" stroke-width="5"/>
-  <image href="/brand-vehicle-mark.webp" x="10" y="10" width="130" height="130" preserveAspectRatio="xMidYMid slice" clip-path="url(#markClip)"/>
+  <image href="/brand-vehicle-mark.webp?v=20260430-premium-badge" x="10" y="10" width="130" height="130" preserveAspectRatio="xMidYMid slice" clip-path="url(#markClip)"/>
   <rect x="15" y="15" width="120" height="120" rx="26" fill="none" stroke="url(#gold)" stroke-width="5"/>
   <text x="164" y="65" fill="#ffffff" font-family="Outfit, Montserrat, Arial, sans-serif" font-size="42" font-weight="800">Premium</text>
   <text x="164" y="108" fill="#ffffff" font-family="Outfit, Montserrat, Arial, sans-serif" font-size="42" font-weight="800">Maxi Taxi</text>

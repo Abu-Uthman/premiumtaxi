@@ -8,15 +8,15 @@ Use "maxi cab" as a service and SEO phrase, not as the primary brand name.
 
 ## Logo Assets
 
-- `/logo.svg` is the primary horizontal logo for light backgrounds, including the header and footer. It keeps the Premium Maxi Taxi wordmark and uses the approved premium van badge from `/brand-vehicle-mark.webp`.
-- `/logo-reverse.svg` is the horizontal logo for dark backgrounds.
-- `/logo-mark.svg` is the compact square premium van badge for hero, app icon, and social placements.
-- `/favicon.svg` and `/favicon-32x32.png` are browser favicon sources. Keep the badge simple enough to remain recognizable at browser-tab size.
+- `/logo.png` is the primary horizontal logo for light backgrounds, including the header. It uses a realistic black and gold shield badge with a high-roof maxi van and the Premium Maxi Taxi wordmark.
+- `/logo-reverse.png` is the horizontal logo for dark backgrounds, including the footer.
+- `/logo-mark.png` is the compact square badge for hero, app icon, and social placements.
+- `/favicon-32x32.png` is the browser favicon source. It uses the realistic van badge, simplified by scale rather than redrawn as a generic icon.
 - `/icon-192.png`, `/icon-512.png`, and `/apple-touch-icon.png` are generated app icon assets.
 - `/favicon.ico` is the generated fallback for older browser and platform support.
-- `/brand-vehicle-mark.webp` is the approved no-text premium van badge used inside the logo mark and app icons.
+- `/brand-vehicle-mark.webp` is a supporting visual asset only. Do not embed it in logo, favicon, or app icon SVGs.
 
-Do not rebuild the logo from separate text and icon elements in page templates. Use the prepared logo files so spacing, color, and proportions remain consistent. The supporting website imagery should stay realistic, clean, and premium: white or black maxi vans, uncluttered Melbourne/Victoria settings, and no fake plates, fake signage, fake reviews, or invented operational claims. When a better approved business vehicle photo is supplied, update the supporting image assets while keeping filenames stable.
+Do not rebuild the logo from separate text and icon elements in page templates. Use the prepared raster logo files so spacing, color, and proportions remain consistent. Do not use generated text, fake plates, fake certification badges, fake reviews, or invented operational claims in logo artwork. The supporting website imagery should stay realistic, clean, and premium: white or black maxi vans and uncluttered Melbourne/Victoria settings. When a better approved business vehicle photo is supplied, update supporting image assets while keeping filenames stable.
 
 ## Colors
 
